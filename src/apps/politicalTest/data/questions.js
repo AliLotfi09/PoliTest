@@ -316,6 +316,216 @@ export const questions = [
       },
     ],
   },
+  {
+    question: "اولویت شما در روابط بین‌الملل چیست؟",
+    options: [
+      {
+        text: "تقویت روابط با همسایگان و منطقه",
+        traits: { regionalist: 3, pragmatic: 2, cooperative: 2 },
+      },
+      {
+        text: "همکاری با کشورهای هم‌ایدئولوژی",
+        traits: { ideological: 3, principled: 2, aligned: 2 },
+      },
+      {
+        text: "تعامل با همه بر اساس منافع ملی",
+        traits: { pragmatic: 3, flexible: 2, strategic: 2 },
+      },
+      {
+        text: "تمرکز بر روابط با قدرت‌های اقتصادی",
+        traits: { economic: 3, realist: 2, pragmatic: 1 },
+      },
+    ],
+  },
+  {
+    question: "نقش زنان در جامعه و سیاست چگونه باشد؟",
+    options: [
+      {
+        text: "برابری کامل در تمام عرصه‌ها",
+        traits: { egalitarian: 3, progressive: 3, liberal: 2 },
+      },
+      {
+        text: "توسعه نقش‌ها در چارچوب ارزش‌های سنتی",
+        traits: { traditionalist: 2, moderate: 3, cultural: 2 },
+      },
+      {
+        text: "حفظ نقش‌های سنتی و خانوادگی",
+        traits: { conservative: 3, traditionalist: 3, religious: 2 },
+      },
+      {
+        text: "سیاست‌های حمایتی ویژه برای توانمندسازی",
+        traits: { supportive: 3, reformist: 2, progressive: 2 },
+      },
+    ],
+  },
+  {
+    question: "سیاست محیط زیستی شما چیست؟",
+    options: [
+      {
+        text: "اولویت رشد اقتصادی بر محیط زیست",
+        traits: { developmentalist: 3, industrialist: 2, pragmatic: 2 },
+      },
+      {
+        text: "توسعه پایدار و حفظ محیط زیست",
+        traits: { environmentalist: 3, sustainable: 3, balanced: 2 },
+      },
+      {
+        text: "مشارکت در تلاش‌های جهانی برای اقلیم",
+        traits: { internationalist: 3, cooperative: 2, responsible: 2 },
+      },
+      {
+        text: "تمرکز بر مشکلات محیطی داخلی",
+        traits: { nationalist: 2, pragmatic: 2, internal_focus: 3 },
+      },
+    ],
+  },
+  {
+    question: "با اپوزیسیون و مخالفان سیاسی چگونه برخورد می‌کنید؟",
+    options: [
+      {
+        text: "مشارکت دادن آنها در فرآیندهای سیاسی",
+        traits: { inclusive: 3, democratic: 3, tolerant: 2 },
+      },
+      {
+        text: "محدود کردن فعالیت‌هایشان در چارچوب قانون",
+        traits: { legalist: 3, controlled: 2, restrictive: 2 },
+      },
+      {
+        text: "سرکوب کامل و حذف آنها",
+        traits: { authoritarian: 3, suppressive: 3, intolerant: 2 },
+      },
+      {
+        text: "گفتگو و مصالحه برای ثبات کشور",
+        traits: { diplomatic: 3, compromising: 2, pragmatic: 2 },
+      },
+    ],
+  },
+  {
+    question: "سیاست شما در قبال مهاجران و پناهندگان چیست؟",
+    options: [
+      {
+        text: "استقبال کنترل‌شده بر اساس نیازهای کشور",
+        traits: { pragmatic: 3, managed: 2, selective: 2 },
+      },
+      {
+        text: "میزبانی گسترده و حمایت انسان‌دوستانه",
+        traits: { humanitarian: 3, welcoming: 3, compassionate: 2 },
+      },
+      {
+        text: "محدودیت شدید و اولویت به شهروندان",
+        traits: { nationalist: 3, restrictive: 3, protective: 2 },
+      },
+      {
+        text: "همکاری بین‌المللی برای حل ریشه‌ای",
+        traits: { internationalist: 3, cooperative: 2, strategic: 2 },
+      },
+    ],
+  },
+  {
+    question: "درباره جهانی‌سازی (Globalization) چه دیدگاهی دارید؟",
+    options: [
+      {
+        text: "ادغام کامل در اقتصاد جهانی",
+        traits: { globalist: 3, liberal: 2, open: 3 },
+      },
+      {
+        text: "تعامل انتخابی و محتاطانه",
+        traits: { cautious: 3, pragmatic: 2, selective: 2 },
+      },
+      {
+        text: "مقاومت در برابر سیطره فرهنگی-اقتصادی خارجی",
+        traits: { resistant: 3, nationalist: 2, protectionist: 3 },
+      },
+      {
+        text: "بهره‌گیری از فرصت‌ها با حفظ هویت",
+        traits: { balanced: 3, adaptive: 2, pragmatic: 2 },
+      },
+    ],
+  },
+  {
+    question: "اولویت نظام آموزشی چیست؟",
+    options: [
+      {
+        text: "پرورش نیروی کار ماهر برای بازار",
+        traits: { practical: 3, economic: 2, vocational: 3 },
+      },
+      {
+        text: "توسعه تفکر انتقادی و خلاقیت",
+        traits: { progressive: 3, liberal: 2, intellectual: 3 },
+      },
+      {
+        text: "تقویت هویت ملی و ارزش‌های فرهنگی",
+        traits: { nationalist: 3, traditionalist: 2, cultural: 3 },
+      },
+      {
+        text: "ترکیبی از علم، مهارت و اخلاق",
+        traits: { balanced: 3, holistic: 3, moderate: 2 },
+      },
+    ],
+  },
+  {
+    question: "در توزیع بودجه بین مناطق مختلف کشور چه معیاری دارید؟",
+    options: [
+      {
+        text: "اولویت به مناطق محروم و کمترتوسعه‌یافته",
+        traits: { egalitarian: 3, redistributive: 3, just: 2 },
+      },
+      {
+        text: "سرمایه‌گذاری در مناطق دارای پتانسیل رشد",
+        traits: { developmentalist: 3, pragmatic: 2, efficient: 2 },
+      },
+      {
+        text: "توزیع عادلانه بر اساس جمعیت",
+        traits: { fair: 3, balanced: 2, proportional: 3 },
+      },
+      {
+        text: "تمرکز بر مناطق استراتژیک برای امنیت ملی",
+        traits: { strategic: 3, security_first: 2, nationalist: 2 },
+      },
+    ],
+  },
+  {
+    question: "نقش هنر و فرهنگ در حکومت شما چیست؟",
+    options: [
+      {
+        text: "آزادی کامل هنری بدون محدودیت",
+        traits: { liberal: 3, permissive: 2, artistic: 3 },
+      },
+      {
+        text: "حمایت در چارچوب ارزش‌های ملی",
+        traits: { cultural: 3, nationalist: 2, guided: 2 },
+      },
+      {
+        text: "هنر در خدمت تبلیغ ایدئولوژی حکومت",
+        traits: { propagandist: 3, ideological: 2, instrumental: 3 },
+      },
+      {
+        text: "عدم دخالت و کاهش حمایت دولتی",
+        traits: { laissez_faire: 3, minimal_state: 2, neutral: 2 },
+      },
+    ],
+  },
+  {
+    question: "درباره انرژی هسته‌ای چه سیاستی دارید؟",
+    options: [
+      {
+        text: "توسعه کامل برای انرژی و فناوری",
+        traits: { technocratic: 3, modernist: 3, ambitious: 2 },
+      },
+      {
+        text: "توسعه صلح‌آمیز تحت نظارت بین‌المللی",
+        traits: { cooperative: 3, peaceful: 3, transparent: 2 },
+      },
+      {
+        text: "توقف کامل به دلیل خطرات امنیتی",
+        traits: { cautious: 3, security_first: 3, anti_nuclear: 2 },
+      },
+      {
+        text: "تمرکز بر انرژی‌های تجدیدپذیر به جای هسته‌ای",
+        traits: { environmentalist: 3, sustainable: 3, alternative: 2 },
+      },
+    ],
+  },
 ];
 
 export const questionExplanations = {
@@ -378,5 +588,45 @@ export const questionExplanations = {
   14: {
     title: "این سوال چی رو می‌سنجه؟",
     text: "این سوال ترجیح شما بین پوپولیسم و تکنوکراسی را مشخص می‌کند.",
+  },
+  15: {
+    title: "این سوال چی رو می‌سنجه؟",
+    text: "این سوال جهت‌گیری کلی شما در دیپلماسی و اولویت‌های بین‌المللی را نشان می‌دهد.",
+  },
+  16: {
+    title: "این سوال چی رو می‌سنجه؟",
+    text: "این سوال نگرش شما نسبت به جنسیت و نقش اجتماعی زنان را بررسی می‌کند.",
+  },
+  17: {
+    title: "این سوال چی رو می‌سنجه؟",
+    text: "این سوال میزان اهمیت محیط زیست در سیاست‌گذاری‌های شما را مشخص می‌کند.",
+  },
+  18: {
+    title: "این سوال چی رو می‌سنجه؟",
+    text: "این سوال میزان مدارا یا سخت‌گیری شما با مخالفان سیاسی را ارزیابی می‌کند.",
+  },
+  19: {
+    title: "این سوال چی رو می‌سنجه؟",
+    text: "این سوال رویکرد انسان‌دوستانه یا محافظه‌کارانه شما نسبت به مهاجران را نشان می‌دهد.",
+  },
+  20: {
+    title: "این سوال چی رو می‌سنجه؟",
+    text: "این سوال موضع شما را در برابر پدیده جهانی‌سازی مشخص می‌کند.",
+  },
+  21: {
+    title: "این سوال چی رو می‌سنجه؟",
+    text: "این سوال فلسفه و اهداف آموزشی مورد نظر شما را بررسی می‌کند.",
+  },
+  22: {
+    title: "این سوال چی رو می‌سنجه؟",
+    text: "این سوال معیارهای شما برای توزیع منابع و امکانات بین مناطق را نشان می‌دهد.",
+  },
+  23: {
+    title: "این سوال چی رو می‌سنجه؟",
+    text: "این سوال رابطه حکومت با هنر و میزان آزادی یا کنترل فرهنگی را ارزیابی می‌کند.",
+  },
+  24: {
+    title: "این سوال چی رو می‌سنجه؟",
+    text: "این سوال موضع شما درباره انرژی هسته‌ای و فناوری‌های پیشرفته را مشخص می‌کند.",
   },
 };

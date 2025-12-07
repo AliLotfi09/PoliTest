@@ -8,6 +8,7 @@ import ResultScreen from './components/ResultScreen';
 import PredictionGauge from './components/PredictionGauge';
 import Toast from './components/Toast';
 import { questionExplanations } from './data';
+import Changelog from '../../components/Changelog';
 
 function PoliticalTestApp() {
   const [showIntroSlides, setShowIntroSlides] = useState(true);
@@ -53,92 +54,59 @@ function PoliticalTestApp() {
     setShowMainIntro(true);
   };
 
-  // حالت Intro Slides
-  if (showIntroSlides) {
-    return <IntroSlides onComplete={handleIntroComplete} />;
-  }
+  return (
+    <>
+      {/* Changelog همیشه در پس‌زمینه قرار دارد */}
+      <Changelog />
+      
+      {/* نمایش Toast اگر وجود داشت */}
+      {showToast && (
+        <Toast 
+          message={showToast} 
+          onClose={closeToast}
+        />
+      )}
 
-  // حالت Intro اصلی
-  if (!testStarted && !result && showMainIntro) {
-    return (
-      <div className="app-container">
-        <IntroScreen onStart={startTest} />
-      </div>
-    );
-  }
-
-  // حالت Quiz (سوالات)
-  if (testStarted && !testCompleted) {
-    return (
-      <div className="app-container">
-        <div className="main-content">
-          <QuizScreen
-            question={questions[currentQuestion]}
-            questionIndex={currentQuestion}
-            totalQuestions={questions.length}
-            selectedAnswer={answers[currentQuestion]}
-            onSelectAnswer={(optionIndex) => handleAnswer(currentQuestion, optionIndex)}
-            onNext={nextQuestion}
-            onPrev={prevQuestion}
-            explanation={questionExplanations[currentQuestion]}
+      {/* حالت‌های مختلف برنامه */}
+      {showIntroSlides ? (
+        <IntroSlides onComplete={handleIntroComplete} />
+      ) : !testStarted && !result && showMainIntro ? (
+        <div className="app-container">
+          <IntroScreen onStart={startTest} />
+        </div>
+      ) : testStarted && !testCompleted ? (
+        <div className="app-container">
+          <div className="main-content">
+            <QuizScreen
+              question={questions[currentQuestion]}
+              questionIndex={currentQuestion}
+              totalQuestions={questions.length}
+              selectedAnswer={answers[currentQuestion]}
+              onSelectAnswer={(optionIndex) => handleAnswer(currentQuestion, optionIndex)}
+              onNext={nextQuestion}
+              onPrev={prevQuestion}
+              explanation={questionExplanations[currentQuestion]}
+            />
+          </div>
+          
+          <div className="sidebar">
+            <PredictionGauge answers={answers} />
+          </div>
+        </div>
+      ) : (
+        <div className="app-container">
+          <ResultScreen
+            result={result}
+            userTraits={userTraits}
+            traitNames={traitNames}
+            onRestart={restartTest}
+            onShare={shareResult}
+            onDownload={downloadResult}
           />
         </div>
-        
-        <div className="sidebar">
-          <PredictionGauge answers={answers} />
-        </div>
-
-        {showToast && (
-          <Toast 
-            message={showToast} 
-            onClose={closeToast}
-          />
-        )}
-      </div>
-    );
-  }
-
-  if (testCompleted && result) {
-    return (
-      <div className="app-container">
-        <ResultScreen
-          result={result}
-          userTraits={userTraits}
-          traitNames={traitNames}
-          onRestart={restartTest}
-          onShare={shareResult}
-          onDownload={downloadResult}
-        />
-        
-        {showToast && (
-          <Toast 
-            message={showToast} 
-            onClose={closeToast}
-          />
-        )}
-      </div>
-    );
-  }
-
-  if (result) {
-    return (
-      <div className="app-container">
-        <ResultScreen
-          result={result}
-          userTraits={userTraits}
-          traitNames={traitNames}
-          onRestart={() => {
-            setShowMainIntro(true);
-            startTest();
-          }}
-          onShare={shareResult}
-          onDownload={downloadResult}
-        />
-      </div>
-    );
-  }
-
-  return null;
+      )}
+    </>
+  );
 }
 
 export default PoliticalTestApp;
