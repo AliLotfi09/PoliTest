@@ -41,7 +41,26 @@ export const traitNames = {
   free_market: "بازار آزاد",
   centralized: "متمرکز",
   innovative: "نوآور",
-  industrialist: "صنعت‌گرا"
+  industrialist: "صنعت‌گرا",
+  just: "عادل",
+  weak: "ضعیف",
+  enlightened: "روشن‌فکر",
+  isolated: "منزوی",
+  unpredictable: "غیرقابل پیش‌بینی",
+  anti_communist: "ضدکمونیست",
+  survivalist: "بقاگرا",
+  radical: "رادیکال",
+  agrarian: "کشاورزی‌گرا",
+  genocidal: "نسل‌کش",
+  imperialist: "امپریالیست",
+  moralist: "اخلاق‌گرا",
+  anti_western: "ضدغرب",
+  dependent: "وابسته",
+  brave: "شجاع",
+  stubborn: "لجباز",
+  cruel: "بی‌رحم",
+  patient: "صبور",
+  religious: "مذهبی"
 };
 
 export { questions, questionExplanations, leaders };

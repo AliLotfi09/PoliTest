@@ -1,14 +1,21 @@
-// components/AdvancedBottomNavigation.jsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { getMiniAppState } from '../utils/miniAppDetector';
+import { User } from 'lucide-react';
 
 const AdvancedBottomNavigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [activeTab, setActiveTab] = useState('home');
   const [ripples, setRipples] = useState([]);
+  const [isMiniApp, setIsMiniApp] = useState(false);
 
-  const navItems = [
+  useEffect(() => {
+    const state = getMiniAppState();
+    setIsMiniApp(state.isInitialized);
+  }, []);
+
+  const baseNavItems = [
     { 
       id: 'home', 
       label: 'خانه', 
@@ -25,6 +32,21 @@ const AdvancedBottomNavigation = () => {
       path: '/settings' 
     },
   ];
+
+  // const miniAppNavItem = {
+  //   id: 'mini-app',
+  //   label: 'پروفایل',
+  //   path: '/profile',
+  // };
+
+  const getNavItems = () => {
+    if (isMiniApp) {
+      return [...baseNavItems, miniAppNavItem];
+    }
+    return baseNavItems;
+  };
+
+  const navItems = getNavItems();
 
   const createRipple = (x, y, id) => {
     const newRipple = {
@@ -61,7 +83,7 @@ const AdvancedBottomNavigation = () => {
     if (currentItem) {
       setActiveTab(currentItem.id);
     }
-  }, [location.pathname]);
+  }, [location.pathname, navItems]);
 
   const getIcon = (id, isActive) => {
     const color = isActive ? '#ffffff' : '#000000';
@@ -83,66 +105,6 @@ const AdvancedBottomNavigation = () => {
               strokeWidth="2" 
               strokeLinecap="round" 
               strokeLinejoin="round"
-            />
-          </svg>
-        );
-      case 'test':
-        return (
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path 
-              d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" 
-              stroke={color} 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            />
-            <rect 
-              x="8" y="2" width="8" height="4" rx="1" ry="1" 
-              stroke={color} 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            />
-            <line 
-              x1="9" y1="9" x2="15" y2="9" 
-              stroke={color} 
-              strokeWidth="2" 
-              strokeLinecap="round"
-            />
-            <line 
-              x1="9" y1="13" x2="15" y2="13" 
-              stroke={color} 
-              strokeWidth="2" 
-              strokeLinecap="round"
-            />
-            <line 
-              x1="9" y1="17" x2="13" y2="17" 
-              stroke={color} 
-              strokeWidth="2" 
-              strokeLinecap="round"
-            />
-          </svg>
-        );
-      case 'results':
-        return (
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <line 
-              x1="18" y1="20" x2="18" y2="10" 
-              stroke={color} 
-              strokeWidth="2" 
-              strokeLinecap="round"
-            />
-            <line 
-              x1="12" y1="20" x2="12" y2="4" 
-              stroke={color} 
-              strokeWidth="2" 
-              strokeLinecap="round"
-            />
-            <line 
-              x1="6" y1="20" x2="6" y2="14" 
-              stroke={color} 
-              strokeWidth="2" 
-              strokeLinecap="round"
             />
           </svg>
         );
@@ -182,6 +144,10 @@ const AdvancedBottomNavigation = () => {
               strokeLinejoin="round"
             />
           </svg>
+        );
+      case 'mini-app':
+        return (
+          <User />
         );
       default:
         return null;

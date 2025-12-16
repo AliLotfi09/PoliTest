@@ -1,0 +1,15 @@
+{
+  "version": "1.2.2",
+  "build": "2024112501",
+  "releaseDate": "1404/09/25",
+  "forceUpdate": false,
+  "minVersion": "1.2.0",
+  "downloadUrl": "https://github.com/Alilotfi09/Politest/releases/latest",
+  "changes": [
+    {"type": "new", "text": "افزودن 10 سوال جدید برای دقیق تر شدن نتیجه"},
+    {"type": "new", "text": "افزودن صفحه قوانین و مقررات"},
+    {"type": "new", "text": "افزودن ده ها رهبر جدید به نتایج"},
+    {"type": "improved", "text": "بهبود نمایش در مینی اپ ها"},
+    {"type": "improved", "text": "بهبود رابط کاربری"}
+  ]
+}

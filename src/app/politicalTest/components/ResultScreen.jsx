@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Chart, registerables } from 'chart.js';
 import html2canvas from 'html2canvas';
+import { Share2, Download, RotateCcw, Heart, Copy, Share } from 'lucide-react';
 
 Chart.register(...registerables);
 
@@ -9,15 +10,24 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
   const chartInstance = useRef(null);
   const shareableRef = useRef(null);
   const [isDownloading, setIsDownloading] = useState(false);
+  const [isCopying, setIsCopying] = useState(false);
+  const [isMiniApp, setIsMiniApp] = useState(false);
+
+  useEffect(() => {
+    const checkMiniApp = () => {
+      const ua = navigator.userAgent.toLowerCase();
+      setIsMiniApp(ua.includes('telegram') || ua.includes('eitaa'));
+    };
+
+    checkMiniApp();
+  }, []);
 
   useEffect(() => {
     if (chartRef.current && result) {
-      // Destroy previous chart if exists
       if (chartInstance.current) {
         chartInstance.current.destroy();
       }
 
-      // Get top 6 traits
       const topTraits = Object.entries(userTraits)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 6);
@@ -26,10 +36,9 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
       const userData = topTraits.map(([, value]) => value);
       const leaderData = topTraits.map(([trait]) => result.traits[trait] || 0);
 
-      // Calculate max value for chart
       const allValues = [...userData, ...leaderData];
       const maxValue = Math.max(...allValues);
-      const chartMax = maxValue + (maxValue * 0.3); // 30% padding
+      const chartMax = maxValue + (maxValue * 0.3);
 
       chartInstance.current = new Chart(chartRef.current, {
         type: 'radar',
@@ -74,13 +83,11 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
                 stepSize: Math.ceil(chartMax / 5),
                 backdropColor: 'transparent',
                 font: {
-                  family: 'Vazirmatn',
                   size: 10
                 }
               },
               pointLabels: {
                 font: {
-                  family: 'Vazirmatn',
                   size: 12,
                   weight: '500'
                 },
@@ -99,7 +106,6 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
               position: 'bottom',
               labels: {
                 font: {
-                  family: 'Vazirmatn',
                   size: 12
                 },
                 padding: 20,
@@ -110,11 +116,9 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
             tooltip: {
               backgroundColor: 'rgba(0, 0, 0, 0.85)',
               titleFont: {
-                family: 'Vazirmatn',
                 size: 13
               },
               bodyFont: {
-                family: 'Vazirmatn',
                 size: 12
               },
               padding: 12,
@@ -139,23 +143,113 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
     };
   }, [result, userTraits, traitNames]);
 
+  const handleCopyResult = async () => {
+    if (!result || isCopying) return;
+    
+    setIsCopying(true);
+    
+    try {
+      const shareText = `
+👤 نتیجه تست شخصیت سیاسی
+
+شما شبیه هستید به:
+${result.name}
+${result.title}
+
+📊 درصد تطابق: ${result.percentage}%
+${result.description}
+
+🏆 مهم‌ترین ویژگی‌ها:
+${Object.entries(result.traits || {})
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 3)
+  .map(([trait, score]) => `• ${traitNames[trait] || trait}: ${score}/4`)
+  .join('\n')}
+
+🎯 تست شخصیت سیاسی
+strategic.imalixd.ir
+      `.trim();
+
+      await navigator.clipboard.writeText(shareText);
+      
+      if (window.Telegram?.WebApp?.showPopup) {
+        window.Telegram.WebApp.showPopup({
+          title: 'کپی شد',
+          message: 'نتیجه در کلیپ‌بورد کپی شد',
+          buttons: [{ type: 'ok' }]
+        });
+      } else if (window.Eitaa?.WebApp?.showAlert) {
+        window.Eitaa.WebApp.showAlert('نتیجه در کلیپ‌بورد کپی شد');
+      } else {
+        alert('✅ نتیجه در کلیپ‌بورد کپی شد');
+      }
+      
+      if (onShare) {
+        onShare();
+      }
+      
+    } catch (error) {
+      console.error('Error copying:', error);
+      
+      if (window.Telegram?.WebApp?.showPopup) {
+        window.Telegram.WebApp.showPopup({
+          title: 'خطا',
+          message: 'خطا در کپی کردن نتیجه',
+          buttons: [{ type: 'ok' }]
+        });
+      } else {
+        alert('خطا در کپی کردن نتیجه');
+      }
+    } finally {
+      setIsCopying(false);
+    }
+  };
+
+  const handleShareResult = () => {
+    const shareText = `نتیجه تست شخصیت سیاسی من: ${result.name} - ${result.percentage}% تطابق`;
+    const shareUrl = window.location.href;
+    
+    if (navigator.share) {
+      navigator.share({
+        title: 'نتیجه تست شخصیت سیاسی',
+        text: shareText,
+        url: shareUrl
+      }).catch(console.error);
+    } else if (window.Telegram?.WebApp?.shareToChat) {
+      window.Telegram.WebApp.shareToChat({
+        title: 'نتیجه تست شخصیت سیاسی',
+        text: shareText,
+        url: shareUrl
+      });
+    } else if (window.Eitaa?.WebApp?.share) {
+      window.Eitaa.WebApp.share({
+        title: 'نتیجه تست شخصیت سیاسی',
+        message: `${shareText}\n${shareUrl}`
+      });
+    } else {
+      handleCopyResult();
+    }
+  };
+
   const handleDownload = async () => {
     if (!shareableRef.current || !result || isDownloading) return;
     
     setIsDownloading(true);
     
     try {
-      // Clone the element for download
+      if (isMiniApp) {
+        handleCopyResult();
+        return;
+      }
+      
       const element = shareableRef.current.cloneNode(true);
       element.style.width = '600px';
       element.style.padding = '40px';
       element.style.backgroundColor = '#ffffff';
       element.style.borderRadius = '24px';
       
-      // Add download-specific styling
       element.classList.add('download-version');
       
-      // Create download preview container
       const container = document.createElement('div');
       container.style.cssText = `
         position: fixed;
@@ -177,16 +271,14 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
         text-align: center;
       `;
       
-      // Create download header
       const header = document.createElement('div');
       header.className = 'download-header';
       header.innerHTML = `
-        <div class="download-title">نتایج تست شخصیت سیاسی</div>
+        <div class="download-title" style="font-size: 14px; color: #999; margin-bottom: 16px; font-weight: 500;">نتایج تست شخصیت سیاسی</div>
         <div class="result-name" style="font-size: 32px; font-weight: 700; margin: 8px 0; color: #1a1a1a;">${result.name}</div>
         <div class="result-title" style="font-size: 14px; color: #666; margin-bottom: 24px;">${result.title}</div>
       `;
       
-      // Create match section
       const matchSection = document.createElement('div');
       matchSection.className = 'preview-match';
       matchSection.style.cssText = `
@@ -202,7 +294,6 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
         <div class="preview-match-label" style="font-size: 13px; opacity: 0.9;">درصد تطابق</div>
       `;
       
-      // Create description
       const description = document.createElement('div');
       description.className = 'preview-description';
       description.style.cssText = `
@@ -217,7 +308,6 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
       `;
       description.textContent = result.description;
       
-      // Create traits grid
       const topTraits = Object.entries(result.traits || {})
         .sort((a, b) => b[1] - a[1])
         .slice(0, 4);
@@ -241,7 +331,6 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
         </div>
       `).join('');
       
-      // Create footer
       const footer = document.createElement('div');
       footer.className = 'preview-footer';
       footer.style.cssText = `
@@ -255,7 +344,6 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
         <div class="preview-footer-url" style="font-size: 12px; color: #667eea; font-weight: 600; margin-top: 4px;">strategic.imalixd.ir</div>
       `;
       
-      // Assemble the download preview
       content.appendChild(header);
       content.appendChild(matchSection);
       content.appendChild(description);
@@ -264,7 +352,6 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
       container.appendChild(content);
       document.body.appendChild(container);
       
-      // Capture and download
       const canvas = await html2canvas(container, {
         scale: 2,
         backgroundColor: null,
@@ -277,7 +364,6 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
       link.href = canvas.toDataURL('image/png');
       link.click();
       
-      // Cleanup
       document.body.removeChild(container);
       
       if (onDownload) {
@@ -285,8 +371,19 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
       }
       
     } catch (error) {
-      console.error('Error downloading image:', error);
-      alert('خطا در دانلود تصویر');
+      console.error('Error:', error);
+      
+      if (isMiniApp) {
+        handleCopyResult();
+      } else if (window.Telegram?.WebApp?.showPopup) {
+        window.Telegram.WebApp.showPopup({
+          title: 'خطا',
+          message: 'خطا در دانلود تصویر',
+          buttons: [{ type: 'ok' }]
+        });
+      } else {
+        alert('خطا در دانلود تصویر');
+      }
     } finally {
       setIsDownloading(false);
     }
@@ -299,7 +396,6 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
   return (
     <div className="result-screen active">
       <div className="result-wrapper">
-        {/* بخش اصلی برای نمایش */}
         <div ref={shareableRef} id="shareableContent">
           <div className="result-header">
             <img 
@@ -355,20 +451,40 @@ const ResultScreen = ({ result, userTraits, traitNames, onRestart, onShare, onDo
             onClick={handleDownload}
             disabled={isDownloading}
           >
-            {isDownloading ? 'در حال دانلود...' : '📥 دانلود به صورت تصویر'}
+            {isMiniApp ? (
+              <>
+                <Copy size={18} />
+                <span>{isCopying ? 'در حال کپی...' : 'کپی نتیجه'}</span>
+              </>
+            ) : (
+              <>
+                <Download size={18} />
+                <span>{isDownloading ? 'در حال دانلود...' : 'دانلود تصویر'}</span>
+              </>
+            )}
           </button>
-          <button className="action-btn" onClick={onShare}>
-            کپی نتیجه
+          
+          <button 
+            className="action-btn secondary" 
+            onClick={handleShareResult}
+          >
+            <Share2 size={18} />
+            <span>اشتراک نتیجه</span>
           </button>
+          
           <button className="action-btn secondary" onClick={onRestart}>
-            آزمون دوباره
+            <RotateCcw size={18} />
+            <span>آزمون دوباره</span>
           </button>
+          
           <a
             href="https://daramet.com/Im_Lotfi"
             target="_blank"
             rel="noopener noreferrer"
+            className="action-btn secondary"
           >
-            <button className="action-btn secondary">حمایت از توسعه دهنده</button>
+            <Heart size={18} />
+            <span>حمایت</span>
           </a>
         </div>
       </div>

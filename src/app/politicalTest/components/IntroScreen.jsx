@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/App.css";
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 const IntroScreen = ({ onStart }) => {
   return (
@@ -9,7 +8,9 @@ const IntroScreen = ({ onStart }) => {
       <div className="intro-wrapper">
         <div className="intro-header">
           <div className="intro-line"></div>
-          <div className="intro-title">تست شخصیت سیاسی</div>
+          <div className="intro-title">
+            <h1>تست شخصیت سیاسی</h1>
+          </div>
           <div className="intro-subtitle">
             کشف کنید شما شبیه کدام رهبر تاریخی یا معاصر هستید
           </div>
@@ -35,11 +36,11 @@ const IntroScreen = ({ onStart }) => {
         <button className="start-btn" onClick={onStart}>
           شروع آزمون
         </button>
-        <Link to="/un">
+        {/* <Link to="/un">
           <button className="start-btn">سازمان ملل</button>
-        </Link>
+        </Link> */}
         <div className="intro-disclaimer">
-          این تست صرفاً برای سرگرمی و بر اساس تحلیل شخصیت است
+          این تست صرفاً برای سرگرمی و نتایج آن واقعی نیست
         </div>
       </div>
     </div>

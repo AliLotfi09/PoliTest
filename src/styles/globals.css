@@ -1,0 +1,260 @@
+/* ============ GLOBAL STYLES ============ */
+/* کلاس‌های فونت فقط */
+.font-estedad * {
+  font-family: 'Estedad', sans-serif !important;
+}
+
+.font-vazir * {
+  font-family: 'Vazirmatn', sans-serif !important;
+}
+
+/* اعمال روی کل body و همه المان‌ها */
+body.font-estedad,
+body.font-estedad * {
+  font-family: 'Estedad', sans-serif !important;
+}
+
+body.font-vazir,
+body.font-vazir * {
+  font-family: 'Vazirmatn', sans-serif !important;
+}
+
+/* تم تاریک - مشابه روشن */
+html.dark body,
+html.dark .app-container,
+html.dark .container {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+html.dark .intro-wrapper,
+html.dark .question-block,
+html.dark .result-wrapper,
+html.dark .settings-container,
+html.dark .setting-card,
+html.dark .about-wrapper {
+  background: #2a2a2a !important;
+  color: #ffffff !important;
+  border-color: #444 !important;
+}
+
+
+html.dark .intro-benefits,
+html.dark .match-container,
+html.dark .result-description,
+html.dark .trait-item,
+html.dark .intro-line,
+html.dark .result-detail,
+html.dark .changelog-content,
+html.dark .option,
+html.dark .btn,
+html.dark .start-btn,
+html.dark .action-btn {
+  background: #f8f8f8 !important;
+  border-color: #e8e8e8 !important;
+  color: #333 !important;
+}
+
+html.dark .option:hover {
+  background: #fff !important;
+  border-color: #000 !important;
+}
+
+html.dark .option.selected {
+  background: #000 !important;
+  border-color: #000 !important;
+  color: white !important;
+}
+
+html.dark .btn:hover {
+  background: #000 !important;
+  color: white !important;
+  border-color: #000 !important;
+}
+
+html.dark .start-btn:hover,
+html.dark .action-btn:hover {
+  background: #1a1a1a !important;
+  color: white !important;
+}
+
+html.dark .action-btn.secondary {
+  background: white !important;
+  color: #000 !important;
+  border: 1.5px solid #000 !important;
+}
+
+html.dark .action-btn.secondary:hover {
+  background: #000 !important;
+  color: white !important;
+}
+
+/* متون */
+html.dark .intro-title,
+html.dark .question-text,
+html.dark .result-name,
+html.dark .settings-title,
+html.dark .setting-title,
+html.dark .chart-title,
+html.dark .detail-value,
+html.dark .trait-score,
+html.dark .match-score,
+html.dark .gauge-label,
+html.dark .quiz-counter strong {
+  color: #fff !important;
+}
+
+html.dark .intro-subtitle,
+html.dark .settings-subtitle,
+html.dark .setting-description,
+html.dark .option-hint,
+html.dark .result-title,
+html.dark .match-label,
+html.dark .detail-label,
+html.dark .trait-name,
+html.dark .intro-disclaimer,
+html.dark .benefit-item {
+  color: #666 !important;
+}
+
+/* دکمه انتخاب شده */
+html.dark .theme-option.active,
+html.dark .font-option.active {
+  background: #000 !important;
+  border-color: #000 !important;
+  color: white !important;
+}
+
+html.dark .theme-option,
+html.dark .font-option {
+  background: #333 !important;
+  border-color: #444 !important;
+  color: #ddd !important;
+}
+
+html.dark .theme-option:hover,
+html.dark .font-option:hover {
+  background: #444 !important;
+  border-color: #666 !important;
+}
+
+/* دکمه‌های تست */
+html.dark .test-button {
+  background: #333 !important;
+  border-color: #444 !important;
+  color: #ddd !important;
+}
+
+html.dark .test-button:hover {
+  background: #000 !important;
+  border-color: #000 !important;
+  color: white !important;
+}
+
+/* دکمه‌های تأیید */
+html.dark .confirm-button {
+  background: #333 !important;
+  border-color: #444 !important;
+  color: #ddd !important;
+}
+
+html.dark .confirm-button:hover {
+  background: #444 !important;
+  border-color: #666 !important;
+}
+
+html.dark .confirm-button.danger {
+  background: #ff4444 !important;
+  border-color: #ff4444 !important;
+  color: white !important;
+}
+
+html.dark .confirm-button.danger:hover {
+  background: #ff2222 !important;
+  border-color: #ff2222 !important;
+}
+
+/* دکمه ذخیره */
+html.dark .save-button {
+  background: #000 !important;
+  color: white !important;
+}
+
+html.dark .save-button:hover {
+  background: #1a1a1a !important;
+}
+
+/* نوار پیشرفت */
+html.dark .progress-bar-container {
+  background: #000000e8 !important;
+}
+
+html.dark .progress-bar {
+  background-color: #fff !important;
+}
+
+/* نوارهای trait */
+html.dark .trait-bar {
+  background: #e8e8e8 !important;
+}
+
+html.dark .trait-fill {
+  background: #000 !important;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 140px;
+  width: 17rem;
+  max-width: calc(
+    100vw - 9px * 2
+  );
+  margin-inline: auto;
+  text-align: center;
+  background: #000;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-family: "Estedad", sans-serif;
+  animation: slideInUp 0.4s ease-out;
+  z-index: 1000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* در تم دارک هم toast مشابه باشد */
+html.dark .toast {
+  background: #000 !important;
+  color: white !important;
+}
+
+
+html.dark .prediction-gauge {
+  background: #1a1a1a !important;
+  color: #fff;
+  border: 1px solid #afafaf85;
+}
+
+html.dark .match-score,
+html.dark .detail-value {
+  color: #000 !important;
+}
+
+html.dark .changelog-preview > h4 {
+  color: #fff;
+}

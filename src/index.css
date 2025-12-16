@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box;
   direction: rtl;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  text-decoration: none;
 }
 
 body {
@@ -45,3 +48,6 @@ body {
   }
 }
 
+.app-container {
+  margin-bottom: 20%;
+}
