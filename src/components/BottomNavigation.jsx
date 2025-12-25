@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getMiniAppState } from '../utils/miniAppDetector';
-import { User } from 'lucide-react';
+// User دیگر نیازی نیست چون کامنت شده
+// import { User } from 'lucide-react';
 
 const AdvancedBottomNavigation = () => {
   const navigate = useNavigate();
@@ -33,17 +34,22 @@ const AdvancedBottomNavigation = () => {
     },
   ];
 
+  // فعلاً کاملاً غیرفعال می‌کنیم
   // const miniAppNavItem = {
   //   id: 'mini-app',
   //   label: 'پروفایل',
   //   path: '/profile',
   // };
 
+  // تابع ساده شده
   const getNavItems = () => {
-    if (isMiniApp) {
-      return [...baseNavItems, miniAppNavItem];
-    }
+    // فعلاً همیشه baseNavItems را برگردان
     return baseNavItems;
+    // اگر بعداً خواستید فعال کنید:
+    // if (isMiniApp) {
+    //   return [...baseNavItems, miniAppNavItem];
+    // }
+    // return baseNavItems;
   };
 
   const navItems = getNavItems();
@@ -145,10 +151,8 @@ const AdvancedBottomNavigation = () => {
             />
           </svg>
         );
-      case 'mini-app':
-        return (
-          <User />
-        );
+      // case 'mini-app':
+      //   return <User color={color} size={20} />;
       default:
         return null;
     }

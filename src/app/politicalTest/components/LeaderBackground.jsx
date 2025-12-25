@@ -10,7 +10,7 @@ const LeaderBackground = () => {
     '/images/leaders/leader1.jpg',
     '/images/leaders/leader2.jpg',
     '/images/leaders/leader3.webp',
-    '/images/leaders/leader4.jpg',
+    '/images/leaders/leader4.jpeg',
   ];
 
   useEffect(() => {

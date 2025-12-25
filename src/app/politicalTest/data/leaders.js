@@ -973,24 +973,6 @@ export const leaders = [
   successRate: "50%"
 },
 {
-  name: "معمر قذافی",
-  title: "رهبر لیبی",
-  era: "۱۹۶۹-۲۰۱۱",
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Muammar_al-Gaddafi_%28cropped%29.jpg/250px-Muammar_al-Gaddafi_%28cropped%29.jpg",
-  traits: {
-    authoritarian: 4,
-    nationalist: 4,
-    socialist: 3,
-    unpredictable: 5,
-    anti_western: 4
-  },
-  description: "شما مانند قذافی، رهبری عجیب و غیرقابل پیش‌بینی هستید که بر استقلال و نظریه جهان سوم تأکید دارید.",
-  politicalParty: "—",
-  suitableCountries: "لیبی، رژیم‌های انقلابی عربی",
-  governingStyle: "رهبری انقلابی غیرمتعارف",
-  successRate: "40%"
-},
-{
   name: "حافظ اسد",
   title: "رئیس‌جمهور سوریه",
   era: "۱۹۷۱-۲۰۰۰",
@@ -1171,21 +1153,113 @@ export const leaders = [
   successRate: "75%"
 },
 {
+  name: "شاه عباس صفوی",
+  title: "پادشاه ایران",
+  era: "۱۵۸۸-۱۶۲۹",
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Shah_Abbas_I.jpg/250px-Shah_Abbas_I.jpg",
+  traits: {
+    nationalist: 4,
+    centralized: 4,
+    strategic: 3,
+    reformist: 3,
+    authoritarian: 3,
+  },
+  description:
+    "شما مانند شاه عباس، دولت‌ساز مقتدر و توسعه‌دهنده زیرساخت‌های ملی هستید.",
+  politicalParty: "—",
+  suitableCountries: "ایران صفوی، دولت‌های متمرکز",
+  governingStyle: "اقتدارگرای دولت‌ساز",
+  successRate: "85%",
+},
+{
+  name: "حسن روحانی",
+  title: "رئیس‌جمهور ایران",
+  era: "۲۰۱۳-۲۰۲۱",
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Hassan_Rouhani_2017.jpg/250px-Hassan_Rouhani_2017.jpg",
+  traits: {
+    moderate: 4,
+    diplomatic: 4,
+    pragmatic: 3,
+    democratic: 2,
+  },
+  description:
+    "شما مانند روحانی، سیاست‌مدار میانه‌رو و مذاکره‌محور هستید.",
+  politicalParty: "اعتدال و توسعه",
+  suitableCountries: "ایران، دولت‌های دیپلماتیک",
+  governingStyle: "میانه‌رو دیپلماتیک",
+  successRate: "65%",
+},
+{
   name: "ابراهیم رئیسی",
   title: "رئیس‌جمهور ایران",
-  era: "۲۰۲۱-اکنون",
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ebrahim_Raisi_official_portrait_%28cropped%29.jpg/250px-Ebrahim_Raisi_official_portrait_%28cropped%29.jpg",
+  era: "۲۰۲۱-۲۰۲۴",
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Ebrahim_Raisi_portrait.jpg/250px-Ebrahim_Raisi_portrait.jpg",
   traits: {
     conservative: 4,
-    nationalist: 3,
-    religious: 4,
     authoritarian: 3,
-    principled: 3
+    nationalist: 3,
+    resistant: 3,
   },
-  description: "شما مانند رئیسی، رهبری اصول‌گرا و محافظه‌کار هستید که بر ارزش‌های انقلابی و مذهبی تأکید دارید.",
-  politicalParty: "اصول‌گرا",
-  suitableCountries: "ایران، جمهوری‌های اسلامی",
-  governingStyle: "اصول‌گرای محافظه‌کار",
-  successRate: "65%"
-}
+  description:
+    "شما مانند رئیسی، رهبر محافظه‌کار با تمرکز بر اقتدار و عدالت قضایی هستید.",
+  politicalParty: "اصولگرایان",
+  suitableCountries: "ایران، دولت‌های ایدئولوژیک",
+  governingStyle: "محافظه‌کار اقتدارگرا",
+  successRate: "60%",
+},
+{
+  name: "اتو فون بیسمارک",
+  title: "صدراعظم آلمان",
+  era: "۱۸۶۲-۱۸۹۰",
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Otto_von_Bismarck_1871.jpg/250px-Otto_von_Bismarck_1871.jpg",
+  traits: {
+    strategic: 4,
+    pragmatic: 4,
+    nationalist: 3,
+    authoritarian: 3,
+  },
+  description:
+    "شما مانند بیسمارک، سیاست‌مدار واقع‌گرا و معمار وحدت ملی هستید.",
+  politicalParty: "محافظه‌کار",
+  suitableCountries: "آلمان، دولت‌های ملی‌ساز",
+  governingStyle: "واقع‌گرای قدرت‌محور",
+  successRate: "90%",
+},
+{
+  name: "معمر قذافی",
+  title: "رهبر لیبی",
+  era: "۱۹۶۹-۲۰۱۱",
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Muammar_al-Gaddafi_%28cropped%29.jpg/250px-Muammar_al-Gaddafi_%28cropped%29.jpg",
+  traits: {
+    populist: 4,
+    authoritarian: 4,
+    ideological: 3,
+    nationalist: 3,
+  },
+  description:
+    "شما مانند قذافی، رهبر پوپولیست رادیکال و ایدئولوژیک هستید.",
+  politicalParty: "جماهیریه",
+  suitableCountries: "لیبی، رژیم‌های ایدئولوژیک",
+  governingStyle: "پوپولیستی اقتدارگرا",
+  successRate: "40%",
+},
+{
+  name: "محمد بن سلمان",
+  title: "ولیعهد عربستان",
+  era: "۲۰۱۷-اکنون",
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mohammed_bin_Salman_2022.jpg/250px-Mohammed_bin_Salman_2022.jpg",
+  traits: {
+    authoritarian: 4,
+    modernist: 4,
+    nationalist: 3,
+    pragmatic: 3,
+  },
+  description:
+    "شما مانند بن سلمان، مدرن‌ساز اقتدارگرا و تحول‌طلب هستید.",
+  politicalParty: "آل سعود",
+  suitableCountries: "عربستان، دولت‌های پادشاهی مدرن",
+  governingStyle: "اقتدارگرای مدرن‌ساز",
+  successRate: "75%",
+},
+
 ];

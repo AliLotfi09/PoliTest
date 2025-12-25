@@ -1,7 +1,6 @@
 // pages/About.jsx
 import React from "react";
 import AdvancedBottomNavigation from "../components/BottomNavigation";
-import { parseEmoji } from "../utils/emojiParser";
 import "../styles/App.css";
 import TermsPage from "./Terms";
 import { Link } from "react-router-dom";

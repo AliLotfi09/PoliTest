@@ -1,10 +1,11 @@
 import React, { createContext, useContext, useEffect } from "react";
-import { useSettings } from "../hooks/useSettings";
+import { useTheme } from "../providers/ThemeProvider"; // تغییر به useTheme
 
 const ClickSoundContext = createContext();
 
 export const ClickSoundProvider = ({ children }) => {
-  const { settings } = useSettings();
+  // استفاده از useTheme به جای useSettings
+  const { settings } = useTheme();
 
   // صدای کلیک
   const playClickSound = () => {
@@ -24,6 +25,7 @@ export const ClickSoundProvider = ({ children }) => {
       oscillator.frequency.value = 800;
       oscillator.type = "sine";
 
+      // استفاده از soundVolume از تنظیمات ThemeProvider
       gainNode.gain.setValueAtTime(
         settings.soundVolume || 0.5,
         audioContext.currentTime
@@ -50,6 +52,7 @@ export const ClickSoundProvider = ({ children }) => {
 
   // اعمال روی کلیه المان‌های کلیک پذیر
   useEffect(() => {
+    // اگر صدا غیرفعال است، event listener اضافه نکن
     if (!settings.soundEnabled) return;
 
     const handleClick = (event) => {
@@ -112,7 +115,7 @@ export const ClickSoundProvider = ({ children }) => {
     return () => {
       document.removeEventListener("click", handleClick, true);
     };
-  }, [settings.soundEnabled, settings.soundVolume]);
+  }, [settings.soundEnabled, settings.soundVolume, playClickSound]);
 
   return (
     <ClickSoundContext.Provider value={{ playClickSound }}>

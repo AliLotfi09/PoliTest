@@ -1,13 +1,12 @@
-// utils/cacheManager.js
+// src/utils/cacheManager.js
 
-// تنظیمات پیش‌فرض
 const CACHE_CONFIG = {
   VERSION: "2.0.0",
-  PREFIX: "pt_", // political test
-  USER_TTL: 30 * 24 * 60 * 60 * 1000, // 30 روز برای کاربران
-  GUEST_TTL: 24 * 60 * 60 * 1000, // 24 ساعت برای مهمان
-  QUIZ_TTL: 7 * 24 * 60 * 60 * 1000, // 7 روز برای نتایج
-  SESSION_TTL: 60 * 60 * 1000, // 1 ساعت برای نشست
+  PREFIX: "pt_",
+  USER_TTL: 30 * 24 * 60 * 60 * 1000,
+  GUEST_TTL: 24 * 60 * 60 * 1000,
+  QUIZ_TTL: 7 * 24 * 60 * 60 * 1000,
+  SESSION_TTL: 60 * 60 * 1000,
 };
 
 class CacheManager {
@@ -18,31 +17,23 @@ class CacheManager {
   }
 
   initialize() {
-    // بررسی نسخه
     const currentVersion = localStorage.getItem(`${this.prefix}version`);
     if (currentVersion !== this.version) {
       this.migrateCache(currentVersion);
       localStorage.setItem(`${this.prefix}version`, this.version);
     }
-
-    // پاکسازی خودکار
     this.autoCleanup();
   }
 
   migrateCache(oldVersion) {
-    // پاک کردن کش قدیمی هنگام آپدیت
     this.clearAll();
     console.log(`Cache migrated from ${oldVersion} to ${this.version}`);
   }
 
-  // ==================== ذخیره سازی هوشمند ====================
-
-  // ذخیره با TTL هوشمند
   set(key, data, ttl = null) {
     try {
       const fullKey = this.prefix + key;
       
-      // انتخاب TTL مناسب
       let actualTTL = ttl;
       if (ttl === null) {
         if (key.includes('user_')) actualTTL = CACHE_CONFIG.USER_TTL;
@@ -68,7 +59,6 @@ class CacheManager {
     }
   }
 
-  // دریافت هوشمند
   get(key) {
     const fullKey = this.prefix + key;
     try {
@@ -77,7 +67,6 @@ class CacheManager {
 
       const cacheItem = JSON.parse(item);
       
-      // بررسی انقضا
       if (Date.now() > cacheItem.expires) {
         localStorage.removeItem(fullKey);
         return null;
@@ -90,19 +79,14 @@ class CacheManager {
     }
   }
 
-  // حذف
   remove(key) {
     localStorage.removeItem(this.prefix + key);
   }
 
-  // بررسی وجود
   has(key) {
     return this.get(key) !== null;
   }
 
-  // ==================== مدیریت کاربران ====================
-
-  // ذخیره کاربر
   saveUser(userData) {
     const userId = userData.id || userData.userId || `guest_${Date.now()}`;
     const platform = userData.platform || 'web';
@@ -115,14 +99,12 @@ class CacheManager {
       device: this.getDeviceInfo()
     };
 
-    // ذخیره در دو سطح
     this.set(userKey, enhancedData);
     this.set(`current_user`, { userId, platform, userKey });
     
     return userKey;
   }
 
-  // دریافت کاربر فعلی
   getCurrentUser() {
     const current = this.get('current_user');
     if (!current) return null;
@@ -130,7 +112,6 @@ class CacheManager {
     return this.get(current.userKey);
   }
 
-  // تمدید نشست کاربر
   renewUserSession(userKey) {
     const user = this.get(userKey);
     if (user) {
@@ -141,9 +122,6 @@ class CacheManager {
     return false;
   }
 
-  // ==================== مدیریت آزمون ====================
-
-  // ذخیره نتیجه آزمون
   saveQuizResult(quizData, userId = null) {
     const quizId = `quiz_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     const quizKey = userId ? `quiz_${userId}_${quizId}` : `guest_quiz_${quizId}`;
@@ -158,7 +136,6 @@ class CacheManager {
 
     this.set(quizKey, enhancedQuiz);
     
-    // ذخیره در لیست نتایج کاربر
     if (userId) {
       this.addToUserHistory(userId, quizId, quizKey);
     }
@@ -166,7 +143,6 @@ class CacheManager {
     return quizKey;
   }
 
-  // دریافت نتایج کاربر
   getUserQuizResults(userId) {
     const history = this.get(`user_history_${userId}`) || [];
     return history
@@ -175,9 +151,6 @@ class CacheManager {
       .sort((a, b) => b.timestamp - a.timestamp);
   }
 
-  // ==================== سرویس‌های کمکی ====================
-
-  // پاکسازی خودکار
   autoCleanup() {
     const now = Date.now();
     const keysToRemove = [];
@@ -200,7 +173,6 @@ class CacheManager {
     return keysToRemove.length;
   }
 
-  // پاکسازی کامل
   clearAll() {
     const keysToRemove = [];
     for (let i = 0; i < localStorage.length; i++) {
@@ -214,9 +186,7 @@ class CacheManager {
     return keysToRemove.length;
   }
 
-  // مدیریت حافظه پر
   handleStorageFull() {
-    // حذف قدیمی‌ترین آیتم‌ها
     const cacheItems = [];
     
     for (let i = 0; i < localStorage.length; i++) {
@@ -235,19 +205,14 @@ class CacheManager {
       }
     }
 
-    // مرتب سازی بر اساس زمان انقضا
     cacheItems.sort((a, b) => a.expires - b.expires);
     
-    // حذف 20% قدیمی‌ترین آیتم‌ها
     const itemsToRemove = Math.ceil(cacheItems.length * 0.2);
     cacheItems.slice(0, itemsToRemove).forEach(item => {
       localStorage.removeItem(item.key);
     });
   }
 
-  // ==================== ابزارها ====================
-
-  // اطلاعات دستگاه
   getDeviceInfo() {
     return {
       userAgent: navigator.userAgent,
@@ -258,12 +223,10 @@ class CacheManager {
     };
   }
 
-  // تولید ID نشست
   generateSessionId() {
     return `sess_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  // آمار کش
   getStats() {
     const stats = {
       total: 0,
@@ -300,8 +263,6 @@ class CacheManager {
     return stats;
   }
 
-  // ==================== متدهای خصوصی ====================
-
   addToUserHistory(userId, quizId, quizKey) {
     const historyKey = `user_history_${userId}`;
     const history = this.get(historyKey) || [];
@@ -312,7 +273,6 @@ class CacheManager {
       timestamp: Date.now()
     });
 
-    // محدود کردن تاریخچه به 50 آیتم
     if (history.length > 50) {
       history.pop();
     }
@@ -321,6 +281,5 @@ class CacheManager {
   }
 }
 
-// ایجاد Singleton
 const cacheManager = new CacheManager();
 export default cacheManager;

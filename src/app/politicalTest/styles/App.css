@@ -2733,6 +2733,14 @@ html.dark .changelog-text {
   color: #ccc;
 }
 
+html.dark .intro-benefits {
+  background: #1a1a1a !important;
+  border: #444 !important;
+}
+html.dark .benefit-item {
+  color: #ccc;
+}
+
 html.dark .confirm-button.danger {
   background: #ff4444;
   border-color: #ff4444;

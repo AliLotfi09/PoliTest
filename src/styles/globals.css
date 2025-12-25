@@ -38,25 +38,55 @@ html.dark .about-wrapper {
   border-color: #444 !important;
 }
 
+html.dark .result-wrapper {
+  filter: in;
+}
 
-html.dark .intro-benefits,
+
 html.dark .match-container,
 html.dark .result-description,
 html.dark .trait-item,
 html.dark .intro-line,
 html.dark .result-detail,
 html.dark .changelog-content,
-html.dark .option,
-html.dark .btn,
 html.dark .start-btn,
+html.dark .action-btn
+html.dark .result-detail,
 html.dark .action-btn {
-  background: #f8f8f8 !important;
-  border-color: #e8e8e8 !important;
-  color: #333 !important;
+  background: #3a3a3a !important;
+  border-color: #444 !important;
+  color: #ffffff !important;
 }
 
+html.dark .match-score,
+html.dark .match-label,
+html.dark .detail-value {
+  color: #fff;
+}
+
+
+html.dark .option {
+  background-color: #444 !important;
+  color: #fff;
+  border: 1px #555555 !important;
+}
+
+html.dark .btn {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #fff;
+}
+
+html.dark .prediction-item{
+  filter: invert(80%);
+}
+
+
 html.dark .option:hover {
+
+
   background: #fff !important;
+  color: #000;
   border-color: #000 !important;
 }
 
@@ -79,9 +109,9 @@ html.dark .action-btn:hover {
 }
 
 html.dark .action-btn.secondary {
-  background: white !important;
-  color: #000 !important;
-  border: 1.5px solid #000 !important;
+  background: #2a2a2a !important;
+  color: #ffffff !important;
+ border-color: #444 !important;
 }
 
 html.dark .action-btn.secondary:hover {
@@ -112,8 +142,7 @@ html.dark .result-title,
 html.dark .match-label,
 html.dark .detail-label,
 html.dark .trait-name,
-html.dark .intro-disclaimer,
-html.dark .benefit-item {
+html.dark .intro-disclaimer, {
   color: #666 !important;
 }
 
@@ -250,10 +279,6 @@ html.dark .prediction-gauge {
   border: 1px solid #afafaf85;
 }
 
-html.dark .match-score,
-html.dark .detail-value {
-  color: #000 !important;
-}
 
 html.dark .changelog-preview > h4 {
   color: #fff;

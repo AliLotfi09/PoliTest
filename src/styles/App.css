@@ -3890,3 +3890,1042 @@ html.dark .confirm-modal-button.cancel:hover {
     flex-direction: column;
   }
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.update-modal {
+  background: var(--card-bg);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--header-bg);
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.close-modal:hover {
+  background: var(--hover-bg);
+}
+
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.setting-card {
+  margin: 15px;
+}
+
+.version-actions {
+  display: flex;
+  gap: 12px;
+}
+
+
+/* ============ CHANGELOG MODAL STYLES ============ */
+.simple-modal {
+  background: white;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow: hidden;
+  border: 1px solid #afafaf85;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* هدر مودال */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fafafa;
+}
+
+.modal-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.modal-title h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: #1a1a1a;
+  font-family: "Estedad", sans-serif;
+}
+
+.modal-subtitle {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.title-icon {
+  font-size: 24px;
+}
+
+.close-modal {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.close-modal:hover {
+  background: #000;
+  color: white;
+  border-color: #000;
+  transform: rotate(90deg);
+}
+
+/* بدنه مودال */
+.modal-body {
+  padding: 32px;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+/* کارت اطلاعات نسخه */
+.version-info-card {
+  background: #f8f8f8;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.version-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.version-label {
+  font-size: 13px;
+  color: #888;
+}
+
+.version-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Estedad", sans-serif;
+}
+
+.version-date {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+.date-label {
+  font-size: 13px;
+  color: #888;
+}
+
+.date-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+/* آپدیت اجباری */
+.force-update-warning {
+  background: #fff8e1;
+  border: 1px solid #ffd54f;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: pulseWarning 2s infinite;
+}
+
+@keyframes pulseWarning {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.force-update-warning svg {
+  color: #ff9800;
+  flex-shrink: 0;
+}
+
+.force-update-warning span {
+  font-size: 14px;
+  color: #ff9800;
+  font-weight: 500;
+  flex: 1;
+}
+
+/* بخش تغییرات */
+.changelog-section {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.section-header h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.show-more-btn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: #0066cc;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background: #f0f7ff;
+}
+
+/* لیست تغییرات */
+.changes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.change-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  animation: slideInItem 0.5s ease-out backwards;
+}
+
+.change-item:hover {
+  transform: translateX(-4px);
+  border-color: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes slideInItem {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.change-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  border: 1px solid #e8e8e8;
+}
+
+.change-item.new .change-icon {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.change-item.improved .change-icon {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.change-item.fixed .change-icon {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.change-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.change-type {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  background: white;
+  border-radius: 12px;
+  display: inline-block;
+  width: fit-content;
+  border: 1px solid #e8e8e8;
+}
+
+.change-item.new .change-type {
+  background: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.change-item.improved .change-type {
+  background: #2196f3;
+  color: white;
+  border-color: #2196f3;
+}
+
+.change-item.fixed .change-type {
+  background: #ff9800;
+  color: white;
+  border-color: #ff9800;
+}
+
+.change-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  text-align: right;
+}
+
+/* تاریخچه نسخه‌ها */
+.version-history {
+  background: #f8f8f8;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #f0f0f0;
+  margin-top: 24px;
+}
+
+.version-history h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.history-item {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.history-item:last-child {
+  margin-bottom: 0;
+}
+
+.history-item:hover {
+  transform: translateX(-4px);
+  border-color: #000;
+}
+
+.history-version {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.version-number {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+}
+
+.version-date {
+  font-size: 13px;
+  color: #666;
+}
+
+.history-changes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-change {
+  font-size: 13px;
+  color: #555;
+  padding-right: 12px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.history-change::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  color: #000;
+}
+
+/* فوتر مودال */
+.modal-footer {
+  padding: 24px 32px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  gap: 12px;
+  background: #fafafa;
+}
+
+/* دکمه‌های اکشن */
+.update-actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.primary-button,
+.secondary-button,
+.tertiary-button {
+  flex: 1;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  font-family: "Estedad", sans-serif;
+  font-size: 15px;
+  border: none;
+}
+
+.primary-button {
+  background: #000;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.secondary-button {
+  background: white;
+  color: #000;
+  border: 1.5px solid #000;
+}
+
+.secondary-button:hover {
+  background: #000;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.tertiary-button {
+  background: transparent;
+  color: #666;
+  border: 1px solid #e8e8e8;
+}
+
+.tertiary-button:hover {
+  background: #f8f8f8;
+  border-color: #000;
+}
+
+/* پیام موفقیت آپدیت */
+.update-success-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  padding: 24px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.update-success-message svg {
+  color: #4caf50;
+  flex-shrink: 0;
+}
+
+.success-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.success-subtitle {
+  font-size: 13px;
+  color: #666;
+}
+
+/* پیام در حال آپدیت */
+.updating-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  padding: 24px;
+  color: #1a1a1a;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* استایل‌های Dark Mode */
+html.dark .simple-modal {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #fff;
+}
+
+html.dark .modal-header {
+  background: #333;
+  border-color: #444;
+}
+
+html.dark .modal-title h3 {
+  color: #fff;
+}
+
+html.dark .modal-subtitle {
+  color: #aaa;
+}
+
+html.dark .close-modal {
+  background: #444;
+  border-color: #555;
+  color: #ddd;
+}
+
+html.dark .close-modal:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+html.dark .version-info-card {
+  background: #333;
+  border-color: #444;
+}
+
+html.dark .version-value {
+  color: #fff;
+}
+
+html.dark .date-value {
+  color: #ddd;
+}
+
+html.dark .force-update-warning {
+  background: #333;
+  border-color: #ff9800;
+}
+
+html.dark .force-update-warning span {
+  color: #ffcc80;
+}
+
+html.dark .section-header {
+  border-color: #444;
+}
+
+html.dark .section-header h4 {
+  color: #fff;
+}
+
+html.dark .change-item {
+  background: #333;
+  border-color: #444;
+  color: #fff;
+}
+
+html.dark .change-icon {
+  background: #444;
+  border-color: #555;
+}
+
+html.dark .change-text {
+  color: #ddd;
+}
+
+html.dark .version-history {
+  background: #333;
+  border-color: #444;
+}
+
+html.dark .version-history h4 {
+  color: #fff;
+  border-color: #444;
+}
+
+html.dark .history-item {
+  background: #444;
+  border-color: #555;
+}
+
+html.dark .version-number {
+  color: #fff;
+}
+
+html.dark .history-change {
+  color: #ccc;
+}
+
+html.dark .history-change::before {
+  color: #fff;
+}
+
+html.dark .modal-footer {
+  background: #333;
+  border-color: #444;
+}
+
+html.dark .primary-button {
+  background: #fff;
+  color: #000;
+}
+
+html.dark .primary-button:hover {
+  background: #e0e0e0;
+}
+
+html.dark .secondary-button {
+  background: #444;
+  color: #fff;
+  border-color: #fff;
+}
+
+html.dark .secondary-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+html.dark .tertiary-button {
+  background: transparent;
+  color: #aaa;
+  border-color: #555;
+}
+
+html.dark .tertiary-button:hover {
+  background: #444;
+  border-color: #fff;
+}
+
+html.dark .update-success-message {
+  background: #333;
+}
+
+html.dark .success-title {
+  color: #fff;
+}
+
+html.dark .success-subtitle {
+  color: #aaa;
+}
+
+html.dark .updating-message {
+  color: #fff;
+}
+
+html.dark .spinner {
+  border-color: rgba(255, 255, 255, 0.1);
+  border-top-color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .simple-modal {
+    width: 95%;
+    max-height: 85vh;
+  }
+
+  .modal-header {
+    padding: 20px 24px;
+  }
+
+  .modal-title h3 {
+    font-size: 18px;
+  }
+
+  .modal-body {
+    padding: 24px;
+  }
+
+  .version-info-card {
+    padding: 20px;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .change-item {
+    padding: 16px;
+  }
+
+  .modal-footer {
+    padding: 20px 24px;
+  }
+
+  .update-actions {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .tertiary-button {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .simple-modal {
+    width: 100%;
+    margin: 16px;
+    border-radius: 20px;
+  }
+
+  .modal-header {
+    padding: 16px 20px;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  .change-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .change-content {
+    text-align: center;
+  }
+
+  .change-type {
+    align-self: center;
+  }
+
+  .version-history {
+    padding: 20px;
+  }
+
+  .history-item {
+    padding: 16px;
+  }
+}
+
+/* ============ STYLES FOR SPECIFIC MODAL TYPES ============ */
+/* Version Comparison Modal */
+.version-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #f8f8f8;
+  border-radius: 16px;
+}
+
+.version-comparison-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.version-label {
+  font-size: 13px;
+  color: #888;
+  font-weight: 500;
+}
+
+.version-badge {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Estedad", sans-serif;
+}
+
+.version-badge.old {
+  background: #e0e0e0;
+  color: #666;
+}
+
+.version-badge.new {
+  background: #000;
+  color: white;
+}
+
+.version-arrow {
+  font-size: 20px;
+  color: #666;
+  padding: 0 20px;
+}
+
+/* Update Details */
+.update-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.update-progress-section {
+  background: #f8f8f8;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #f0f0f0;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.progress-percent {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Estedad", sans-serif;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #000, #333);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.update-logs {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #f0f0f0;
+}
+
+.logs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.clear-logs-btn {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #ff4444;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.clear-logs-btn:hover {
+  background: #ffebee;
+}
+
+.logs-container {
+  max-height: 150px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.log-entry {
+  display: flex;
+  gap: 12px;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  background: #f8f8f8;
+}
+
+.log-entry.error {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.log-time {
+  color: #666;
+  font-family: monospace;
+  flex-shrink: 0;
+}
+
+.log-message {
+  flex: 1;
+  text-align: right;
+}
+
+/* Dark Mode Adjustments */
+html.dark .version-comparison {
+  background: #333;
+}
+
+html.dark .version-badge.old {
+  background: #444;
+  color: #ccc;
+}
+
+html.dark .version-arrow {
+  color: #aaa;
+}
+
+html.dark .update-progress-section {
+  background: #333;
+  border-color: #444;
+}
+
+html.dark .progress-percent {
+  color: #fff;
+}
+
+html.dark .progress-bar {
+  background: #444;
+}
+
+html.dark .update-logs {
+  background: #444;
+  border-color: #555;
+}
+
+html.dark .logs-header {
+  border-color: #555;
+}
+
+html.dark .clear-logs-btn {
+  color: #ff6b6b;
+}
+
+html.dark .clear-logs-btn:hover {
+  background: #444;
+}
+
+html.dark .log-entry {
+  background: #333;
+}
+
+html.dark .log-entry.error {
+  background: #442222;
+  color: #ff6b6b;
+}
