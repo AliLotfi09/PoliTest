@@ -1,158 +1,84 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getMiniAppState } from '../utils/miniAppDetector';
-// User دیگر نیازی نیست چون کامنت شده
-// import { User } from 'lucide-react';
+import { User } from 'lucide-react';
 
 const AdvancedBottomNavigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
+
   const [activeTab, setActiveTab] = useState('home');
   const [ripples, setRipples] = useState([]);
   const [isMiniApp, setIsMiniApp] = useState(false);
 
   useEffect(() => {
-    const state = getMiniAppState();
-    setIsMiniApp(state.isInitialized);
+    setIsMiniApp(getMiniAppState().isInitialized);
   }, []);
 
   const baseNavItems = [
-    { 
-      id: 'home', 
-      label: 'خانه', 
-      path: '/' 
-    },
-    { 
-      id: 'about', 
-      label: 'درباره', 
-      path: '/about' 
-    },
-    { 
-      id: 'settings', 
-      label: 'تنظیمات', 
-      path: '/settings' 
-    },
+    { id: 'home', label: 'خانه', path: '/' },
+    { id: 'about', label: 'درباره', path: '/about' },
+    { id: 'settings', label: 'تنظیمات', path: '/settings' },
   ];
 
-  // فعلاً کاملاً غیرفعال می‌کنیم
-  // const miniAppNavItem = {
-  //   id: 'mini-app',
-  //   label: 'پروفایل',
-  //   path: '/profile',
-  // };
-
-  // تابع ساده شده
-  const getNavItems = () => {
-    // فعلاً همیشه baseNavItems را برگردان
-    return baseNavItems;
-    // اگر بعداً خواستید فعال کنید:
-    // if (isMiniApp) {
-    //   return [...baseNavItems, miniAppNavItem];
-    // }
-    // return baseNavItems;
+  const profileNavItem = {
+    id: 'profile',
+    label: 'پروفایل',
+    path: '/profile',
   };
 
-  const navItems = getNavItems();
+  const navItems = isMiniApp
+    ? [...baseNavItems, profileNavItem]
+    : baseNavItems;
 
-  const createRipple = (x, y, id) => {
-    const newRipple = {
-      id: Date.now(),
-      x: x,
-      y: y,
-      tabId: id,
-    };
-    setRipples((prev) => [...prev, newRipple]);
-    
+  useEffect(() => {
+    const currentItem = navItems.find(i => i.path === location.pathname);
+    if (currentItem) setActiveTab(currentItem.id);
+  }, [location.pathname]);
+
+  const createRipple = (x, y, tabId) => {
+    const id = Date.now();
+    setRipples(r => [...r, { id, x, y, tabId }]);
     setTimeout(() => {
-      setRipples((prev) => prev.filter((r) => r.id !== newRipple.id));
+      setRipples(r => r.filter(i => i.id !== id));
     }, 600);
   };
 
   const handleNavigation = (item, e) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    
-    createRipple(x, y, item.id);
+    createRipple(e.clientX - rect.left, e.clientY - rect.top, item.id);
     setActiveTab(item.id);
-    
-    setTimeout(() => {
-      if (item.path) {
-        navigate(item.path);
-      }
-    }, 200);
+    setTimeout(() => navigate(item.path), 200);
   };
-
-  useEffect(() => {
-    const currentPath = location.pathname;
-    const currentItem = navItems.find(item => item.path === currentPath);
-    if (currentItem) {
-      setActiveTab(currentItem.id);
-    }
-  }, [location.pathname, navItems]);
 
   const getIcon = (id, isActive) => {
     const color = isActive ? '#ffffff' : '#000000';
-    
-    switch(id) {
+
+    switch (id) {
       case 'home':
         return (
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path 
-              d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" 
-              stroke={color} 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            />
-            <polyline 
-              points="9 22 9 12 15 12 15 22" 
-              stroke={color} 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            />
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke={color} strokeWidth="2" />
+            <path d="M9 22V12h6v10" stroke={color} strokeWidth="2" />
           </svg>
         );
       case 'about':
         return (
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <circle 
-              cx="12" cy="12" r="10" 
-              stroke={color} 
-              strokeWidth="2"
-            />
-            <line 
-              x1="12" y1="16" x2="12" y2="12" 
-              stroke={color} 
-              strokeWidth="2" 
-              strokeLinecap="round"
-            />
-            <circle 
-              cx="12" cy="8" r="1" 
-              fill={color}
-            />
+            <circle cx="12" cy="12" r="10" stroke={color} strokeWidth="2" />
+            <line x1="12" y1="16" x2="12" y2="12" stroke={color} strokeWidth="2" />
+            <circle cx="12" cy="8" r="1" fill={color} />
           </svg>
         );
       case 'settings':
         return (
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <circle 
-              cx="12" cy="12" r="3" 
-              stroke={color} 
-              strokeWidth="2"
-            />
-            <path 
-              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" 
-              stroke={color} 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            />
+            <circle cx="12" cy="12" r="3" stroke={color} strokeWidth="2" />
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15 1.65 1.65 0 0 0 3.09 14H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6V4a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9" stroke={color} strokeWidth="2" />
           </svg>
         );
-      // case 'mini-app':
-      //   return <User color={color} size={20} />;
+      case 'profile':
+        return <User size={20} color={color} />;
       default:
         return null;
     }
@@ -162,36 +88,30 @@ const AdvancedBottomNavigation = () => {
     <nav className="advanced-bottom-navigation">
       <div className="nav-container">
         <div className="nav-backdrop" />
-        
         <div className="nav-items">
-          {navItems.map((item) => {
+          {navItems.map(item => {
             const isActive = activeTab === item.id;
             return (
               <button
                 key={item.id}
                 className={`nav-item ${isActive ? 'active' : ''}`}
-                onClick={(e) => handleNavigation(item, e)}
+                onClick={e => handleNavigation(item, e)}
                 aria-label={item.label}
               >
                 {ripples
-                  .filter((ripple) => ripple.tabId === item.id)
-                  .map((ripple) => (
+                  .filter(r => r.tabId === item.id)
+                  .map(r => (
                     <span
-                      key={ripple.id}
+                      key={r.id}
                       className="ripple"
-                      style={{
-                        left: ripple.x + 'px',
-                        top: ripple.y + 'px',
-                      }}
+                      style={{ left: r.x, top: r.y }}
                     />
                   ))}
-                
                 <span className="nav-icon-wrapper">
                   <span className="nav-icon">
                     {getIcon(item.id, isActive)}
                   </span>
                 </span>
-                
                 <span className="nav-label">{item.label}</span>
               </button>
             );

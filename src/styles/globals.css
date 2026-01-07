@@ -52,7 +52,13 @@ html.dark .changelog-content,
 html.dark .start-btn,
 html.dark .action-btn
 html.dark .result-detail,
-html.dark .action-btn {
+html.dark .action-btn,
+html.dark .about-container,
+html.dark .about-header,
+html.dark .feature-card,
+html.dark .contact-card,
+html.dark .stats-section,
+html.dark .about-footer{
   background: #3a3a3a !important;
   border-color: #444 !important;
   color: #ffffff !important;
@@ -60,7 +66,16 @@ html.dark .action-btn {
 
 html.dark .match-score,
 html.dark .match-label,
-html.dark .detail-value {
+html.dark .detail-value,
+html.dark .about-title,
+html.dark .about-subtitle,
+html.dark .hero-text > h2,
+html.dark .hero-text > p,
+html.dark .section-title,
+html.dark .feature-title,
+html.dark .feature-description,
+html.dark .contact-info > h4,
+html.dark .contact-info > p > a{
   color: #fff;
 }
 
@@ -117,6 +132,10 @@ html.dark .action-btn.secondary {
 html.dark .action-btn.secondary:hover {
   background: #000 !important;
   color: white !important;
+}
+
+html.dark .preview-header > h4 {
+  color: #fff;
 }
 
 /* متون */
@@ -282,4 +301,15 @@ html.dark .prediction-gauge {
 
 html.dark .changelog-preview > h4 {
   color: #fff;
+}
+
+/* SHINY TEXT */
+:root {
+  --shiny-text-color: #000;
+  --shiny-shine-color: #ccc;
+}
+
+html.dark {
+  --shiny-text-color: #ffffff;
+  --shiny-shine-color: #666666;
 }

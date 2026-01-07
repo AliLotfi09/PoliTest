@@ -688,7 +688,7 @@
 
 .action-button.secondary:hover {
   background: #000;
-  color: white;
+  color: #000;
 }
 
 /* Responsive */
@@ -1138,12 +1138,12 @@
 }
 
 .info-label {
-  font-size: 12px;
+  font-size: 20px;
   color: #888;
 }
 
 .info-value {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   color: #1a1a1a;
 }
@@ -3231,13 +3231,11 @@ html.dark .agree-btn:hover {
   }
 }
 
-/* ============ PROFILE PAGE STYLES - SIMPLE & CLEAN ============ */
+/* ============ PROFILE PAGE STYLES - RESPONSIVE & CLEAN ============ */
 .profile-page {
-  padding: 16px;
+  width: 100%;
   max-width: 600px;
-  margin-bottom: 70px;
   margin: 0 auto;
-  min-height: 100vh;
 }
 
 .profile-container {
@@ -3357,7 +3355,7 @@ html.dark .agree-btn:hover {
 }
 
 .user-name {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   color: #1a1a1a;
   margin: 8px 0;
@@ -3426,7 +3424,7 @@ html.dark .agree-btn:hover {
 }
 
 .info-value {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 500;
   color: #1a1a1a;
   padding: 12px;
@@ -3435,11 +3433,12 @@ html.dark .agree-btn:hover {
   border: 1px solid #f0f0f0;
   text-align: right;
   direction: rtl;
+  word-break: break-all;
 }
 
 .info-value.code {
   font-family: monospace;
-  font-size: 13px;
+  font-size: 16px;
   direction: ltr;
   text-align: left;
 }
@@ -3456,7 +3455,7 @@ html.dark .agree-btn:hover {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #1a1a1a;
   text-align: center;
 }
 
@@ -3471,7 +3470,7 @@ html.dark .agree-btn:hover {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 16px;
+  padding: 16px 8px;
   background: white;
   border-radius: 8px;
   border: 1px solid #f0f0f0;
@@ -3494,15 +3493,17 @@ html.dark .agree-btn:hover {
 }
 
 .stat-number {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: #1a1a1a;
   font-family: "Estedad", sans-serif;
+  text-align: center;
 }
 
 .stat-label {
   font-size: 11px;
   color: #666;
+  text-align: center;
 }
 
 /* وضعیت اتصال */
@@ -3781,10 +3782,233 @@ html.dark .confirm-modal-button.cancel:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .profile-header {
+    padding: 20px 16px;
+  }
+  
+  .profile-title {
+    font-size: 22px;
+  }
+  
+  .profile-content {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+  
+  .profile-section,
+  .info-section,
+  .stats-section {
+    padding: 20px 16px;
+  }
+  
+  .stats-grid {
+    gap: 8px;
+  }
+  
+  .stat-item {
+    padding: 12px 6px;
+  }
+  
+  .stat-number {
+    font-size: 16px;
+  }
+  
+  .stat-label {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-header {
+    padding: 16px;
+  }
+  
+  .profile-title {
+    font-size: 20px;
+  }
+  
+  .profile-subtitle {
+    font-size: 13px;
+  }
+  
+  .profile-content {
+    padding: 16px;
+    gap: 12px;
+  }
+  
+  .profile-section,
+  .info-section,
+  .stats-section {
+    padding: 16px;
+  }
+  
+  .profile-image-container {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .profile-initials {
+    font-size: 24px;
+  }
+  
+  .user-name {
+    font-size: 30px;
+  }
+  
+  .stats-grid {
+    gap: 6px;
+  }
+  
+  .stat-item {
+    padding: 10px 4px;
+  }
+  
+  .stat-number {
+    font-size: 14px;
+  }
+  
+  .stat-label {
+    font-size: 9px;
+  }
+  
+  .action-button {
+    padding: 14px;
+    font-size: 14px;
+  }
+  
+  .confirm-modal-content {
+    padding: 20px;
+  }
+  
+  .confirm-modal-buttons {
+    flex-direction: column;
+  }
+}
+
+/* Dark Mode */
+html.dark .profile-container {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+html.dark .profile-header {
+  background: #333;
+  border-color: #444;
+}
+
+html.dark .profile-title {
+  color: #fff;
+}
+
+html.dark .profile-subtitle {
+  color: #aaa;
+}
+
+html.dark .profile-section,
+html.dark .info-section,
+html.dark .stats-section {
+  background: #333;
+  border-color: #444;
+  color: #fff;
+}
+
+html.dark .profile-image {
+  background: #444;
+}
+
+html.dark .profile-initials {
+  color: #ccc;
+}
+
+html.dark .platform-name,
+html.dark .user-name,
+html.dark .section-header h3,
+html.dark .stats-title {
+  color: #fff;
+}
+
+html.dark .verification-badge {
+  background: #1a1a1a;
+  color: #4CAF50;
+}
+
+html.dark .info-value {
+  background: #444;
+  color: #fff;
+  border-color: #555;
+}
+
+html.dark .info-label {
+  color: #bbb;
+}
+
+html.dark .stat-item {
+  background: #444;
+  border-color: #555;
+}
+
+html.dark .stat-number {
+  color: #fff;
+}
+
+html.dark .stat-label {
+  color: #aaa;
+}
+
+html.dark .connection-status {
+  background: #444;
+  border-color: #555;
+}
+
+html.dark .connection-status span {
+  color: #fff;
+}
+
+html.dark .action-button.secondary {
+  background: #444;
+  color: #fff;
+  border-color: #555;
+}
+
+html.dark .action-button.secondary:hover {
+  background: #555;
+  border-color: #666;
+}
+
+html.dark .confirm-modal-content {
+  background: #333;
+  border-color: #444;
+}
+
+html.dark .confirm-modal h3 {
+  color: #fff;
+}
+
+html.dark .confirm-modal p {
+  color: #aaa;
+}
+
+html.dark .confirm-modal-button.cancel {
+  background: #444;
+  color: #ddd;
+  border-color: #555;
+}
+
+html.dark .confirm-modal-button.cancel:hover {
+  background: #555;
+}
+.profile-page-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+/* Responsive */
+@media (max-width: 768px) {
   .profile-page {
-    width: 140%;
-    padding: 12px;
-  margin-bottom: 70px;
+    width: 100vw;
+    padding: 24px;
+    margin-bottom: 70px;
+    max-width:;
   }
   
   .profile-header {

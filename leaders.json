@@ -1,0 +1,1437 @@
+[
+  {
+    "name": "کوروش بزرگ",
+    "title": "بنیان‌گذار امپراتوری هخامنشی",
+    "era": "۵۵۹-۵۳۰ ق.م",
+    "image": "https://media.sarpoosh.com/images/article/picture/cyrus-the-great-photos01.jpg",
+    "traits": {
+      "tolerant": 4,
+      "strategic": 4,
+      "diplomatic": 3,
+      "nationalist": 2,
+      "balanced": 3,
+      "peaceful": 3,
+      "egalitarian": 3
+    },
+    "description": "شما مانند کوروش، به تسامح، انسانیت و بنیان‌گذاری یک تمدن بزرگ باور دارید.",
+    "politicalParty": "—",
+    "suitableCountries": "ایران باستان، امپراتوری‌های چندفرهنگی",
+    "governingStyle": "پادشاهی عادل و گسترش‌طلب",
+    "successRate": "95%"
+  },
+  {
+    "name": "داریوش بزرگ",
+    "title": "شاهنشاه هخامنشی",
+    "era": "۵۲۲-۴۸۶ ق.م",
+    "image": "https://ketabnak.com/images/thumb/318x318/persons/64243.webp",
+    "traits": {
+      "strategic": 4,
+      "pragmatic": 4,
+      "balanced": 3,
+      "authoritarian": 3,
+      "nationalist": 2,
+      "modernist": 3
+    },
+    "description": "شما مانند داریوش، نظم، قانون و توسعه اداری را سرلوحه دارید.",
+    "politicalParty": "—",
+    "suitableCountries": "ایران باستان، امپراتوری‌های بزرگ",
+    "governingStyle": "پادشاهی متمرکز",
+    "successRate": "90%"
+  },
+  {
+    "name": "نادرشاه افشار",
+    "title": "پادشاه ایران",
+    "era": "۱۷۳۶-۱۷۴۷",
+    "image": "https://api2.kojaro.com/media/2021-6-52c9531b-dc15-4a23-bfbe-0796081b9195-67c4610bc1067c5ba7676c1f?w=1200&q=80",
+    "traits": {
+      "militarist": 4,
+      "nationalist": 3,
+      "authoritarian": 3,
+      "strategic": 3,
+      "aggressive": 2
+    },
+    "description": "شما مانند نادرشاه، رهبر جنگجو و فتح‌طلب هستید.",
+    "politicalParty": "—",
+    "suitableCountries": "ایران، امپراتوری‌های جنگی",
+    "governingStyle": "نظامی‌گرای مقتدر",
+    "successRate": "70%"
+  },
+  {
+    "name": "امیرکبیر",
+    "title": "صدر اعظم ایران",
+    "era": "۱۸۴۸-۱۸۵۱",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/AmirKabir_naghashbashi.jpg/250px-AmirKabir_naghashbashi.jpg",
+    "traits": {
+      "reformist": 4,
+      "nationalist": 3,
+      "modernist": 3,
+      "pragmatic": 3,
+      "balanced": 2
+    },
+    "description": "شما مانند امیرکبیر، اصلاحات، آموزش و پیشرفت ملی را دنبال می‌کنید.",
+    "politicalParty": "—",
+    "suitableCountries": "ایران، کشورهای در حال توسعه",
+    "governingStyle": "اصلاح‌گر ملی",
+    "successRate": "80%"
+  },
+  {
+    "name": "میرزا کوچک‌خان جنگلی",
+    "title": "رهبر جنبش جنگل",
+    "era": "۱۹۱۴-۱۹۲۱",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Mirza_Kochak_Khan.jpg/250px-Mirza_Kochak_Khan.jpg",
+    "traits": {
+      "nationalist": 4,
+      "resistant": 3,
+      "spiritual": 2,
+      "socialist": 2,
+      "independent": 3
+    },
+    "description": "شما مانند میرزا کوچک‌خان، رهبر انقلابی و ملی‌گرای عدالت‌خواه هستید.",
+    "politicalParty": "جنبش جنگل",
+    "suitableCountries": "ایران، جنبش‌های استقلال‌طلب",
+    "governingStyle": "انقلابی ملی‌گرا",
+    "successRate": "65%"
+  },
+  {
+    "name": "محمد مصدق",
+    "title": "نخست‌وزیر ایران",
+    "era": "۱۹۵۱-۱۹۵۳",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Portrait_of_Mohammad_Mosaddegh_-_circa_1952.jpg/250px-Portrait_of_Mohammad_Mosaddegh_-_circa_1952.jpg",
+    "traits": {
+      "democratic": 4,
+      "nationalist": 3,
+      "liberal": 3,
+      "independent": 4,
+      "diplomatic": 3
+    },
+    "description": "شما مانند مصدق، استقلال سیاسی و اقتصادی را با تکیه بر مردم‌سالاری دنبال می‌کنید.",
+    "politicalParty": "جبهه ملی",
+    "suitableCountries": "ایران، کشورهای ضد استعمار",
+    "governingStyle": "ملی‌گرای دموکراتیک",
+    "successRate": "70%"
+  },
+  {
+    "name": "رضا شاه پهلوی",
+    "title": "شاه ایران",
+    "era": "۱۹۲۵-۱۹۴۱",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Reza_shah_uniform.jpg/250px-Reza_shah_uniform.jpg",
+    "traits": {
+      "authoritarian": 4,
+      "nationalist": 4,
+      "modernist": 3,
+      "militarist": 2,
+      "pragmatic": 2
+    },
+    "description": "شما مانند رضا شاه، به تمرکز قدرت، نوسازی و اقتدار ملی اهمیت می‌دهید.",
+    "politicalParty": "پهلوی",
+    "suitableCountries": "ایران، ترکیه آتاتورک",
+    "governingStyle": "اقتدارگرای مدرن‌ساز",
+    "successRate": "65%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "محمدرضا شاه پهلوی",
+    "title": "آخرین شاه ایران",
+    "era": "۱۹۴۱-۱۹۷۹",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Shah_Mohammad_Reza_Pahlavi%2C_1973.jpg/250px-Shah_Mohammad_Reza_Pahlavi%2C_1973.jpg",
+    "traits": {
+      "modernist": 3,
+      "authoritarian": 3,
+      "nationalist": 3,
+      "capitalist": 2,
+      "dependent": 2
+    },
+    "description": "شما مانند محمدرضا شاه، به مدرنیزاسیون و اتحاد با غرب باور دارید.",
+    "politicalParty": "پهلوی",
+    "suitableCountries": "ایران، کشورهای متحد غرب",
+    "governingStyle": "سلطنتی مدرن",
+    "successRate": "60%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "روح‌الله خمینی",
+    "title": "رهبر انقلاب اسلامی ایران",
+    "era": "۱۹۷۹-۱۹۸۹",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Portrait_of_Ruhollah_Khomeini.jpg/250px-Portrait_of_Ruhollah_Khomeini.jpg",
+    "traits": {
+      "spiritual": 4,
+      "theocratic": 4,
+      "nationalist": 3,
+      "authoritarian": 3,
+      "resistant": 3
+    },
+    "description": "شما مانند خمینی، سیاست را با ایدئولوژی و دین پیوند می‌زنید.",
+    "politicalParty": "جمهوری اسلامی",
+    "suitableCountries": "ایران، کشورهای اسلامی",
+    "governingStyle": "اسلام‌گرای انقلابی",
+    "successRate": "80%"
+  },
+  {
+    "name": " آیت الله علی خامنه‌ای",
+    "title": "رهبر جمهوری اسلامی ایران",
+    "era": "۱۹۸۹-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Ali_Khamenei_2025_%283x4_cropped%29.jpg",
+    "traits": {
+      "spiritual": 3,
+      "nationalist": 3,
+      "authoritarian": 3,
+      "strategic": 3,
+      "resistant": 3
+    },
+    "description": "شما مانند آیت الله خامنه‌ای، بر ثبات سیاسی، استقلال و ایدئولوژی تاکید دارید.",
+    "politicalParty": "جمهوری اسلامی",
+    "suitableCountries": "ایران، کشورهای اسلامی",
+    "governingStyle": "ایدئولوژیک-اقتدارگرا",
+    "successRate": "75%"
+  },
+  {
+    "name": "اکبر هاشمی رفسنجانی",
+    "title": "رئیس‌جمهور ایران",
+    "era": "۱۹۸۹-۱۹۹۷",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Akbar_Hashemi_Rafsanjani_by_Fars_01_%28cropped%29.jpg",
+    "traits": {
+      "pragmatic": 4,
+      "moderate": 3,
+      "capitalist": 2,
+      "nationalist": 2,
+      "balanced": 3
+    },
+    "description": "شما مانند رفسنجانی، عملگرایی و توسعه اقتصادی را در سیاست در اولویت دارید.",
+    "politicalParty": "کارگزاران سازندگی",
+    "suitableCountries": "ایران، کشورهای در حال توسعه",
+    "governingStyle": "عملگرای توسعه‌گرا",
+    "successRate": "70%"
+  },
+  {
+    "name": "سید محمد خاتمی",
+    "title": "رئیس‌جمهور ایران",
+    "era": "۱۹۹۷-۲۰۰۵",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Mohammad_Khatami_-_December_11%2C_2007.jpg",
+    "traits": {
+      "reformist": 4,
+      "liberal": 3,
+      "democratic": 3,
+      "moderate": 3,
+      "diplomatic": 3
+    },
+    "description": "شما مانند خاتمی، به اصلاحات، گفت‌وگوی تمدن‌ها و آزادی‌های مدنی باور دارید.",
+    "politicalParty": "اصلاح‌طلبان",
+    "suitableCountries": "ایران، دموکراسی‌های در حال گذار",
+    "governingStyle": "اصلاح‌طلب دموکرات",
+    "successRate": "65%"
+  },
+  {
+    "name": "محمود احمدی‌نژاد",
+    "title": "رئیس‌جمهور ایران",
+    "era": "۲۰۰۵-۲۰۱۳",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Mahmoud_Ahmadinejad_2019_02.jpg",
+    "traits": {
+      "populist": 4,
+      "nationalist": 3,
+      "confrontational": 3,
+      "authoritarian": 2
+    },
+    "description": "شما مانند احمدی‌نژاد، با گفتمان پوپولیستی و تقابل با غرب پیش می‌روید.",
+    "politicalParty": "اصولگرایان",
+    "suitableCountries": "ایران، ونزوئلا چاوز",
+    "governingStyle": "پوپولیستی-ملی‌گرایانه",
+    "successRate": "55%"
+  },
+  {
+    "name": "مسعود پزشکیان",
+    "title": "رئیس‌جمهور ایران",
+    "era": "۲۰۲۴-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Masoud_Pezeshkian_14040616_%28cropped%29.jpg",
+    "traits": {
+      "reformist": 3,
+      "moderate": 3,
+      "democratic": 2,
+      "pragmatic": 3
+    },
+    "description": "شما مانند پزشکیان، به اعتدال، اصلاحات اجتماعی و گفت‌وگو باور دارید.",
+    "politicalParty": "اصلاح‌طلبان",
+    "suitableCountries": "ایران، دموکراسی‌های نوپا",
+    "governingStyle": "اصلاح‌طلب معتدل",
+    "successRate": "60%"
+  },
+  {
+    "name": "جورج واشنگتن",
+    "title": "اولین رئیس‌جمهور آمریکا",
+    "era": "۱۷۸۹-۱۷۹۷",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg",
+    "traits": {
+      "democratic": 4,
+      "principled": 4,
+      "moderate": 3,
+      "nationalist": 3,
+      "balanced": 3
+    },
+    "description": "شما مانند واشنگتن، بنیان‌گذار دموکراسی و رهبر اصولی هستید.",
+    "politicalParty": "بی‌طرف",
+    "suitableCountries": "آمریکا، جمهوری‌های نوپا",
+    "governingStyle": "دموکراتیک بنیان‌گذار",
+    "successRate": "90%"
+  },
+  {
+    "name": "آبراهام لینکلن",
+    "title": "شانزدهمین رئیس‌جمهور آمریکا",
+    "era": "۱۸۶۱-۱۸۶۵",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/57/Abraham_Lincoln_1863_Portrait_%283x4_cropped%29.jpg",
+    "traits": {
+      "egalitarian": 4,
+      "principled": 4,
+      "democratic": 3,
+      "strategic": 3
+    },
+    "description": "شما مانند لینکلن، برای برابری، وحدت ملی و عدالت می‌جنگید.",
+    "politicalParty": "جمهوری‌خواه",
+    "suitableCountries": "آمریکا، کشورهای تقسیم‌شده",
+    "governingStyle": "وحدت‌بخش انسان‌دوست",
+    "successRate": "85%"
+  },
+  {
+    "name": "فرانکلین روزولت",
+    "title": "سی و دومین رئیس‌جمهور آمریکا",
+    "era": "۱۹۳۳-۱۹۴۵",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/FDR-1944-Campaign-Portrait_%283x4_retouched%2C_cropped%29.jpg/250px-FDR-1944-Campaign-Portrait_%283x4_retouched%2C_cropped%29.jpg",
+    "traits": {
+      "pragmatic": 4,
+      "reformist": 4,
+      "democratic": 3,
+      "strategic": 4,
+      "socialist": 2
+    },
+    "description": "شما مانند روزولت، رهبر بحران‌ها و حامی رفاه اجتماعی هستید.",
+    "politicalParty": "دموکرات",
+    "suitableCountries": "آمریکا، کشورهای در بحران اقتصادی",
+    "governingStyle": "پیشرو رفاه‌گرا",
+    "successRate": "90%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "جان اف کندی",
+    "title": "سی و پنجمین رئیس‌جمهور آمریکا",
+    "era": "۱۹۶۱-۱۹۶۳",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/John_F._Kennedy%2C_White_House_color_photo_portrait.jpg",
+    "traits": {
+      "modernist": 3,
+      "diplomatic": 3,
+      "liberal": 3,
+      "strategic": 3
+    },
+    "description": "شما مانند کندی، جوان، کاریزماتیک و طرفدار پیشرفت هستید.",
+    "politicalParty": "دموکرات",
+    "suitableCountries": "آمریکا، دموکراسی‌های مدرن",
+    "governingStyle": "کاریزماتیک مدرن",
+    "successRate": "75%"
+  },
+  {
+    "name": "رونالد ریگان",
+    "title": "چهلمین رئیس‌جمهور آمریکا",
+    "era": "۱۹۸۱-۱۹۸۹",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Portrait_of_President_Reagan_1981.jpg/250px-Official_Portrait_of_President_Reagan_1981.jpg",
+    "traits": {
+      "capitalist": 4,
+      "conservative": 4,
+      "militarist": 2,
+      "pragmatic": 3
+    },
+    "description": "شما مانند ریگان، محافظه‌کار، طرفدار بازار آزاد و قدرت نظامی هستید.",
+    "politicalParty": "جمهوری‌خواه",
+    "suitableCountries": "آمریکا، کشورهای سرمایه‌داری",
+    "governingStyle": "محافظه‌کار بازارگرا",
+    "successRate": "80%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "دونالد ترامپ",
+    "title": "چهل و پنجمین رئیس‌جمهور آمریکا",
+    "era": "۲۰۱۷-۲۰۲۱ - 2024 - کنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg",
+    "traits": {
+      "populist": 4,
+      "nationalist": 4,
+      "capitalist": 3,
+      "confrontational": 3
+    },
+    "description": "شما مانند ترامپ، پوپولیست، ملی‌گرا و تاجر هستید.",
+    "politicalParty": "جمهوری‌خواه",
+    "suitableCountries": "آمریکا، کشورهای پوپولیست",
+    "governingStyle": "پوپولیستی تجاری",
+    "successRate": "60%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "جو بایدن",
+    "title": "چهل و ششمین رئیس‌جمهور آمریکا",
+    "era": "2021-2024",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Joe_Biden_presidential_portrait.jpg",
+    "traits": {
+      "moderate": 4,
+      "diplomatic": 3,
+      "pragmatic": 3,
+      "democratic": 3
+    },
+    "description": "شما مانند بایدن، با تجربه، معتدل و طرفدار دیپلماسی سنتی هستید.",
+    "politicalParty": "دموکرات",
+    "suitableCountries": "آمریکا، اتحادهای غربی",
+    "governingStyle": "معتدل دیپلماتیک",
+    "successRate": "70%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "ویل‌هلم دوم آلمان",
+    "title": "آخرین قیصر آلمان",
+    "era": "۱۸۸۸-۱۹۱۸",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Kaiser_Wilhelm_II_of_Germany_-_1902_%28cropped%29.jpg/250px-Kaiser_Wilhelm_II_of_Germany_-_1902_%28cropped%29.jpg",
+    "traits": {
+      "militarist": 4,
+      "nationalist": 4,
+      "authoritarian": 3,
+      "aggressive": 3
+    },
+    "description": "شما مانند قیصر ویلهلم، امپراتور جاه‌طلب و نظامی‌گرا هستید.",
+    "politicalParty": "امپراتوری آلمان",
+    "suitableCountries": "آلمان امپراتوری، قدرت‌های بزرگ",
+    "governingStyle": "امپراتوری نظامی‌گرا",
+    "successRate": "50%"
+  },
+  {
+    "name": "آدولف هیتلر",
+    "title": "فوهرر آلمان نازی",
+    "era": "۱۹۳۳-۱۹۴۵",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Hitler_portrait_crop.jpg",
+    "traits": {
+      "authoritarian": 4,
+      "nationalist": 4,
+      "militarist": 4,
+      "aggressive": 4
+    },
+    "description": "شما مانند هیتلر، رهبر توتالیتر و افراطی هستید. (تحلیل تاریخی)",
+    "politicalParty": "حزب نازی",
+    "suitableCountries": "آلمان نازی، رژیم‌های توتالیتر",
+    "governingStyle": "توتالیتر فاشیستی",
+    "successRate": "10%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "وینستون چرچیل",
+    "title": "نخست‌وزیر بریتانیا",
+    "era": "۱۹۴۰-۱۹۴۵، ۱۹۵۱-۱۹۵۵",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sir_Winston_Churchill_-_19086236948.jpg/250px-Sir_Winston_Churchill_-_19086236948.jpg",
+    "traits": {
+      "strategic": 4,
+      "diplomatic": 3,
+      "nationalist": 3,
+      "militarist": 2,
+      "pragmatic": 3
+    },
+    "description": "شما مانند چرچیل، رهبر قاطع و سخنور بزرگ در زمان بحران هستید.",
+    "politicalParty": "محافظه‌کار",
+    "suitableCountries": "بریتانیا، دموکراسی‌های غربی",
+    "governingStyle": "رهبری بحران",
+    "successRate": "85%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "شارل دوگل",
+    "title": "رئیس‌جمهور فرانسه",
+    "era": "۱۹۵۹-۱۹۶۹",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/De_Gaulle-OWI.jpg/250px-De_Gaulle-OWI.jpg",
+    "traits": {
+      "nationalist": 4,
+      "independent": 4,
+      "strategic": 3,
+      "conservative": 3
+    },
+    "description": "شما مانند دوگل، ملی‌گرای مستقل و رهبر کاریزماتیک هستید.",
+    "politicalParty": "گولیست",
+    "suitableCountries": "فرانسه، کشورهای مستقل اروپایی",
+    "governingStyle": "ملی‌گرای مستقل",
+    "successRate": "80%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "مارگارت تاچر",
+    "title": "نخست‌وزیر بریتانیا",
+    "era": "۱۹۷۹-۱۹۹۰",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Margaret_Thatcher_stock_portrait_%28cropped%29.jpg/250px-Margaret_Thatcher_stock_portrait_%28cropped%29.jpg",
+    "traits": {
+      "conservative": 4,
+      "capitalist": 4,
+      "authoritarian": 3,
+      "reformist": 3
+    },
+    "description": "شما مانند تاچر، محافظه‌کار سرسخت و اصلاح‌گر اقتصادی هستید.",
+    "politicalParty": "محافظه‌کار",
+    "suitableCountries": "بریتانیا، کشورهای سرمایه‌داری",
+    "governingStyle": "محافظه‌کار اقتصادی",
+    "successRate": "75%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "آنگلا مرکل",
+    "title": "صدراعظم آلمان",
+    "era": "۲۰۰۵-۲۰۲۱",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Angela_Merkel_2023_%28cropped%29.jpg/250px-Angela_Merkel_2023_%28cropped%29.jpg",
+    "traits": {
+      "pragmatic": 4,
+      "moderate": 4,
+      "diplomatic": 3,
+      "balanced": 4
+    },
+    "description": "شما مانند مرکل، رهبر عملگرا، معتدل و باثبات هستید.",
+    "politicalParty": "دموکرات مسیحی",
+    "suitableCountries": "آلمان، اتحادیه اروپا",
+    "governingStyle": "عملگرای باثبات",
+    "successRate": "85%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "امانوئل مکرون",
+    "title": "رئیس‌جمهور فرانسه",
+    "era": "۲۰۱۷-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Emmanuel_Macron_-_June_2025_%283x4_cropped%29.jpg/250px-Emmanuel_Macron_-_June_2025_%283x4_cropped%29.jpg",
+    "traits": {
+      "moderate": 4,
+      "modernist": 3,
+      "technocratic": 3,
+      "liberal": 3
+    },
+    "description": "شما مانند مکرون، سیاست‌مدار میانه‌رو و اروپایی هستید.",
+    "politicalParty": "جمهوری به پیش",
+    "suitableCountries": "فرانسه، اتحادیه اروپا",
+    "governingStyle": "میانه‌رو اروپایی",
+    "successRate": "70%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "مائو تسه‌دونگ",
+    "title": "رهبر جمهوری خلق چین",
+    "era": "۱۹۴۹-۱۹۷۶",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Mao_Zedong_1950_Portait_%283x4_cropped%29.jpg/250px-Mao_Zedong_1950_Portait_%283x4_cropped%29.jpg",
+    "traits": {
+      "socialist": 4,
+      "authoritarian": 4,
+      "nationalist": 3,
+      "militarist": 3
+    },
+    "description": "شما مانند مائو، انقلابی کمونیست و رهبر تحول‌گر هستید.",
+    "politicalParty": "حزب کمونیست چین",
+    "suitableCountries": "چین، کشورهای کمونیستی",
+    "governingStyle": "انقلابی کمونیستی",
+    "successRate": "60%"
+  },
+  {
+    "name": "دنگ شیائوپینگ",
+    "title": "رهبر چین",
+    "era": "۱۹۷۸-۱۹۹۲",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Deng_Xiaoping_and_Jimmy_Carter_at_the_arrival_ceremony_for_the_Vice_Premier_of_China._-_NARA_-_183157-restored%28cropped%29.jpg/250px-Deng_Xiaoping_and_Jimmy_Carter_at_the_arrival_ceremony_for_the_Vice_Premier_of_China._-_NARA_-_183157-restored%28cropped%29.jpg",
+    "traits": {
+      "pragmatic": 4,
+      "reformist": 4,
+      "modernist": 4,
+      "strategic": 3
+    },
+    "description": "شما مانند دنگ، اصلاح‌گر عملگرا و توسعه‌دهنده اقتصادی هستید.",
+    "politicalParty": "حزب کمونیست چین",
+    "suitableCountries": "چین، کشورهای در حال توسعه",
+    "governingStyle": "اصلاح‌گر اقتصادی",
+    "successRate": "90%"
+  },
+  {
+    "name": "شی جین‌پینگ",
+    "title": "رئیس‌جمهور چین",
+    "era": "۲۰۱۳-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Xi_Jinping_in_2025.jpg/250px-Xi_Jinping_in_2025.jpg",
+    "traits": {
+      "authoritarian": 4,
+      "nationalist": 4,
+      "strategic": 4,
+      "centralized": 3
+    },
+    "description": "شما مانند شی جین‌پینگ، رهبر متمرکز و جاه‌طلب قدرت جهانی هستید.",
+    "politicalParty": "حزب کمونیست چین",
+    "suitableCountries": "چین، قدرت‌های بزرگ",
+    "governingStyle": "اقتدارگرای متمرکز",
+    "successRate": "75%"
+  },
+  {
+    "name": "مهاتما گاندی",
+    "title": "رهبر استقلال هند",
+    "era": "۱۹۱۵-۱۹۴۸",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Mahatma-Gandhi%2C_studio%2C_1931.jpg/250px-Mahatma-Gandhi%2C_studio%2C_1931.jpg",
+    "traits": {
+      "peaceful": 4,
+      "spiritual": 4,
+      "democratic": 4,
+      "principled": 4,
+      "tolerant": 3
+    },
+    "description": "شما مانند گاندی، رهبر صلح‌طلب و معنوی هستید.",
+    "politicalParty": "کنگره هند",
+    "suitableCountries": "هند، جنبش‌های صلح‌آمیز",
+    "governingStyle": "رهبری صلح‌آمیز",
+    "successRate": "85%"
+  },
+  {
+    "name": "نهرو",
+    "title": "نخست‌وزیر هند",
+    "era": "۱۹۴۷-۱۹۶۴",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Jawaharlal_Nehru%2C_1947.jpg/250px-Jawaharlal_Nehru%2C_1947.jpg",
+    "traits": {
+      "secular": 4,
+      "socialist": 3,
+      "democratic": 4,
+      "internationalist": 3
+    },
+    "description": "شما مانند نهرو، دموکرات سکولار و بین‌المللی‌گرا هستید.",
+    "politicalParty": "کنگره هند",
+    "suitableCountries": "هند، کشورهای غیرمتعهد",
+    "governingStyle": "دموکراتیک سکولار",
+    "successRate": "80%"
+  },
+  {
+    "name": "لی کوان یو",
+    "title": "نخست‌وزیر سنگاپور",
+    "era": "۱۹۵۹-۱۹۹۰",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Lee_Kuan_Yew.jpg/250px-Lee_Kuan_Yew.jpg",
+    "traits": {
+      "technocratic": 4,
+      "authoritarian": 3,
+      "pragmatic": 4,
+      "modernist": 4
+    },
+    "description": "شما مانند لی کوان یو، توسعه‌گر تکنوکرات و عملگرا هستید.",
+    "politicalParty": "حزب عمل خلق",
+    "suitableCountries": "سنگاپور، شهردولت‌های توسعه‌یافته",
+    "governingStyle": "تکنوکراتیک توسعه‌ای",
+    "successRate": "95%"
+  },
+  {
+    "name": "پارک چونگ‌هی",
+    "title": "رئیس‌جمهور کره جنوبی",
+    "era": "۱۹۶۳-۱۹۷۹",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Park_Chung_Hee_%28%EB%B0%95%EC%A0%95%ED%9D%AC%29_Presidential_Portrait.jpg/250px-Park_Chung_Hee_%28%EB%B0%95%EC%A0%95%ED%9D%AC%29_Presidential_Portrait.jpg",
+    "traits": {
+      "authoritarian": 4,
+      "modernist": 4,
+      "nationalist": 3,
+      "militarist": 3
+    },
+    "description": "شما مانند پارک چونگ‌هی، رهبر توسعه‌گر اقتدارگرا هستید.",
+    "politicalParty": "حزب جمهوری دموکراتیک",
+    "suitableCountries": "کره جنوبی، کشورهای در حال توسعه",
+    "governingStyle": "اقتدارگرای توسعه‌ای",
+    "successRate": "75%"
+  },
+  {
+    "name": "نارندرا مودی",
+    "title": "نخست‌وزیر هند",
+    "era": "۲۰۱۴-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Shri_Narendra_Modi%2C_Prime_Minister_of_India.jpg/250px-Shri_Narendra_Modi%2C_Prime_Minister_of_India.jpg",
+    "traits": {
+      "nationalist": 4,
+      "populist": 3,
+      "modernist": 3,
+      "pragmatic": 3
+    },
+    "description": "شما مانند مودی، ملی‌گرای توسعه‌طلب و پوپولیست هستید.",
+    "politicalParty": "بهاراتیا جاناتا",
+    "suitableCountries": "هند، کشورهای پوپولیست",
+    "governingStyle": "ملی‌گرای توسعه‌ای",
+    "successRate": "70%"
+  },
+  {
+    "name": "نلسون ماندلا",
+    "title": "رئیس‌جمهور آفریقای جنوبی",
+    "era": "۱۹۹۴-۱۹۹۹",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Nelson_Mandela_1994.jpg/250px-Nelson_Mandela_1994.jpg",
+    "traits": {
+      "egalitarian": 4,
+      "peaceful": 4,
+      "democratic": 4,
+      "tolerant": 4,
+      "principled": 3
+    },
+    "description": "شما مانند ماندلا، رهبر صلح، عدالت و آشتی هستید.",
+    "politicalParty": "کنگره ملی آفریقا",
+    "suitableCountries": "آفریقای جنوبی، کشورهای پسا تفکیک",
+    "governingStyle": "صلح‌آمیز آشتی‌جو",
+    "successRate": "90%"
+  },
+  {
+    "name": "کوامه نکروما",
+    "title": "اولین رئیس‌جمهور غنا",
+    "era": "۱۹۵۷-۱۹۶۶",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Kwame_Nkrumah_%28JFKWHP-AR6409-A%29.jpg/250px-Kwame_Nkrumah_%28JFKWHP-AR6409-A%29.jpg",
+    "traits": {
+      "nationalist": 4,
+      "socialist": 3,
+      "independent": 4,
+      "modernist": 2
+    },
+    "description": "شما مانند نکروما، رهبر ضد استعمار و پان‌آفریقانیست هستید.",
+    "politicalParty": "حزب کنوانسیون خلق",
+    "suitableCountries": "غنا، کشورهای آفریقایی",
+    "governingStyle": "پان‌آفریقانیست",
+    "successRate": "70%"
+  },
+  {
+    "name": "ولادیمیر لنین",
+    "title": "رهبر انقلاب اکتبر",
+    "era": "۱۹۱۷-۱۹۲۴",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Lenin_in_1920_%28cropped%29.jpg/250px-Lenin_in_1920_%28cropped%29.jpg",
+    "traits": {
+      "socialist": 4,
+      "authoritarian": 4,
+      "strategic": 3,
+      "modernist": 3
+    },
+    "description": "شما مانند لنین، انقلابی کمونیست و ایدئولوگ هستید.",
+    "politicalParty": "بلشویک",
+    "suitableCountries": "شوروی، کشورهای انقلابی",
+    "governingStyle": "انقلابی کمونیستی",
+    "successRate": "75%"
+  },
+  {
+    "name": "یوسف استالین",
+    "title": "رهبر اتحاد شوروی",
+    "era": "۱۹۲۴-۱۹۵۳",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Joseph_Stalin_in_1932_%284%29_%28cropped%29%282%29.jpg/250px-Joseph_Stalin_in_1932_%284%29_%28cropped%29%282%29.jpg",
+    "traits": {
+      "authoritarian": 4,
+      "industrialist": 4,
+      "militarist": 3,
+      "centralized": 4
+    },
+    "description": "شما مانند استالین، رهبر توتالیتر و صنعتی‌ساز هستید.",
+    "politicalParty": "حزب کمونیست شوروی",
+    "suitableCountries": "شوروی، رژیم‌های توتالیتر",
+    "governingStyle": "توتالیتر صنعتی",
+    "successRate": "50%"
+  },
+  {
+    "name": "میخائیل گورباچف",
+    "title": "آخرین رهبر شوروی",
+    "era": "۱۹۸۵-۱۹۹۱",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev_%28crop%29.jpg/250px-RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev_%28crop%29.jpg",
+    "traits": {
+      "reformist": 4,
+      "peaceful": 4,
+      "democratic": 3,
+      "pragmatic": 3
+    },
+    "description": "شما مانند گورباچف، اصلاح‌گر صلح‌دوست و دموکراتیزه‌کننده هستید.",
+    "politicalParty": "حزب کمونیست شوروی",
+    "suitableCountries": "شوروی، کشورهای در حال گذار",
+    "governingStyle": "اصلاح‌گر دموکراتیک",
+    "successRate": "70%"
+  },
+  {
+    "name": "ولادیمیر پوتین",
+    "title": "رئیس‌جمهور روسیه",
+    "era": "۲۰۰۰-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%9F%D1%83%D1%82%D0%B8%D0%BD_%2808-03-2024%29_%28crop%29.jpg/250px-%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%9F%D1%83%D1%82%D0%B8%D0%BD_%2808-03-2024%29_%28crop%29.jpg",
+    "traits": {
+      "authoritarian": 4,
+      "nationalist": 4,
+      "strategic": 4,
+      "militarist": 3
+    },
+    "description": "شما مانند پوتین، رهبر اقتدارگرا و استراتژیست قدرت‌طلب هستید.",
+    "politicalParty": "روسیه متحد",
+    "suitableCountries": "روسیه، قدرت‌های اقتدارگرا",
+    "governingStyle": "اقتدارگرای استراتژیک",
+    "successRate": "75%"
+  },
+  {
+    "name": "سیمون بولیوار",
+    "title": "رهبر استقلال آمریکای لاتین",
+    "era": "۱۸۱۳-۱۸۳۰",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Portrait_of_Sim%C3%B3n_Bol%C3%ADvar_by_Arturo_Michelena.jpg/250px-Portrait_of_Sim%C3%B3n_Bol%C3%ADvar_by_Arturo_Michelena.jpg",
+    "traits": {
+      "nationalist": 4,
+      "independent": 4,
+      "strategic": 4,
+      "democratic": 3
+    },
+    "description": "شما مانند بولیوار، رهایی‌بخش و وحدت‌گرای بزرگ هستید.",
+    "politicalParty": "—",
+    "suitableCountries": "آمریکای لاتین، جنبش‌های استقلال",
+    "governingStyle": "آزادی‌بخش ملی",
+    "successRate": "85%"
+  },
+  {
+    "name": "فیدل کاسترو",
+    "title": "رهبر انقلاب کوبا",
+    "era": "۱۹۵۹-۲۰۰۸",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Fidel_Castro_1950s.jpg/250px-Fidel_Castro_1950s.jpg",
+    "traits": {
+      "socialist": 4,
+      "authoritarian": 4,
+      "nationalist": 3,
+      "resistant": 4
+    },
+    "description": "شما مانند کاسترو، انقلابی کاریزماتیک و مقاوم هستید.",
+    "politicalParty": "حزب کمونیست کوبا",
+    "suitableCountries": "کوبا، کشورهای انقلابی",
+    "governingStyle": "انقلابی کمونیستی",
+    "successRate": "70%"
+  },
+  {
+    "name": "هوگو چاوز",
+    "title": "رئیس‌جمهور ونزوئلا",
+    "era": "۱۹۹۹-۲۰۱۳",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Hugo_Rafael_Ch%C3%A1vez_Fr%C3%ADas.jpeg/250px-Hugo_Rafael_Ch%C3%A1vez_Fr%C3%ADas.jpeg",
+    "traits": {
+      "populist": 4,
+      "socialist": 4,
+      "nationalist": 3,
+      "confrontational": 3
+    },
+    "description": "شما مانند چاوز، پوپولیست سوسیالیست و ضد امپریالیست هستید.",
+    "politicalParty": "حزب سوسیالیست متحد",
+    "suitableCountries": "ونزوئلا، کشورهای پوپولیست",
+    "governingStyle": "پوپولیستی سوسیالیستی",
+    "successRate": "60%"
+  },
+  {
+    "name": "اوا پرون",
+    "title": "بانوی اول آرژانتین",
+    "era": "۱۹۴۶-۱۹۵۲",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Evita_%28cropped%29.JPG/250px-Evita_%28cropped%29.JPG",
+    "traits": {
+      "populist": 4,
+      "egalitarian": 4,
+      "socialist": 3,
+      "democratic": 3
+    },
+    "description": "شما مانند اویتا، رهبر پوپولیست و مدافع حقوق زنان هستید.",
+    "politicalParty": "پرونیست",
+    "suitableCountries": "آرژانتین، کشورهای پوپولیست",
+    "governingStyle": "پوپولیستی فمینیستی",
+    "successRate": "80%"
+  },
+  {
+    "name": "مصطفی کمال آتاتورک",
+    "title": "بنیان‌گذار ترکیه مدرن",
+    "era": "۱۹۲۳-۱۹۳۸",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ataturk1930s.jpg/250px-Ataturk1930s.jpg",
+    "traits": {
+      "secular": 4,
+      "modernist": 4,
+      "nationalist": 4,
+      "reformist": 4
+    },
+    "description": "شما مانند آتاتورک، مدرن‌ساز سکولار و ملی‌گرا هستید.",
+    "politicalParty": "حزب خلق جمهوری",
+    "suitableCountries": "ترکیه، کشورهای مدرن‌ساز",
+    "governingStyle": "سکولار مدرن‌ساز",
+    "successRate": "90%"
+  },
+  {
+    "name": "رجب طیب اردوغان",
+    "title": "رئیس‌جمهور ترکیه",
+    "era": "۲۰۰۳-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Turkish_President_Recep_Tayyip_Erdo%C4%9Fan_in_January_2024_%28cropped%29.jpg/250px-Turkish_President_Recep_Tayyip_Erdo%C4%9Fan_in_January_2024_%28cropped%29.jpg",
+    "traits": {
+      "authoritarian": 4,
+      "spiritual": 3,
+      "populist": 3,
+      "nationalist": 3
+    },
+    "description": "شما مانند اردوغان، رهبر محافظه‌کار مسلمان و پوپولیست هستید.",
+    "politicalParty": "عدالت و توسعه",
+    "suitableCountries": "ترکیه، کشورهای اسلامی",
+    "governingStyle": "اسلام‌گرای پوپولیست",
+    "successRate": "70%"
+  },
+  {
+    "name": "جمال عبدالناصر",
+    "title": "رئیس‌جمهور مصر",
+    "era": "۱۹۵۶-۱۹۷۰",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Nasser_in_1969.jpg/250px-Nasser_in_1969.jpg",
+    "traits": {
+      "nationalist": 4,
+      "socialist": 3,
+      "independent": 4,
+      "modernist": 3
+    },
+    "description": "شما مانند ناصر، رهبر پان‌عرب و ملی‌گرای کاریزماتیک هستید.",
+    "politicalParty": "اتحاد سوسیالیست عرب",
+    "suitableCountries": "مصر، جهان عرب",
+    "governingStyle": "پان‌عربیستی",
+    "successRate": "75%"
+  },
+  {
+    "name": "صدام حسین",
+    "title": "رئیس‌جمهور عراق",
+    "era": "۱۹۷۹-۲۰۰۳",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/%D8%B5%D8%AF%D8%A7%D9%85.png/250px-%D8%B5%D8%AF%D8%A7%D9%85.png",
+    "traits": {
+      "authoritarian": 4,
+      "militarist": 4,
+      "nationalist": 3,
+      "aggressive": 4
+    },
+    "description": "شما مانند صدام، رهبر اقتدارگرا و جنگ‌طلب هستید.",
+    "politicalParty": "حزب بعث",
+    "suitableCountries": "عراق، رژیم‌های اقتدارگرا",
+    "governingStyle": "اقتدارگرای نظامی",
+    "successRate": "30%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "بنیامین نتانیاهو",
+    "title": "نخست‌وزیر اسرائیل",
+    "era": "۱۹۹۶-۱۹۹۹، ۲۰۰۹-۲۰۲۱، ۲۰۲۲-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Benjamin_Netanyahu%2C_February_2023.jpg/250px-Benjamin_Netanyahu%2C_February_2023.jpg",
+    "traits": {
+      "conservative": 4,
+      "nationalist": 4,
+      "militarist": 3,
+      "pragmatic": 3
+    },
+    "description": "شما مانند نتانیاهو، محافظه‌کار امنیت‌محور و ملی‌گرا هستید.",
+    "politicalParty": "لیکود",
+    "suitableCountries": "اسرائیل، دموکراسی‌های امنیت‌محور",
+    "governingStyle": "محافظه‌کار امنیت‌گرا",
+    "successRate": "70%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "ولودیمیر زلنسکی",
+    "title": "رئیس‌جمهور اوکراین",
+    "era": "۲۰۱۹-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%2853700301709%29.jpg/250px-%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%2853700301709%29.jpg",
+    "traits": {
+      "democratic": 4,
+      "resistant": 4,
+      "diplomatic": 3,
+      "nationalist": 3
+    },
+    "description": "شما مانند زلنسکی، رهبر مقاوم و ارتباط‌گر ماهر در بحران هستید.",
+    "politicalParty": "خدمتگزار مردم",
+    "suitableCountries": "اوکراین، دموکراسی‌های در حال دفاع",
+    "governingStyle": "رهبری بحران دموکراتیک",
+    "successRate": "80%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "جاسیندا آردرن",
+    "title": "نخست‌وزیر نیوزیلند",
+    "era": "۲۰۱۷-۲۰۲۳",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/New_Zealand_Prime_Minister_Jacinda_Ardern_in_2018.jpg/250px-New_Zealand_Prime_Minister_Jacinda_Ardern_in_2018.jpg",
+    "traits": {
+      "liberal": 4,
+      "egalitarian": 4,
+      "democratic": 4,
+      "peaceful": 3
+    },
+    "description": "شما مانند آردرن، رهبر همدل و پیشرو در عدالت اجتماعی هستید.",
+    "politicalParty": "کارگر",
+    "suitableCountries": "نیوزیلند، دموکراسی‌های پیشرو",
+    "governingStyle": "پیشرو همدل",
+    "successRate": "85%"
+  },
+  {
+    "name": "لولا داسیلوا",
+    "title": "رئیس‌جمهور برزیل",
+    "era": "۲۰۰۳-۲۰۱۱، ۲۰۲۳-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_%28estreita%29.jpg/250px-Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_%28estreita%29.jpg",
+    "traits": {
+      "populist": 4,
+      "socialist": 4,
+      "egalitarian": 4,
+      "democratic": 3
+    },
+    "description": "شما مانند لولا، رهبر چپ پوپولیست و مدافع برابری هستید.",
+    "politicalParty": "حزب کارگران",
+    "suitableCountries": "برزیل، کشورهای چپ لاتین",
+    "governingStyle": "چپ پوپولیست",
+    "successRate": "75%"
+  },
+  {
+    "name": "ناپلئون بناپارت",
+    "title": "امپراتور فرانسه",
+    "era": "۱۸۰۴-۱۸۱۴",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg/250px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg",
+    "traits": {
+      "militarist": 4,
+      "strategic": 4,
+      "nationalist": 3,
+      "reformist": 3
+    },
+    "description": "شما مانند ناپلئون، فرمانده نظامی نابغه و اصلاح‌گر جاه‌طلب هستید.",
+    "politicalParty": "امپراتوری فرانسه",
+    "suitableCountries": "فرانسه، امپراتوری‌های نظامی",
+    "governingStyle": "امپراتوری نظامی",
+    "successRate": "70%"
+  },
+  {
+    "name": "آلکساندر مقدونی",
+    "title": "پادشاه مقدونیه",
+    "era": "۳۳۶-۳۲۳ ق.م",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Alexander_the_Great_mosaic_%28cropped%29.jpg/250px-Alexander_the_Great_mosaic_%28cropped%29.jpg",
+    "traits": {
+      "militarist": 4,
+      "strategic": 4,
+      "nationalist": 3,
+      "tolerant": 3
+    },
+    "description": "شما مانند اسکندر، فاتح بزرگ و آمیزه‌دهنده فرهنگ‌ها هستید.",
+    "politicalParty": "—",
+    "suitableCountries": "مقدونیه باستان، امپراتوری‌های باستانی",
+    "governingStyle": "فتح‌گرای فرهنگی",
+    "successRate": "85%"
+  },
+  {
+    "name": "یولیوس سزار",
+    "title": "دیکتاتور روم",
+    "era": "۴۹-۴۴ ق.م",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg/250px-Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg",
+    "traits": {
+      "strategic": 4,
+      "militarist": 4,
+      "reformist": 3,
+      "populist": 3
+    },
+    "description": "شما مانند سزار، سیاست‌مدار جاه‌طلب و فرمانده کاریزماتیک هستید.",
+    "politicalParty": "پوپولار",
+    "suitableCountries": "روم باستان، جمهوری‌های قدرتمند",
+    "governingStyle": "دیکتاتوری کاریزماتیک",
+    "successRate": "75%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "اکبر شاه",
+    "title": "پادشاه مغولی هند",
+    "era": "۱۵۵۶-۱۶۰۵",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Govardhan._Akbar_With_Lion_and_Calf_ca._1630%2C_Metmuseum_%28cropped%29.jpg/250px-Govardhan._Akbar_With_Lion_and_Calf_ca._1630%2C_Metmuseum_%28cropped%29.jpg",
+    "traits": {
+      "tolerant": 4,
+      "strategic": 4,
+      "balanced": 4,
+      "pragmatic": 3
+    },
+    "description": "شما مانند اکبر، پادشاه متسامح و مدیر ماهر امپراتوری هستید.",
+    "politicalParty": "—",
+    "suitableCountries": "هند مغولی، امپراتوری‌های چندفرهنگی",
+    "governingStyle": "پادشاهی متسامح",
+    "successRate": "90%"
+  },
+  {
+    "name": "سوکارنو",
+    "title": "اولین رئیس‌جمهور اندونزی",
+    "era": "۱۹۴۵-۱۹۶۷",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Soekarno.jpg/250px-Soekarno.jpg",
+    "traits": {
+      "nationalist": 4,
+      "independent": 4,
+      "diplomatic": 3,
+      "populist": 3
+    },
+    "description": "شما مانند سوکارنو، رهبر ضد استعمار و بنیان‌گذار غیرمتعهدی هستید.",
+    "politicalParty": "ملی اندونزی",
+    "suitableCountries": "اندونزی، کشورهای غیرمتعهد",
+    "governingStyle": "ملی‌گرای ضد استعمار",
+    "successRate": "70%"
+  },
+  {
+    "name": "شاه عباس یکم",
+    "title": "بنیانگذار سلسله صفوی",
+    "era": "۱۵۸۸-۱۶۲۹",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Abbas_I_of_Persia.jpg/250px-Abbas_I_of_Persia.jpg",
+    "traits": {
+      "reformist": 4,
+      "strategic": 4,
+      "nationalist": 4,
+      "authoritarian": 3,
+      "modernist": 3
+    },
+    "description": "شما مانند شاه عباس بزرگ، نوساز و اصلاح‌گر امپراتوری هستید که به توسعه اقتصادی و نظامی اهمیت می‌دهید.",
+    "politicalParty": "صفوی",
+    "suitableCountries": "ایران، امپراتوری‌های در حال توسعه",
+    "governingStyle": "پادشاهی توسعه‌گرا",
+    "successRate": "90%"
+  },
+  {
+    "name": "کیم ایل‌سونگ",
+    "title": "بنیانگذار کره شمالی",
+    "era": "۱۹۴۸-۱۹۹۴",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Kim_Il_Sung_Portrait-2.jpg/250px-Kim_Il_Sung_Portrait-2.jpg",
+    "traits": {
+      "authoritarian": 5,
+      "nationalist": 5,
+      "socialist": 4,
+      "militarist": 4,
+      "centralized": 5
+    },
+    "description": "شما مانند کیم ایل‌سونگ، رهبر توتالیتری هستید که بر خودکفایی و ایدئولوژی انقلابی تأکید دارید.",
+    "politicalParty": "حزب کارگران کره",
+    "suitableCountries": "کره شمالی، رژیم‌های کمونیستی بسته",
+    "governingStyle": "کمونیست خودکفا",
+    "successRate": "65%"
+  },
+  {
+    "name": "کیم جونگ‌ایل",
+    "title": "رهبر کره شمالی",
+    "era": "۱۹۹۴-۲۰۱۱",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Kim_Jong-il_%282%29.jpg/250px-Kim_Jong-il_%282%29.jpg",
+    "traits": {
+      "authoritarian": 5,
+      "militarist": 4,
+      "nationalist": 4,
+      "isolated": 4,
+      "unpredictable": 3
+    },
+    "description": "شما مانند کیم جونگ‌ایل، رهبر مرموز و نظامی‌گری هستید که بر حفظ نظام بسته تأکید دارید.",
+    "politicalParty": "حزب کارگران کره",
+    "suitableCountries": "کره شمالی، رژیم‌های بسته",
+    "governingStyle": "رهبری مرموز نظامی",
+    "successRate": "55%"
+  },
+  {
+    "name": "کیم جونگ‌اون",
+    "title": "رهبر کره شمالی",
+    "era": "۲۰۱۱-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Kim_Jong-un_April_2019_%28cropped%29.jpg/250px-Kim_Jong-un_April_2019_%28cropped%29.jpg",
+    "traits": {
+      "authoritarian": 5,
+      "militarist": 4,
+      "nationalist": 4,
+      "strategic": 3,
+      "unpredictable": 4
+    },
+    "description": "شما مانند کیم جونگ‌اون، رهبر جوان و تکنولوژی‌محوری هستید که همزمان بر قدرت نظامی و دیپلماسی تأکید دارید.",
+    "politicalParty": "حزب کارگران کره",
+    "suitableCountries": "کره شمالی، قدرت‌های هسته‌ای جدید",
+    "governingStyle": "رهبری اقتدارگرای مدرن",
+    "successRate": "70%"
+  },
+  {
+    "name": "فرانسیسکو فرانکو",
+    "title": "رهبر اسپانیا",
+    "era": "۱۹۳۹-۱۹۷۵",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Francisco_Franco_1964.jpg/250px-Francisco_Franco_1964.jpg",
+    "traits": {
+      "authoritarian": 4,
+      "nationalist": 4,
+      "traditionalist": 4,
+      "militarist": 3,
+      "conservative": 4
+    },
+    "description": "شما مانند فرانکو، دیکتاتوری محافظه‌کار هستید که بر وحدت ملی و سنت‌های اسپانیایی تأکید دارید.",
+    "politicalParty": "فالانژ",
+    "suitableCountries": "اسپانیا، دیکتاتوری‌های محافظه‌کار",
+    "governingStyle": "دیکتاتوری محافظه‌کار",
+    "successRate": "60%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "آگوستو پینوشه",
+    "title": "رئیس‌جمهور شیلی",
+    "era": "۱۹۷۳-۱۹۹۰",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Augusto_Pinochet_1995.jpg/250px-Augusto_Pinochet_1995.jpg",
+    "traits": {
+      "authoritarian": 5,
+      "militarist": 4,
+      "capitalist": 4,
+      "nationalist": 3,
+      "anti_communist": 5
+    },
+    "description": "شما مانند پینوشه، دیکتاتوری نظامی هستید که بر اقتصاد بازار آزاد و مبارزه با کمونیسم تأکید دارید.",
+    "politicalParty": "نظامی",
+    "suitableCountries": "شیلی، دیکتاتوری‌های نظامی",
+    "governingStyle": "دیکتاتوری نظامی-اقتصادی",
+    "successRate": "50%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "حافظ اسد",
+    "title": "رئیس‌جمهور سوریه",
+    "era": "۱۹۷۱-۲۰۰۰",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hafez_al-Assad_1977.jpg/250px-Hafez_al-Assad_1977.jpg",
+    "traits": {
+      "authoritarian": 5,
+      "nationalist": 4,
+      "strategic": 4,
+      "militarist": 3,
+      "secular": 3
+    },
+    "description": "شما مانند حافظ اسد، رهبری مقتدر و استراتژیست هستید که بر ثبات و قدرت منطقه‌ای تأکید دارید.",
+    "politicalParty": "حزب بعث",
+    "suitableCountries": "سوریه، رژیم‌های اقتدارگرای عربی",
+    "governingStyle": "اقتدارگرای استراتژیک",
+    "successRate": "70%"
+  },
+  {
+    "name": "بشار اسد",
+    "title": "رئیس‌جمهور سوریه",
+    "era": "۲۰۰۰-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Bashar_al-Assad_in_2018_%28cropped%29.jpg/250px-Bashar_al-Assad_in_2018_%28cropped%29.jpg",
+    "traits": {
+      "authoritarian": 5,
+      "nationalist": 4,
+      "resistant": 4,
+      "strategic": 4,
+      "survivalist": 5
+    },
+    "description": "شما مانند بشار اسد، رهبری مقاوم و انعطاف‌پذیر هستید که بر حفظ قدرت در شرایط بحرانی تأکید دارید.",
+    "politicalParty": "حزب بعث",
+    "suitableCountries": "سوریه، رژیم‌های مقاوم",
+    "governingStyle": "اقتدارگرای مقاوم",
+    "successRate": "75%"
+  },
+  {
+    "name": "هوشی مین",
+    "title": "رئیس‌جمهور ویتنام شمالی",
+    "era": "۱۹۴۵-۱۹۶۹",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Ho_Chi_Minh_1946.jpg/250px-Ho_Chi_Minh_1946.jpg",
+    "traits": {
+      "nationalist": 5,
+      "socialist": 4,
+      "resistant": 5,
+      "strategic": 4,
+      "populist": 3
+    },
+    "description": "شما مانند هوشی‌مین، رهبر استقلال‌طلب و کمونیستی هستید که بر وحدت ملی و مبارزه ضداستعماری تأکید دارید.",
+    "politicalParty": "حزب کمونیست ویتنام",
+    "suitableCountries": "ویتنام، کشورهای ضداستعماری",
+    "governingStyle": "کمونیست ملی‌گرا",
+    "successRate": "85%"
+  },
+  {
+    "name": "پل پوت",
+    "title": "رهبر خمرهای سرخ",
+    "era": "۱۹۷۵-۱۹۷۹",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Pol_Pot_1977.jpg/250px-Pol_Pot_1977.jpg",
+    "traits": {
+      "authoritarian": 5,
+      "radical": 5,
+      "nationalist": 4,
+      "agrarian": 4,
+      "genocidal": 5
+    },
+    "description": "شما مانند پل پوت، رهبری افراطی و رادیکال هستید که بر بازگشت به جامعه کشاورزی و پاکسازی تأکید دارید.",
+    "politicalParty": "خمرهای سرخ",
+    "suitableCountries": "کامبوج، رژیم‌های رادیکال",
+    "governingStyle": "کمونیست رادیکال",
+    "successRate": "10%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "ایدی امین",
+    "title": "رئیس‌جمهور اوگاندا",
+    "era": "۱۹۷۱-۱۹۷۹",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Idi_Amin_cropped.png/250px-Idi_Amin_cropped.png",
+    "traits": {
+      "authoritarian": 5,
+      "militarist": 4,
+      "unpredictable": 5,
+      "nationalist": 3,
+      "aggressive": 4
+    },
+    "description": "شما مانند ایدی امین، دیکتاتوری غیرقابل پیش‌بینی و خشن هستید که بر نمایش قدرت و خودستایی تأکید دارید.",
+    "politicalParty": "نظامی",
+    "suitableCountries": "اوگاندا، دیکتاتوری‌های نظامی آفریقایی",
+    "governingStyle": "دیکتاتوری نمایشی",
+    "successRate": "20%",
+    "excludeFromEitaa": true
+  },
+  {
+    "name": "رابرت موگابه",
+    "title": "رئیس‌جمهور زیمبابوه",
+    "era": "۱۹۸۷-۲۰۱۷",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Robert_Mugabe_2015.jpg/250px-Robert_Mugabe_2015.jpg",
+    "traits": {
+      "authoritarian": 4,
+      "nationalist": 4,
+      "socialist": 3,
+      "populist": 3,
+      "anti_colonial": 4
+    },
+    "description": "شما مانند موگابه، رهبری ضداستعماری هستید که ابتدا محبوب بودید اما به تدریج به دیکتاتوری گراییدید.",
+    "politicalParty": "اتحادیه ملی آفریقایی",
+    "suitableCountries": "زیمبابوه، کشورهای پسااستعماری",
+    "governingStyle": "دیکتاتوری پسااستعماری",
+    "successRate": "45%"
+  },
+  {
+    "name": "فریدریش کبیر",
+    "title": "پادشاه پروس",
+    "era": "۱۷۴۰-۱۷۸۶",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Frederick_the_Great_-_Antoine_Pesne_%28ca._1750%29.jpg/250px-Frederick_the_Great_-_Antoine_Pesne_%28ca._1750%29.jpg",
+    "traits": {
+      "strategic": 5,
+      "militarist": 4,
+      "reformist": 4,
+      "nationalist": 4,
+      "enlightened": 4
+    },
+    "description": "شما مانند فریدریش کبیر، پادشاهی روشن‌فکر و نظامی‌گرا هستید که بر توسعه پروس به یک قدرت بزرگ تأکید دارید.",
+    "politicalParty": "—",
+    "suitableCountries": "پروس، پادشاهی‌های نظامی",
+    "governingStyle": "پادشاهی روشن‌فکر نظامی",
+    "successRate": "88%"
+  },
+  {
+    "name": "کاترین کبیر",
+    "title": "ملکه روسیه",
+    "era": "۱۷۶۲-۱۷۹۶",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Vigilius_Eriksen_-_Portrait_of_Catherine_II_of_Russia_in_her_coronation_coach_-_1762.jpg/250px-Vigilius_Eriksen_-_Portrait_of_Catherine_II_of_Russia_in_her_coronation_coach_-_1762.jpg",
+    "traits": {
+      "reformist": 4,
+      "enlightened": 4,
+      "nationalist": 4,
+      "authoritarian": 3,
+      "diplomatic": 4
+    },
+    "description": "شما مانند کاترین کبیر، ملکه‌ای روشن‌فکر و اصلاح‌طلب هستید که بر توسعه روسیه و دیپلماسی تأکید دارید.",
+    "politicalParty": "—",
+    "suitableCountries": "روسیه، پادشاهی‌های روشن‌فکر",
+    "governingStyle": "پادشاهی روشن‌فکر",
+    "successRate": "85%"
+  },
+  {
+    "name": "ملکه ویکتوریا",
+    "title": "ملکه بریتانیا",
+    "era": "۱۸۳۷-۱۹۰۱",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Queen_Victoria_by_Bassano.jpg/250px-Queen_Victoria_by_Bassano.jpg",
+    "traits": {
+      "traditionalist": 4,
+      "nationalist": 4,
+      "diplomatic": 3,
+      "moralist": 4,
+      "imperialist": 4
+    },
+    "description": "شما مانند ملکه ویکتوریا، نماد عصر ویکتوریایی هستید که بر اخلاق، سنت و امپراتوری تأکید دارید.",
+    "politicalParty": "—",
+    "suitableCountries": "بریتانیا، امپراتوری‌های استعماری",
+    "governingStyle": "سلطنت مشروطه نمادین",
+    "successRate": "80%"
+  },
+  {
+    "name": "ژوزف تیتو",
+    "title": "رئیس‌جمهور یوگسلاوی",
+    "era": "۱۹۵۳-۱۹۸۰",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Josip_Broz_Tito_uniform_portrait.jpg/250px-Josip_Broz_Tito_uniform_portrait.jpg",
+    "traits": {
+      "nationalist": 4,
+      "socialist": 4,
+      "independent": 5,
+      "diplomatic": 4,
+      "balanced": 4
+    },
+    "description": "شما مانند تیتو، رهبری مستقل و میانه‌رو هستید که بر وحدت چندقومیتی و عدم تعهد تأکید دارید.",
+    "politicalParty": "اتحادیه کمونیست‌های یوگسلاوی",
+    "suitableCountries": "یوگسلاوی، کشورهای غیرمتعهد",
+    "governingStyle": "کمونیست مستقل",
+    "successRate": "75%"
+  },
+  {
+    "name": "شاه عباس صفوی",
+    "title": "پادشاه ایران",
+    "era": "۱۵۸۸-۱۶۲۹",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Shah_Abbas_I.jpg/250px-Shah_Abbas_I.jpg",
+    "traits": {
+      "nationalist": 4,
+      "centralized": 4,
+      "strategic": 3,
+      "reformist": 3,
+      "authoritarian": 3
+    },
+    "description": "شما مانند شاه عباس، دولت‌ساز مقتدر و توسعه‌دهنده زیرساخت‌های ملی هستید.",
+    "politicalParty": "—",
+    "suitableCountries": "ایران صفوی، دولت‌های متمرکز",
+    "governingStyle": "اقتدارگرای دولت‌ساز",
+    "successRate": "85%"
+  },
+  {
+    "name": "حسن روحانی",
+    "title": "رئیس‌جمهور ایران",
+    "era": "۲۰۱۳-۲۰۲۱",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Hassan_Rouhani_2017.jpg/250px-Hassan_Rouhani_2017.jpg",
+    "traits": {
+      "moderate": 4,
+      "diplomatic": 4,
+      "pragmatic": 3,
+      "democratic": 2
+    },
+    "description": "شما مانند روحانی، سیاست‌مدار میانه‌رو و مذاکره‌محور هستید.",
+    "politicalParty": "اعتدال و توسعه",
+    "suitableCountries": "ایران، دولت‌های دیپلماتیک",
+    "governingStyle": "میانه‌رو دیپلماتیک",
+    "successRate": "65%"
+  },
+  {
+    "name": "ابراهیم رئیسی",
+    "title": "رئیس‌جمهور ایران",
+    "era": "۲۰۲۱-۲۰۲۴",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Ebrahim_Raisi_portrait.jpg/250px-Ebrahim_Raisi_portrait.jpg",
+    "traits": {
+      "conservative": 4,
+      "authoritarian": 3,
+      "nationalist": 3,
+      "resistant": 3
+    },
+    "description": "شما مانند رئیسی، رهبر محافظه‌کار با تمرکز بر اقتدار و عدالت هستید.",
+    "politicalParty": "اصولگرایان",
+    "suitableCountries": "ایران، دولت‌های ایدئولوژیک",
+    "governingStyle": "محافظه‌کار اقتدارگرا",
+    "successRate": "60%"
+  },
+  {
+    "name": "اتو فون بیسمارک",
+    "title": "صدراعظم آلمان",
+    "era": "۱۸۶۲-۱۸۹۰",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Otto_von_Bismarck_1871.jpg/250px-Otto_von_Bismarck_1871.jpg",
+    "traits": {
+      "strategic": 4,
+      "pragmatic": 4,
+      "nationalist": 3,
+      "authoritarian": 3
+    },
+    "description": "شما مانند بیسمارک، سیاست‌مدار واقع‌گرا و معمار وحدت ملی هستید.",
+    "politicalParty": "محافظه‌کار",
+    "suitableCountries": "آلمان، دولت‌های ملی‌ساز",
+    "governingStyle": "واقع‌گرای قدرت‌محور",
+    "successRate": "90%"
+  },
+  {
+    "name": "معمر قذافی",
+    "title": "رهبر لیبی",
+    "era": "۱۹۶۹-۲۰۱۱",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Muammar_al-Gaddafi_%28cropped%29.jpg/250px-Muammar_al-Gaddafi_%28cropped%29.jpg",
+    "traits": {
+      "populist": 4,
+      "authoritarian": 4,
+      "ideological": 3,
+      "nationalist": 3
+    },
+    "description": "شما مانند قذافی، رهبر پوپولیست و ایدئولوژیک وابسته هستید.",
+    "politicalParty": "جماهیریه",
+    "suitableCountries": "لیبی، رژیم‌های ایدئولوژیک",
+    "governingStyle": "پوپولیستی اقتدارگرا",
+    "successRate": "40%"
+  },
+  {
+    "name": "محمد بن سلمان",
+    "title": "ولیعهد عربستان",
+    "era": "۲۰۱۷-اکنون",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mohammed_bin_Salman_2022.jpg/250px-Mohammed_bin_Salman_2022.jpg",
+    "traits": {
+      "authoritarian": 4,
+      "modernist": 4,
+      "nationalist": 3,
+      "pragmatic": 3
+    },
+    "description": "شما مانند بن سلمان، مدرن‌ساز اقتدارگرا و تحول‌طلب هستید.",
+    "politicalParty": "آل سعود",
+    "suitableCountries": "عربستان، دولت‌های پادشاهی مدرن",
+    "governingStyle": "اقتدارگرای مدرن‌ساز",
+    "successRate": "75%",
+    "excludeFromEitaa": true
+  }
+]

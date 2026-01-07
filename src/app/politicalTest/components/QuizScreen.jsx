@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "../styles/App.css";
+import ShinyText from "@/components/ShinyText";
 
-const QuizScreen = ({ 
-  question, 
-  questionIndex, 
+const QuizScreen = ({
+  question,
+  questionIndex,
   totalQuestions,
-  selectedAnswer, 
-  onSelectAnswer, 
-  onNext, 
+  selectedAnswer,
+  onSelectAnswer,
+  onNext,
   onPrev,
-  explanation
+  explanation,
 }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -20,10 +21,10 @@ const QuizScreen = ({
           سوال <strong>{questionIndex + 1}</strong> از {totalQuestions}
         </span>
         <div className="progress-bar-container">
-          <div 
-            className="progress-bar" 
-            style={{ 
-              width: `${((questionIndex + 1) / totalQuestions) * 100}%` 
+          <div
+            className="progress-bar"
+            style={{
+              width: `${((questionIndex + 1) / totalQuestions) * 100}%`,
             }}
           ></div>
         </div>
@@ -31,16 +32,29 @@ const QuizScreen = ({
 
       <div className="question-block">
         <div className="question-header">
-          <div className="question-text-with-icon">{question.question}</div>
-          <button 
-            className="question-info-btn" 
+          <div className="question-text-with-icon">
+            <ShinyText
+              className="question-text-with-icon"
+              text={question.question}
+              speed={3}
+              delay={2}
+              color="var(--shiny-text-color)"
+              shineColor="var(--shiny-shine-color)"
+              spread={120}
+              direction="right"
+              yoyo={true}
+              pauseOnHover={true}
+            />
+          </div>
+          <button
+            className="question-info-btn"
             onClick={() => setShowTooltip(!showTooltip)}
             aria-label="توضیحات سوال"
           >
             ?
           </button>
         </div>
-        
+
         {showTooltip && explanation && (
           <div className="question-tooltip active">
             <div className="tooltip-title">{explanation.title}</div>
@@ -52,7 +66,7 @@ const QuizScreen = ({
           {question.options.map((option, index) => (
             <div
               key={index}
-              className={`option ${selectedAnswer === index ? 'selected' : ''}`}
+              className={`option ${selectedAnswer === index ? "selected" : ""}`}
               onClick={() => onSelectAnswer(index)}
             >
               {option.text}
@@ -62,15 +76,11 @@ const QuizScreen = ({
       </div>
 
       <div className="controls">
-        <button
-          className="btn"
-          onClick={onPrev}
-          disabled={questionIndex === 0}
-        >
+        <button className="btn" onClick={onPrev} disabled={questionIndex === 0}>
           قبلی
         </button>
         <button className="btn" onClick={onNext}>
-          {questionIndex === totalQuestions - 1 ? 'مشاهده نتایج' : 'بعدی'}
+          {questionIndex === totalQuestions - 1 ? "مشاهده نتایج" : "بعدی"}
         </button>
       </div>
     </div>

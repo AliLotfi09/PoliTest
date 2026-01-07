@@ -1,5 +1,5 @@
 import { questions, questionExplanations } from './questions.js';
-import { leaders } from './leaders.js';
+import { getFilteredLeaders } from './leaders.js';
 
 export const traitNames = {
   democratic: "دموکراتیک",
@@ -63,4 +63,4 @@ export const traitNames = {
   religious: "مذهبی"
 };
 
-export { questions, questionExplanations, leaders };
+export { questions, questionExplanations, getFilteredLeaders };

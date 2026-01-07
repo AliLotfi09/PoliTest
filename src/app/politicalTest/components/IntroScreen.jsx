@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/App.css";
 import { Link } from "react-router-dom";
+import BlurText from "@/components/BlurText";
+import ShinyText from "@/components/ShinyText";
 
 const IntroScreen = ({ onStart }) => {
   return (
@@ -9,10 +11,23 @@ const IntroScreen = ({ onStart }) => {
         <div className="intro-header">
           <div className="intro-line"></div>
           <div className="intro-title">
-            <h1>تست شخصیت سیاسی</h1>
+            <h1>
+              <BlurText text="تست شخصیت سیاسی" className="" delay={140} />
+            </h1>
           </div>
           <div className="intro-subtitle">
-            کشف کنید شما شبیه کدام رهبر تاریخی یا معاصر هستید
+            <ShinyText
+            className="intro-subtitle"
+              text=" کشف کنید شما شبیه کدام رهبر تاریخی یا معاصر هستید"
+              speed={2}
+              delay={0}
+              color="var(--shiny-text-color)"
+              shineColor="var(--shiny-shine-color)"
+              spread={120}
+              direction="right"
+              yoyo={true}
+              pauseOnHover={false}
+            />
           </div>
         </div>
 

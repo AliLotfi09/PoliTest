@@ -66,21 +66,22 @@ body {
 }
 
 .intro-title {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
   margin-bottom: 12px;
-  letter-spacing: -0.5px;
   line-height: 1.2;
   font-family: "Estedad", sans-serif;
   font-weight: 500;
+  word-spacing: -1.4rem;
 }
 
 .intro-subtitle {
-  font-size: 15px;
-  color: #666;
+  font-size: 13px;
+  color: #464646;
   font-weight: 400;
   line-height: 1.7;
-  text-align: center;
+  text-align: justify;
+  word-spacing: -0.1rem;
   margin-bottom: 28px;
   font-family: "Estedad", sans-serif;
   font-weight: 400;
@@ -558,7 +559,7 @@ body {
   }
 
   .intro-title {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .question-text {
@@ -687,6 +688,9 @@ body {
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.2px;
+  word-spacing: -0.1rem;
+  line-height: 2rem;
+  width: 100%;
   font-family: "Estedad", sans-serif;
 }
 
@@ -1156,7 +1160,7 @@ body {
 /* Responsive */
 @media (max-width: 480px) {
   .intro-title > h1 {
-    font-size: 35px;
+    font-size: 32px;
     text-align: center;
   }
 
@@ -3036,3 +3040,4 @@ html.dark .confirm-button.danger {
     filter: grayscale(20%) brightness(1.1);
   }
 }
+

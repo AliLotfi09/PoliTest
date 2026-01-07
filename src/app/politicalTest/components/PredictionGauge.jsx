@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { calculateSimilarity, calculateUserTraits } from '../utils/calculations';
-import { questions, leaders } from '../data';
+import { questions } from '../data';
 
-const PredictionGauge = ({ answers }) => {
+const PredictionGauge = ({ answers, leaders }) => {
   const answeredCount = answers.filter(a => a !== null).length;
   
   if (answeredCount < 3) {
@@ -23,12 +23,13 @@ const PredictionGauge = ({ answers }) => {
 
   const userTraits = calculateUserTraits(answers, questions);
   
-  const predictions = leaders.map(leader => ({
-    leader,
-    similarity: calculateSimilarity(userTraits, leader.traits)
-  }))
-  .sort((a, b) => b.similarity - a.similarity)
-  .slice(0, 3);
+  const predictions = leaders
+    .map(leader => ({
+      leader,
+      similarity: calculateSimilarity(userTraits, leader.traits)
+    }))
+    .sort((a, b) => b.similarity - a.similarity)
+    .slice(0, 3);
 
   return (
     <div className="prediction-gauge">
@@ -41,7 +42,7 @@ const PredictionGauge = ({ answers }) => {
           {predictions.map((pred, index) => {
             const percentage = Math.round(pred.similarity * 100);
             return (
-              <div key={pred.leader.id} className="prediction-item">
+              <div key={pred.leader.name} className="prediction-item">
                 <div className="prediction-rank">{index + 1}</div>
                 <div className="prediction-info">
                   <div className="prediction-name">{pred.leader.name}</div>

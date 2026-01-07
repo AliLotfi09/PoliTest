@@ -1,5 +1,7 @@
-export const leaders = [
-  {
+import { detectMiniAppHost } from '../../../utils/miniAppDetector';
+
+const allLeaders = [
+{
     name: "کوروش بزرگ",
     title: "بنیان‌گذار امپراتوری هخامنشی",
     era: "۵۵۹-۵۳۰ ق.م",
@@ -138,6 +140,7 @@ export const leaders = [
     suitableCountries: "ایران، ترکیه آتاتورک",
     governingStyle: "اقتدارگرای مدرن‌ساز",
     successRate: "65%",
+    excludeFromEitaa: true,
   },
   {
     name: "محمدرضا شاه پهلوی",
@@ -158,10 +161,11 @@ export const leaders = [
     suitableCountries: "ایران، کشورهای متحد غرب",
     governingStyle: "سلطنتی مدرن",
     successRate: "60%",
+    excludeFromEitaa: true,
   },
   {
     name: "روح‌الله خمینی",
-    title: "رهبر انقلاب ایران",
+    title: "رهبر انقلاب اسلامی ایران",
     era: "۱۹۷۹-۱۹۸۹",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Portrait_of_Ruhollah_Khomeini.jpg/250px-Portrait_of_Ruhollah_Khomeini.jpg",
@@ -179,7 +183,7 @@ export const leaders = [
     successRate: "80%",
   },
   {
-    name: "علی خامنه‌ای",
+    name: " آیت الله علی خامنه‌ای",
     title: "رهبر جمهوری اسلامی ایران",
     era: "۱۹۸۹-اکنون",
     image:
@@ -192,7 +196,7 @@ export const leaders = [
       resistant: 3,
     },
     description:
-      "شما مانند خامنه‌ای، بر ثبات سیاسی، استقلال و ایدئولوژی تاکید دارید.",
+      "شما مانند آیت الله خامنه‌ای، بر ثبات سیاسی، استقلال و ایدئولوژی تاکید دارید.",
     politicalParty: "جمهوری اسلامی",
     suitableCountries: "ایران، کشورهای اسلامی",
     governingStyle: "ایدئولوژیک-اقتدارگرا",
@@ -321,6 +325,7 @@ export const leaders = [
     suitableCountries: "آمریکا، کشورهای در بحران اقتصادی",
     governingStyle: "پیشرو رفاه‌گرا",
     successRate: "90%",
+    excludeFromEitaa: true,
   },
   {
     name: "جان اف کندی",
@@ -348,6 +353,7 @@ export const leaders = [
     suitableCountries: "آمریکا، کشورهای سرمایه‌داری",
     governingStyle: "محافظه‌کار بازارگرا",
     successRate: "80%",
+    excludeFromEitaa: true,
   },
   {
     name: "دونالد ترامپ",
@@ -361,6 +367,7 @@ export const leaders = [
     suitableCountries: "آمریکا، کشورهای پوپولیست",
     governingStyle: "پوپولیستی تجاری",
     successRate: "60%",
+    excludeFromEitaa: true,
   },
   {
     name: "جو بایدن",
@@ -375,6 +382,7 @@ export const leaders = [
     suitableCountries: "آمریکا، اتحادهای غربی",
     governingStyle: "معتدل دیپلماتیک",
     successRate: "70%",
+    excludeFromEitaa: true,
   },
   {
     name: "ویل‌هلم دوم آلمان",
@@ -385,9 +393,10 @@ export const leaders = [
     traits: { militarist: 4, nationalist: 4, authoritarian: 3, aggressive: 3 },
     description: "شما مانند قیصر ویلهلم، امپراتور جاه‌طلب و نظامی‌گرا هستید.",
     politicalParty: "امپراتوری آلمان",
-    suitableCountries: "آلمان امپراتوری، قدرت‌های بزرگ",
+    suitableCountries: "آلمان امپراتوری، قدرت‌های بزرگ", 
     governingStyle: "امپراتوری نظامی‌گرا",
     successRate: "50%",
+    
   },
   {
     name: "آدولف هیتلر",
@@ -402,6 +411,7 @@ export const leaders = [
     suitableCountries: "آلمان نازی، رژیم‌های توتالیتر",
     governingStyle: "توتالیتر فاشیستی",
     successRate: "10%",
+    excludeFromEitaa: true,
   },
   {
     name: "وینستون چرچیل",
@@ -420,6 +430,7 @@ export const leaders = [
     suitableCountries: "بریتانیا، دموکراسی‌های غربی",
     governingStyle: "رهبری بحران",
     successRate: "85%",
+    excludeFromEitaa: true,
   },
   {
     name: "شارل دوگل",
@@ -432,6 +443,7 @@ export const leaders = [
     suitableCountries: "فرانسه، کشورهای مستقل اروپایی",
     governingStyle: "ملی‌گرای مستقل",
     successRate: "80%",
+    excludeFromEitaa: true,
   },
   {
     name: "مارگارت تاچر",
@@ -444,6 +456,7 @@ export const leaders = [
     suitableCountries: "بریتانیا، کشورهای سرمایه‌داری",
     governingStyle: "محافظه‌کار اقتصادی",
     successRate: "75%",
+    excludeFromEitaa: true,
   },
   {
     name: "آنگلا مرکل",
@@ -456,6 +469,7 @@ export const leaders = [
     suitableCountries: "آلمان، اتحادیه اروپا",
     governingStyle: "عملگرای باثبات",
     successRate: "85%",
+    excludeFromEitaa: true,
   },
   {
     name: "امانوئل مکرون",
@@ -468,6 +482,7 @@ export const leaders = [
     suitableCountries: "فرانسه، اتحادیه اروپا",
     governingStyle: "میانه‌رو اروپایی",
     successRate: "70%",
+    excludeFromEitaa: true,
   },
   {
     name: "مائو تسه‌دونگ",
@@ -751,6 +766,7 @@ export const leaders = [
     suitableCountries: "عراق، رژیم‌های اقتدارگرا",
     governingStyle: "اقتدارگرای نظامی",
     successRate: "30%",
+    excludeFromEitaa: true,
   },
   {
     name: "بنیامین نتانیاهو",
@@ -763,6 +779,7 @@ export const leaders = [
     suitableCountries: "اسرائیل، دموکراسی‌های امنیت‌محور",
     governingStyle: "محافظه‌کار امنیت‌گرا",
     successRate: "70%",
+    excludeFromEitaa: true,
   },
   {
     name: "ولودیمیر زلنسکی",
@@ -776,6 +793,7 @@ export const leaders = [
     suitableCountries: "اوکراین، دموکراسی‌های در حال دفاع",
     governingStyle: "رهبری بحران دموکراتیک",
     successRate: "80%",
+    excludeFromEitaa: true,
   },
   {
     name: "جاسیندا آردرن",
@@ -838,6 +856,7 @@ export const leaders = [
     suitableCountries: "روم باستان، جمهوری‌های قدرتمند",
     governingStyle: "دیکتاتوری کاریزماتیک",
     successRate: "75%",
+    excludeFromEitaa: true,
   },
   {
     name: "اکبر شاه",
@@ -952,7 +971,8 @@ export const leaders = [
   politicalParty: "فالانژ",
   suitableCountries: "اسپانیا، دیکتاتوری‌های محافظه‌کار",
   governingStyle: "دیکتاتوری محافظه‌کار",
-  successRate: "60%"
+  successRate: "60%",
+  excludeFromEitaa: true,
 },
 {
   name: "آگوستو پینوشه",
@@ -970,7 +990,8 @@ export const leaders = [
   politicalParty: "نظامی",
   suitableCountries: "شیلی، دیکتاتوری‌های نظامی",
   governingStyle: "دیکتاتوری نظامی-اقتصادی",
-  successRate: "50%"
+  successRate: "50%",
+  excludeFromEitaa: true,
 },
 {
   name: "حافظ اسد",
@@ -1042,7 +1063,8 @@ export const leaders = [
   politicalParty: "خمرهای سرخ",
   suitableCountries: "کامبوج، رژیم‌های رادیکال",
   governingStyle: "کمونیست رادیکال",
-  successRate: "10%"
+  successRate: "10%",
+  excludeFromEitaa: true,
 },
 {
   name: "ایدی امین",
@@ -1060,7 +1082,8 @@ export const leaders = [
   politicalParty: "نظامی",
   suitableCountries: "اوگاندا، دیکتاتوری‌های نظامی آفریقایی",
   governingStyle: "دیکتاتوری نمایشی",
-  successRate: "20%"
+  successRate: "20%",
+  excludeFromEitaa: true,
 },
 {
   name: "رابرت موگابه",
@@ -1201,7 +1224,7 @@ export const leaders = [
     resistant: 3,
   },
   description:
-    "شما مانند رئیسی، رهبر محافظه‌کار با تمرکز بر اقتدار و عدالت قضایی هستید.",
+    "شما مانند رئیسی، رهبر محافظه‌کار با تمرکز بر اقتدار و عدالت هستید.",
   politicalParty: "اصولگرایان",
   suitableCountries: "ایران، دولت‌های ایدئولوژیک",
   governingStyle: "محافظه‌کار اقتدارگرا",
@@ -1237,7 +1260,7 @@ export const leaders = [
     nationalist: 3,
   },
   description:
-    "شما مانند قذافی، رهبر پوپولیست رادیکال و ایدئولوژیک هستید.",
+    "شما مانند قذافی، رهبر پوپولیست و ایدئولوژیک وابسته هستید.",
   politicalParty: "جماهیریه",
   suitableCountries: "لیبی، رژیم‌های ایدئولوژیک",
   governingStyle: "پوپولیستی اقتدارگرا",
@@ -1260,6 +1283,54 @@ export const leaders = [
   suitableCountries: "عربستان، دولت‌های پادشاهی مدرن",
   governingStyle: "اقتدارگرای مدرن‌ساز",
   successRate: "75%",
+  excludeFromEitaa: true,
 },
 
-];
+]
+
+export const getFilteredLeaders = () => {
+  const host = detectMiniAppHost();
+  
+  console.log('🔍 detectMiniAppHost() returned:', host);
+  console.log('📱 Full UserAgent for debugging:', navigator.userAgent);
+  console.log('🌐 Window objects:', {
+    hasTelegram: !!window.Telegram,
+    hasEitaa: !!window.Eitaa,
+    hasEitaaWebApp: !!(window.Eitaa?.WebApp),
+    hasTelegramWebviewProxy: !!window.TelegramWebviewProxy
+  });
+  
+  // دیباگ بیشتر برای ایتا
+  if (host === "eitaa") {
+    console.log('🚫 Filtering for Eitaa - Checking leaders with excludeFromEitaa flag');
+    const filtered = allLeaders.filter(leader => !leader.excludeFromEitaa);
+    
+    // دیباگ: چک کردن چه کسانی فیلتر شدند
+    const removed = allLeaders.filter(l => l.excludeFromEitaa);
+    console.log('🗑️ Removed leaders:', removed.map(l => l.name));
+    console.log('✅ Remaining leaders:', filtered.map(l => l.name));
+    
+    return filtered;
+  }
+  
+  console.log('✅ No filtering - returning all leaders');
+  return allLeaders;
+};
+
+// تابع کمکی برای دیباگ بهتر
+export const debugLeadersFiltering = () => {
+  
+  const host = detectMiniAppHost();
+  const filtered = getFilteredLeaders();
+  
+  console.log('=== DEBUG LEADERS FILTERING ===');
+  console.log('Detected host:', host);
+  console.log('Total leaders:', allLeaders.length);
+  console.log('Filtered leaders:', filtered.length);
+  console.log('Leaders with excludeFromEitaa flag:', 
+    allLeaders.filter(l => l.excludeFromEitaa).map(l => l.name)
+  );
+  console.log('=== END DEBUG ===');
+  
+  return { host, filtered };
+};

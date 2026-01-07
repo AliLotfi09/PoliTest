@@ -96,10 +96,6 @@ const About = () => {
               {features.map((feature, index) => (
                 <div key={index} className="feature-card">
                   <div
-                    className="feature-icon"
-                    dangerouslySetInnerHTML={{
-                      __html: parseEmoji(feature.icon),
-                    }}
                   />
                   <h4 className="feature-title">{feature.title}</h4>
                   <p className="feature-description">{feature.description}</p>
@@ -210,7 +206,7 @@ const About = () => {
 
           {/* فوتر */}
           <div className="about-footer">
-            <p>© 1404 - تمامی حقوق برای پُلی تستt محفوظ است</p>
+            <p>© 1404 - تمامی حقوق برای پُلی تست محفوظ است</p>
             <div className="footer-links">
               <Link to="/terms">
               <button className="footer-link">قوانین و مقررات</button>

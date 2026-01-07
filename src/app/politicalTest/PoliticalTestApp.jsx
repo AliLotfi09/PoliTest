@@ -11,6 +11,7 @@ import { questionExplanations } from "./data";
 import Changelog from "../../components/Changelog";
 import { Helmet } from "react-helmet-async";
 import LeaderBackground from "./components/LeaderBackground";
+import Noise from "./components/Noise";
 
 function PoliticalTestApp({ onIntroComplete }) {
   const [showIntroSlides, setShowIntroSlides] = useState(true);
@@ -26,6 +27,7 @@ function PoliticalTestApp({ onIntroComplete }) {
     showToast,
     questions,
     traitNames,
+    leaders, // این حالا باید filteredLeaders باشد
     startTest,
     handleAnswer,
     nextQuestion,
@@ -67,7 +69,10 @@ function PoliticalTestApp({ onIntroComplete }) {
 
       {showToast && <Toast message={showToast} onClose={closeToast} />}
 
-      <div className="leaders" >
+
+
+
+      <div className="leaders">
         <LeaderBackground />
       </div>
 
@@ -95,7 +100,7 @@ function PoliticalTestApp({ onIntroComplete }) {
           </div>
 
           <div className="sidebar">
-            <PredictionGauge answers={answers} />
+            <PredictionGauge answers={answers} leaders={leaders} />
           </div>
         </div>
       ) : (

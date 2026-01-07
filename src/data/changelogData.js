@@ -1,17 +1,17 @@
 // data/changelogData.js
 export const changelogData = {
-  version: "1.2.3",
-  releaseDate: "1404/09/25", 
+  version: "1.2.5",
+  releaseDate: "1404/10/12", 
   forceUpdate: false,
   minVersion: "1.2.0",
-  downloadUrl: "https://github.com/Alilotfi09/PoliTest/releases/latest",
   apiCheckUrl: "", 
   
   changes: [
+    { type: "new", text: "اضافه شدن افکت های چشم نواز" },
     { type: "new", text: "اضافه شدن ۲۰ رهبر جدید" },
+    { type: "new", text: "اضافه شدن پروفایل در مینی‌اپ ها" },
     { type: "improved", text: "بهبود دقت الگوریتم تطبیق" },
-    { type: "improved", text: "افزایش سرعت لودینگ" },
-    { type: "fixed", text: "رفع باگ نمایش نتایج" }
+    { type: "improved", text: "بهبود ظاهر و تجربه کلی" },
   ],
   
   versionHistory: [
