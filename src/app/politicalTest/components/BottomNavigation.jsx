@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/App.css'
+import AdlyBanner from '@/components/AdlyBanner';
 
 
 const AdvancedBottomNavigation = () => {
@@ -58,6 +59,8 @@ const AdvancedBottomNavigation = () => {
   }, [location.pathname]);
 
   return (
+    <>
+    <AdlyBanner />
     <nav className="advanced-bottom-navigation">
       <div className="nav-container">
         <div className="nav-backdrop" />
@@ -97,6 +100,7 @@ const AdvancedBottomNavigation = () => {
         </div>
       </div>
     </nav>
+</>
   );
 };
 

@@ -189,7 +189,7 @@ Politest.ir
     
     // Data
     questions,
-    leaders: filteredLeaders, // این مهم است - filteredLeaders را پاس بده
+    leaders: filteredLeaders,
     traitNames,
     
     // Actions

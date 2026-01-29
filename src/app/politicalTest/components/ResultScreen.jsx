@@ -4,7 +4,6 @@ import html2canvas from "html2canvas";
 import { Share2, Download, RotateCcw, Heart, Copy, Share } from "lucide-react";
 import { getFilteredLeaders } from "../data/leaders";
 import ShinyText from "@/components/ShinyText";
-import AdlyBanner from "@/components/AdlyBanner";
 
 Chart.register(...registerables);
 
@@ -459,7 +458,6 @@ Politest.ir
             <div className="match-score">{result.percentage}%</div>
             <div className="match-label">درصد تطابق</div>
           </div>
-          <AdlyBanner />
           <div className="result-description">{result.description}</div>
 
           <div className="traits-grid">

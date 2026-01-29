@@ -13,31 +13,32 @@ export function detectMiniAppHost() {
   try {
     const ua = navigator.userAgent.toLowerCase();
 
-    // اول Telegram رو چک کنید
-    if (window.TelegramWebviewProxy || ua.includes("telegram"))
-      return "telegram";
-
-    // سپس Eitaa رو با دقت بیشتری چک کنید
+    // 1. Telegram (اول و قطعی)
     if (
-      window.Eitaa?.WebApp ||
-      window.Eitaa ||
+      window.TelegramWebviewProxy ||
+      window.Telegram?.WebApp ||
+      ua.includes("telegram")
+    ) {
+      return "telegram";
+    }
+
+    // 2. Eitaa (فقط اگر تلگرام نبود)
+    if (
+      // دسکتاپ ایتا (Electron)
+      window.external?.invoke ||
+      // موبایل ایتا
       ua.includes("eitaa") ||
       ua.includes("eitaaw")
     ) {
-      console.log("📱 Eitaa detected via:", {
-        hasEitaaObject: !!window.Eitaa,
-        hasEitaaWebApp: !!window.Eitaa?.WebApp,
-        userAgentMatches: ua.includes("eitaa") || ua.includes("eitaaw"),
-      });
       return "eitaa";
     }
 
     return "unknown";
-  } catch (error) {
-    console.warn("Error detecting mini-app host:", error);
+  } catch {
     return "unknown";
   }
 }
+
 
 export async function initMiniApp() {
   const host = detectMiniAppHost();

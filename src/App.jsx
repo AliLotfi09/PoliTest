@@ -57,7 +57,6 @@ function App() {
                   {!showIntroSlides && (
                     <>
                       <BottomNavigation />
-                      <AdlyBanner />
                     </>
                   )}
                 </>

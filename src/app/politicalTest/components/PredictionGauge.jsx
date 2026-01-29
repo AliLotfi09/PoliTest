@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { calculateSimilarity, calculateUserTraits } from '../utils/calculations';
 import { questions } from '../data';
+import AdlyBanner from '@/components/AdlyBanner';
 
 const PredictionGauge = ({ answers, leaders }) => {
   const answeredCount = answers.filter(a => a !== null).length;
@@ -32,6 +33,7 @@ const PredictionGauge = ({ answers, leaders }) => {
     .slice(0, 3);
 
   return (
+
     <div className="prediction-gauge">
       <div className="gauge-header">
         <span className="gauge-icon">🎯</span>

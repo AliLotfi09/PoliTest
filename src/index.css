@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
-
-@plugin 'tailwindcss-animate';
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
 @custom-variant dark (&:is(.dark *));
+
 
 * {
   margin: 0;
@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: 'Vazirmatn', sans-serif;
+  font-family: "Vazirmatn", sans-serif;
   background: #fafafa;
   color: #1a1a1a;
   min-height: 100vh;
@@ -26,8 +26,12 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {

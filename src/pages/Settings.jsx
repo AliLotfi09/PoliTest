@@ -4,6 +4,9 @@ import { useTheme } from "../providers/ThemeProvider";
 import { useSound } from "../hooks/useSound";
 import { useVibration } from "../hooks/useVibration";
 import AdvancedBottomNavigation from "../components/BottomNavigation";
+import { FontManager } from "../utils/fontManager";
+
+
 import {
   Sun,
   Moon,
@@ -63,24 +66,36 @@ const Settings = () => {
   };
 
   // توابع اصلی
-  const handleSettingChange = (key, value) => {
-    playSelect();
-    clickVibrate();
-    updateSetting(key, value);
+  const handleSettingChange = async (key, value) => {
+  playSelect();
+  clickVibrate();
 
-    // پیام‌های توضیحی
-    const messages = {
-      fontFamily: `فونت به ${value === "vazir" ? "وزیر" : "استعداد"} تغییر کرد`,
-      soundEnabled: `صدا ${value ? "فعال" : "غیرفعال"} شد`,
-      vibrationEnabled: `لرزش ${value ? "فعال" : "غیرفعال"} شد`,
-      fontSize: `سایز فونت تغییر کرد`,
-      language: `زبان تغییر کرد`,
-    };
+  if (key === "fontFamily") {
+    const ok = await FontManager.loadFont(value);
+    if (ok) FontManager.applyFont(value);
+  }
 
-    if (messages[key]) {
-      showToast(messages[key]);
-    }
+  updateSetting(key, value);
+
+  const messages = {
+    fontFamily: `فونت به ${
+      value === "vazir"
+        ? "وزیر"
+        : value === "estedad"
+        ? "استعداد"
+        : value === "abar"
+        ? "ابر"
+        : value
+    } تغییر کرد`,
+    soundEnabled: `صدا ${value ? "فعال" : "غیرفعال"} شد`,
+    vibrationEnabled: `لرزش ${value ? "فعال" : "غیرفعال"} شد`,
+    fontSize: `سایز فونت تغییر کرد`,
+    language: `زبان تغییر کرد`,
   };
+
+  if (messages[key]) showToast(messages[key]);
+};
+
 
   const handleThemeChange = (newTheme) => {
     playSelect();
@@ -205,7 +220,7 @@ const Settings = () => {
   const handleClearCache = () => {
     if (
       window.confirm(
-        "آیا مطمئن هستید که می‌خواهید کش برنامه را پاک کنید؟ این عمل قابل بازگشت نیست."
+        "آیا مطمئن هستید که می‌خواهید کش برنامه را پاک کنید؟ این عمل قابل بازگشت نیست.",
       )
     ) {
       try {
@@ -225,7 +240,7 @@ const Settings = () => {
   const handleOpenGitHub = () => {
     window.open(
       changelogData.downloadUrl || "https://github.com/ALILOTFI1379/PoliTest",
-      "_blank"
+      "_blank",
     );
     showToast("صفحه گیت‌هاب باز شد", "info");
   };
@@ -244,12 +259,13 @@ const Settings = () => {
   const fontOptions = [
     { id: "estedad", label: "استعداد" },
     { id: "vazir", label: "وزیر" },
+    { id: "abar", label: "ابر" },
   ];
 
-  const languageOptions = [
-    { id: "fa", label: "فارسی", flag: "🇮🇷" },
-    { id: "en", label: "انگلیسی", flag: "🇺🇸" },
-  ];
+  // const languageOptions = [
+  //   { id: "fa", label: "فارسی", flag: "🇮🇷" },
+  //   { id: "en", label: "انگلیسی", flag: "🇺🇸" },
+  // ];
 
   // کامپوننت Toast
   const Toast = () => {
@@ -310,20 +326,20 @@ const Settings = () => {
                     {change.type === "new"
                       ? "🆕"
                       : change.type === "improved"
-                      ? "✨"
-                      : change.type === "fixed"
-                      ? "🐛"
-                      : "📝"}
+                        ? "✨"
+                        : change.type === "fixed"
+                          ? "🐛"
+                          : "📝"}
                   </div>
                   <div className="change-content">
                     <span className="change-type">
                       {change.type === "new"
                         ? "جدید"
                         : change.type === "improved"
-                        ? "بهبود"
-                        : change.type === "fixed"
-                        ? "رفع باگ"
-                        : "تغییر"}
+                          ? "بهبود"
+                          : change.type === "fixed"
+                            ? "رفع باگ"
+                            : "تغییر"}
                     </span>
                     <span className="change-text">{change.text}</span>
                   </div>
@@ -516,8 +532,8 @@ const Settings = () => {
                         {change.type === "new"
                           ? "🆕"
                           : change.type === "improved"
-                          ? "✨"
-                          : "🐛"}
+                            ? "✨"
+                            : "🐛"}
                       </span>
                       <span className="preview-text">{change.text}</span>
                     </div>
@@ -601,7 +617,11 @@ const Settings = () => {
                           fontFamily:
                             option.id === "vazir"
                               ? "Vazirmatn, sans-serif"
-                              : "Estedad, sans-serif",
+                              : option.id === "estedad"
+                                ? "Estedad, sans-serif"
+                                : option.id === "abar"
+                                  ? "AbarMidFaNum, sans-serif"
+                                  : "Estedad, sans-serif",
                         }}
                       >
                         {option.label}
@@ -641,7 +661,7 @@ const Settings = () => {
                         onClick={() =>
                           handleSettingChange(
                             "soundEnabled",
-                            !settings.soundEnabled
+                            !settings.soundEnabled,
                           )
                         }
                       >
@@ -667,7 +687,7 @@ const Settings = () => {
                             onChange={(e) =>
                               handleSettingChange(
                                 "soundVolume",
-                                parseInt(e.target.value) / 100
+                                parseInt(e.target.value) / 100,
                               )
                             }
                             className="slider"
@@ -715,7 +735,7 @@ const Settings = () => {
                         onClick={() =>
                           handleSettingChange(
                             "vibrationEnabled",
-                            !settings.vibrationEnabled
+                            !settings.vibrationEnabled,
                           )
                         }
                       >

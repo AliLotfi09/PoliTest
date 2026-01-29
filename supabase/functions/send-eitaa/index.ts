@@ -8,40 +8,114 @@ const supabase = createClient(
 );
 
 const TOKEN = Deno.env.get("EITAA_PROGRAM_TOKEN")!;
-const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 const BATCH_SIZE = 20;
 
 type Mode = "welcome" | "vip" | "broadcast";
 
 serve(async (req) => {
   try {
-    const { mode, message } = await req.json() as {
-      mode: Mode;
-      message?: string;
-    };
+    console.log("Request received:", {
+      method: req.method,
+      headers: Object.fromEntries(req.headers.entries()),
+      url: req.url
+    });
+
+    // بررسی متد درخواست
+    if (req.method !== "POST") {
+      return new Response(
+        JSON.stringify({ error: "Method not allowed. Use POST" }),
+        { status: 405, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    // بررسی وجود body
+    const contentType = req.headers.get("content-type") || "";
+    
+    if (!req.body) {
+      return new Response(
+        JSON.stringify({ error: "No request body" }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    let body: any = {};
+    
+    try {
+      // اگر content-type application/json نیست، باز هم سعی کنیم parse کنیم
+      body = await req.json();
+      console.log("Parsed body:", body);
+    } catch (e) {
+      console.error("JSON parsing error:", e);
+      
+      // سعی کنیم body را به صورت text بخوانیم
+      try {
+        const textBody = await req.text();
+        console.log("Raw body text:", textBody);
+        
+        // سعی در parse دستی
+        if (textBody.trim().startsWith("{") || textBody.trim().startsWith("[")) {
+          body = JSON.parse(textBody);
+        } else {
+          return new Response(
+            JSON.stringify({ 
+              error: "Invalid JSON body",
+              details: e.message,
+              received: textBody.substring(0, 100)
+            }),
+            { status: 400, headers: { "Content-Type": "application/json" } }
+          );
+        }
+      } catch (textError) {
+        return new Response(
+          JSON.stringify({ 
+            error: "Could not parse request body",
+            jsonError: e.message,
+            textError: textError.message
+          }),
+          { status: 400, headers: { "Content-Type": "application/json" } }
+        );
+      }
+    }
+
+    const { mode, message } = body as { mode: Mode; message?: string };
+
+    // اعتبارسنجی mode
+    if (!mode || !["welcome", "vip", "broadcast"].includes(mode)) {
+      return new Response(
+        JSON.stringify({ error: "Invalid mode. Must be 'welcome', 'vip', or 'broadcast'" }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
+      );
+    }
 
     let query = supabase.from("users").select("id, first_name, visit_count");
 
     // 🔀 رفتار بر اساس mode
     if (mode === "welcome") {
       query = query.eq("welcome_sent", false).limit(20);
-    }
-
-    if (mode === "vip") {
-      query = query
-        .gt("visit_count", 3)
-        .eq("vip_message_sent", false)
-        .limit(50);
-    }
-
-    if (mode === "broadcast") {
+    } else if (mode === "vip") {
+      query = query.gt("visit_count", 3).eq("vip_message_sent", false).limit(50);
+    } else if (mode === "broadcast") {
       query = query.eq("broadcast_sent", false);
     }
 
     const { data: users, error } = await query;
-    if (error || !users?.length) {
-      return new Response(JSON.stringify({ message: "No users" }), { status: 200 });
+    if (error) {
+      console.error("Supabase query error:", error);
+      return new Response(
+        JSON.stringify({ error: "Database error", details: error.message }),
+        { status: 500, headers: { "Content-Type": "application/json" } }
+      );
     }
+    
+    if (!users?.length) {
+      return new Response(
+        JSON.stringify({ message: "No users found for this mode" }),
+        { status: 200, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    console.log(`Found ${users.length} users for mode: ${mode}`);
 
     const results: any[] = [];
 
@@ -49,51 +123,96 @@ serve(async (req) => {
       const batch = users.slice(i, i + BATCH_SIZE);
 
       const jobs = batch.map(async (user) => {
-        const chat_id = Number(String(user.id).replace("eitaa_", ""));
-        if (!chat_id) return;
+        try {
+          const chat_id = Number(String(user.id).replace("eitaa_", ""));
+          if (!chat_id) {
+            console.warn(`Invalid chat_id for user: ${user.id}`);
+            return { id: user.id, error: "Invalid chat_id" };
+          }
 
-        const text =
-          message ||
-          (mode === "welcome"
-            ? `سلام ${user.first_name || "عزیز"}! 👋
+          const text =
+            message ||
+            (mode === "welcome"
+              ? `سلام ${user.first_name || "عزیز"}! 👋
 خوش اومدی به تست شخصیت سیاسی ما! 😎
 نتیجه غیرمنتظره‌ای در انتظارته، همین الان شروع کن! 🚀
 نتیجه تست خودتو برای دوستان و علاقه‌مندان بفرست تا اون‌ها هم شرکت کنن✨`
-            : mode === "vip"
-            ? `سلام ${user.first_name || "دوست عزیز"}! 👀
+              : mode === "vip"
+              ? `سلام ${user.first_name || "دوست عزیز"}! 👀
 دیدیم ${user.visit_count || 0} بار سر زدی 😉
 این یعنی وفاداری و کنجکاوی داری! 🔥
 هر روز به ما سربزن و همچنین آشناهات رو دعوت کن تا اونا هم تست بدن!
 همین الان دوباره امتحانش کن و نتیجه‌تو با دوستانت به اشتراک بذار ✨`
-            : "");
+              : mode === "broadcast"
+              ? `سلام ${user.first_name || "دوست عزیز"}! 👋
 
-        await fetch("https://eitaayar.ir/api/app/sendMessage", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ token: TOKEN, chat_id, text }),
-        });
+یه فرصت دوباره برای تست شخصیت سیاسی داری 🚀  
+برای شروع دوباره، روی سه‌نقطه بالا بزن و صفحه رو Reload  یا بارگذاری مجدد صفحه رو بزن کن تا ویژگی های جدید رو ببینی
 
-        // FIXED: Proper object update based on mode
-        const updateData: any = {};
-        if (mode === "welcome") updateData.welcome_sent = true;
-        if (mode === "vip") updateData.vip_message_sent = true;
-        if (mode === "broadcast") updateData.broadcast_sent = true;
+بعد از دیدن نتیجه، تجربه‌ت رو با ما به اشتراک بذار  
+فرم رضایت‌سنجی:  
+https://eitaa.com/Pollbot_app/app?startapp=an_CwcS8nnr?btn=پاسخ.به.پرسشنامه`
+              : "");
 
-        await supabase
-          .from("users")
-          .update(updateData)
-          .eq("id", user.id);
+          const sendResult = await fetch("https://eitaayar.ir/api/app/sendMessage", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ token: TOKEN, chat_id, text }),
+          });
 
-        return { id: chat_id, mode, status: "sent" };
+          const sendData = await sendResult.json();
+          console.log(`Sent to ${chat_id}:`, sendData);
+
+          const updateData: any = {};
+          if (mode === "welcome") updateData.welcome_sent = true;
+          if (mode === "vip") updateData.vip_message_sent = true;
+          if (mode === "broadcast") updateData.broadcast_sent = true;
+
+          await supabase.from("users").update(updateData).eq("id", user.id);
+
+          return { 
+            id: chat_id, 
+            mode, 
+            status: "sent",
+            message_id: sendData.result?.message_id 
+          };
+        } catch (jobError) {
+          console.error(`Error sending to user ${user.id}:`, jobError);
+          return { id: user.id, error: jobError.message };
+        }
       });
 
-      results.push(...await Promise.all(jobs));
-      await sleep(1000);
+      const batchResults = await Promise.all(jobs);
+      results.push(...batchResults);
+      
+      if (i + BATCH_SIZE < users.length) {
+        console.log(`Waiting 1 second before next batch...`);
+        await sleep(1000);
+      }
     }
 
-    return new Response(JSON.stringify({ results }), { status: 200 });
-
+    return new Response(
+      JSON.stringify({ 
+        success: true,
+        mode,
+        total_sent: results.filter(r => !r.error).length,
+        total_failed: results.filter(r => r.error).length,
+        results 
+      }),
+      { 
+        status: 200, 
+        headers: { "Content-Type": "application/json" } 
+      }
+    );
   } catch (err: any) {
-    return new Response(JSON.stringify({ error: err.message }), { status: 500 });
+    console.error("Unhandled error:", err);
+    return new Response(
+      JSON.stringify({ 
+        error: "Internal server error",
+        message: err.message,
+        stack: err.stack 
+      }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
   }
 });

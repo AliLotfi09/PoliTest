@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/App.css";
 import ShinyText from "@/components/ShinyText";
+import AdlyBanner from "@/components/AdlyBanner";
 
 const QuizScreen = ({
   question,
@@ -72,9 +73,10 @@ const QuizScreen = ({
               {option.text}
             </div>
           ))}
+          
+        <AdlyBanner />
         </div>
       </div>
-
       <div className="controls">
         <button className="btn" onClick={onPrev} disabled={questionIndex === 0}>
           قبلی
