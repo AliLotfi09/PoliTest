@@ -1,0 +1,138 @@
+/**
+*
+*	Name:			Abar Fonts
+*	Version:			1.0
+*	Author:			Reza Bakhtiarifard
+*	Created on:		October 2023
+*	Updated on:		October 2023
+*	Vendor:			http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+فونت ابر یک نرم افزار مالکیتی محسوب می شود. جهت آگاهی از قوانین استفاده از این فونت ها لطفا به وب سایت (فونت ایران دات کام) مراجعه نمایید
+--------------------------------------------------------------------------------------
+Abar fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+------------------------------------------------------------------------------------- fonts/-
+*	
+**/
+
+@font-face {
+	font-family: AbarLowFaNum;
+	font-style: normal;
+	font-weight: normal;
+	src: url('woff/AbarLowFaNum-Regular.woff') format('woff'),   
+	url('woff2/AbarLowFaNum-Regular.woff2') format('woff2');		 	 
+}
+
+@font-face {
+	font-family: AbarLowFaNum;
+	font-style: normal;
+	font-weight: 600;
+	src: url('woff/AbarLowFaNum-SemiBold.woff') format('woff'),   
+	url('woff2/AbarLowFaNum-SemiBold.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: AbarLowFaNum;
+	font-style: normal;
+	font-weight: bold;
+	src: url('woff/AbarLowFaNum-Bold.woff') format('woff'),   
+	url('woff2/AbarLowFaNum-Bold.woff2') format('woff2'); 
+}
+
+@font-face {
+	font-family: AbarLowFaNum;
+	font-style: normal;
+	font-weight: 800;
+	src: url('woff/AbarLowFaNum-ExtraBold.woff') format('woff'),   
+	url('woff2/AbarLowFaNum-ExtraBold.woff2') format('woff2'); 
+}
+
+@font-face {
+	font-family: AbarLowFaNum;
+	font-style: normal;
+	font-weight: 900;
+	src: url('woff/AbarLowFaNum-Black.woff') format('woff'),   
+	url('woff2/AbarLowFaNum-Black.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: AbarMidFaNum;
+	font-style: normal;
+	font-weight: normal;
+	src: url('woff/AbarMidFaNum-Regular.woff') format('woff'),   
+	url('woff2/AbarMidFaNum-Regular.woff2') format('woff2');		 	 
+}
+
+@font-face {
+	font-family: AbarMidFaNum;
+	font-style: normal;
+	font-weight: 600;
+	src: url('woff/AbarMidFaNum-SemiBold.woff') format('woff'),   
+	url('woff2/AbarMidFaNum-SemiBold.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: AbarMidFaNum;
+	font-style: normal;
+	font-weight: bold;
+	src: url('woff/AbarMidFaNum-Bold.woff') format('woff'),   
+	url('woff2/AbarMidFaNum-Bold.woff2') format('woff2'); 
+}
+
+@font-face {
+	font-family: AbarMidFaNum;
+	font-style: normal;
+	font-weight: 800;
+	src: url('woff/AbarMidFaNum-ExtraBold.woff') format('woff'),   
+	url('woff2/AbarMidFaNum-ExtraBold.woff2') format('woff2'); 
+}
+
+@font-face {
+	font-family: AbarMidFaNum;
+	font-style: normal;
+	font-weight: 900;
+	src: url('woff/AbarMidFaNum-Black.woff') format('woff'),   
+	url('woff2/AbarMidFaNum-Black.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: AbarHighFaNum;
+	font-style: normal;
+	font-weight: normal;
+	src: url('woff/AbarHighFaNum-Regular.woff') format('woff'),   
+	url('woff2/AbarHighFaNum-Regular.woff2') format('woff2');		 	 
+}
+
+@font-face {
+	font-family: AbarHighFaNum;
+	font-style: normal;
+	font-weight: 600;
+	src: url('woff/AbarHighFaNum-SemiBold.woff') format('woff'),   
+	url('woff2/AbarHighFaNum-SemiBold.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: AbarHighFaNum;
+	font-style: normal;
+	font-weight: bold;
+	src: url('woff/AbarHighFaNum-Bold.woff') format('woff'),   
+	url('woff2/AbarHighFaNum-Bold.woff2') format('woff2'); 
+}
+
+@font-face {
+	font-family: AbarHighFaNum;
+	font-style: normal;
+	font-weight: 800;
+	src: url('woff/AbarHighFaNum-ExtraBold.woff') format('woff'),   
+	url('woff2/AbarHighFaNum-ExtraBold.woff2') format('woff2'); 
+}
+
+@font-face {
+	font-family: AbarHighFaNum;
+	font-style: normal;
+	font-weight: 900;
+	src: url('woff/AbarHighFaNum-Black.woff') format('woff'),   
+	url('woff2/AbarHighFaNum-Black.woff2') format('woff2');		 
+}
