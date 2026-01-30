@@ -3,7 +3,7 @@ export class FontManager {
   static fonts = {
     estedad: {
       name: 'Estedad',
-      url: 'https://cdn.jsdelivr.net/gh/rastikerdar/estedad-font@latest/fonts/font-face.css',
+      url: '/fonts/fontiran.css',
       className: 'font-estedad',
       fallback: 'system-ui, -apple-system, sans-serif'
     },

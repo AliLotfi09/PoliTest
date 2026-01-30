@@ -1,9 +1,11 @@
-@import url(/public/fonts/fontiran.css);
+@import url(/fonts/fontiran.css);
+
 
 /* ============ GLOBAL STYLES ============ */
 body.font-estedad,
 body.font-estedad * {
   font-family: 'Estedad', sans-serif !important;
+  font-weight: 600;
 }
 
 /* کلاس وزیر */
