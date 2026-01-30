@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint .",
+    "build": "vite build",
     "preview": "vite preview",
     "predeploy": "bun run build",
     "deploy": "git add . && git commit -m 'deploy' && git push -u origin main" 
