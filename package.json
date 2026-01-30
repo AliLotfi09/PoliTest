@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "bun run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "git add . && git commit -m 'deploy' && git push -u origin main" 
   },
   "dependencies": {
     "@mui/material": "^7.3.6",
