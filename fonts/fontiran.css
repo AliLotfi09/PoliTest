@@ -136,3 +136,15 @@ This set of fonts are used in this project under the license: (.....)
 	src: url('woff/AbarHighFaNum-Black.woff') format('woff'),   
 	url('woff2/AbarHighFaNum-Black.woff2') format('woff2');		 
 }
+
+@font-face {
+	font-family: Estedad;
+	src: url('estedad/Estedad-Regular.woff2');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Estedad;
+	src: url('estedad/Estedad-Medium.woff2');
+	font-weight: 600;
+}
