@@ -9,7 +9,6 @@ export class FontManager {
     },
     vazir: {
       name: 'Vazirmatn',
-      url: 'https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@latest/dist/font-face.css',
       className: 'font-vazir',
       fallback: 'system-ui, -apple-system, sans-serif'
     },

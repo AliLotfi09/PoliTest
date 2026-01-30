@@ -49,7 +49,8 @@
     "topojson-client": "^3.1.0",
     "twemoji": "^14.0.2",
     "use-sound": "^5.0.0",
-    "vite-plugin-pwa": "^1.2.0"
+    "vite-plugin-pwa": "^1.2.0",
+    "wrangler": "^4.61.1"
   },
   "devDependencies": {
     "@capacitor/android": "^7.4.4",
