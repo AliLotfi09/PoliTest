@@ -60,7 +60,7 @@ export async function initMiniApp() {
           await loadScript("https://developer.eitaa.com/eitaa-web-app.js");
           await new Promise(resolve => setTimeout(resolve, 300));
         } catch (err) {
-          console.warn("Could not load Eitaa SDK");
+          console.warn("Could not load Eitaa SDK", err);
           return initEitaaFallback();
         }
       }

@@ -843,6 +843,7 @@ const allLeaders = [
     suitableCountries: "مقدونیه باستان، امپراتوری‌های باستانی",
     governingStyle: "فتح‌گرای فرهنگی",
     successRate: "85%",
+    excludeFromEitaa: true,
   },
   {
     name: "یولیوس سزار",
