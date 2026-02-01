@@ -242,9 +242,8 @@ Politest.ir
       handleCopyResult();
     }
   };
-
   const handleDownload = async () => {
-    if (!shareableRef.current || !result || isDownloading) return;
+    if (!result || isDownloading) return;
 
     setIsDownloading(true);
 
@@ -254,155 +253,200 @@ Politest.ir
         return;
       }
 
-      const element = shareableRef.current.cloneNode(true);
-      element.style.width = "600px";
-      element.style.padding = "40px";
-      element.style.backgroundColor = "#ffffff";
-      element.style.borderRadius = "24px";
-
-      element.classList.add("download-version");
-
+      /* ---------- container ---------- */
       const container = document.createElement("div");
-      container.style.cssText = `
-        position: fixed;
-        top: -9999px;
-        left: -9999px;
-        width: 600px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 40px;
-        border-radius: 24px;
-      `;
+      Object.assign(container.style, {
+        position: "fixed",
+        top: "-9999px",
+        left: "-9999px",
+        width: "600px",
+        padding: "32px",
+        direction: "rtl",
+        fontFamily: "'Estedad', 'Vazirmatn', sans-serif",
+        background: "linear-gradient(135deg, #667eea, #764ba2)",
+        borderRadius: "24px",
+      });
 
+      /* ---------- content ---------- */
       const content = document.createElement("div");
-      content.className = "preview-content";
-      content.style.cssText = `
-        background: white;
-        border-radius: 20px;
-        padding: 32px 28px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        text-align: center;
-      `;
+      Object.assign(content.style, {
+        background: "#ffffff",
+        borderRadius: "20px",
+        padding: "28px",
+        textAlign: "center",
+        unicodeBidi: "plaintext",
+        boxShadow: "0 20px 60px rgba(0,0,0,.25)",
+      });
 
+      /* ---------- header ---------- */
       const header = document.createElement("div");
-      header.className = "download-header";
-      header.innerHTML = `
-        <div class="download-title" style="font-size: 14px; color: #999; margin-bottom: 16px; font-weight: 500;">نتایج تست شخصیت سیاسی</div>
-        <div class="result-name" style="font-size: 32px; font-weight: 700; margin: 8px 0; color: #1a1a1a;">${result.name}</div>
-        <div class="result-title" style="font-size: 14px; color: #666; margin-bottom: 24px;">${result.title}</div>
-      `;
 
-      const matchSection = document.createElement("div");
-      matchSection.className = "preview-match";
-      matchSection.style.cssText = `
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border-radius: 16px;
-        padding: 20px;
-        text-align: center;
-        margin: 24px 0;
-      `;
-      matchSection.innerHTML = `
-        <div class="preview-match-score" style="font-size: 48px; font-weight: 700; margin-bottom: 4px;">${result.percentage}%</div>
-        <div class="preview-match-label" style="font-size: 13px; opacity: 0.9;">درصد تطابق</div>
-      `;
+      const subtitle = document.createElement("div");
+      subtitle.textContent = "نتایج تست شخصیت سیاسی";
+      Object.assign(subtitle.style, {
+        fontSize: "13px",
+        color: "#999",
+        marginBottom: "12px",
+        fontWeight: "500",
+      });
 
-      const description = document.createElement("div");
-      description.className = "preview-description";
-      description.style.cssText = `
-        font-size: 15px;
-        line-height: 1.8;
-        color: #444;
-        background: #f8f8f8;
-        border-radius: 12px;
-        padding: 16px;
-        margin: 24px 0;
-        text-align: right;
-      `;
-      description.textContent = result.description;
+      const name = document.createElement("div");
+      name.textContent = result.name;
+      Object.assign(name.style, {
+        fontSize: "30px",
+        fontWeight: "800",
+        color: "#111",
+        marginBottom: "6px",
+      });
 
-      const topTraits = Object.entries(result.traits || {})
+      const title = document.createElement("div");
+      title.textContent = result.title;
+      Object.assign(title.style, {
+        fontSize: "14px",
+        color: "#666",
+        marginBottom: "20px",
+      });
+
+      header.append(subtitle, name, title);
+
+      /* ---------- match ---------- */
+      const match = document.createElement("div");
+      Object.assign(match.style, {
+        background: "linear-gradient(135deg, #667eea, #764ba2)",
+        color: "#fff",
+        borderRadius: "16px",
+        padding: "18px",
+        margin: "20px 0",
+      });
+
+      const percent = document.createElement("div");
+      percent.textContent = `${result.percentage}%`;
+      Object.assign(percent.style, {
+        fontSize: "44px",
+        fontWeight: "800",
+      });
+
+      const percentLabel = document.createElement("div");
+      percentLabel.textContent = "درصد تطابق";
+      Object.assign(percentLabel.style, {
+        fontSize: "12px",
+        opacity: "0.9",
+      });
+
+      match.append(percent, percentLabel);
+
+      /* ---------- description ---------- */
+      const desc = document.createElement("div");
+      desc.textContent = result.description;
+      Object.assign(desc.style, {
+        background: "#f8f8f8",
+        borderRadius: "12px",
+        padding: "16px",
+        margin: "20px 0",
+        fontSize: "14px",
+        lineHeight: "1.9",
+        color: "#444",
+        textAlign: "right",
+      });
+
+      /* ---------- traits ---------- */
+      const traits = document.createElement("div");
+      Object.assign(traits.style, {
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gap: "12px",
+        margin: "20px 0",
+      });
+
+      Object.entries(result.traits || {})
         .sort((a, b) => b[1] - a[1])
-        .slice(0, 4);
+        .slice(0, 4)
+        .forEach(([key, value]) => {
+          const item = document.createElement("div");
+          Object.assign(item.style, {
+            background: "#f8f8f8",
+            borderRadius: "12px",
+            padding: "12px",
+            textAlign: "center",
+          });
 
-      const traitsGrid = document.createElement("div");
-      traitsGrid.className = "preview-traits";
-      traitsGrid.style.cssText = `
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-        margin: 24px 0;
-      `;
+          const label = document.createElement("div");
+          label.textContent = traitNames[key] || key;
+          Object.assign(label.style, {
+            fontSize: "12px",
+            color: "#666",
+            fontWeight: "600",
+            marginBottom: "8px",
+          });
 
-      traitsGrid.innerHTML = topTraits
-        .map(
-          ([trait, score]) => `
-        <div class="preview-trait-item" style="background: #f8f8f8; border-radius: 12px; padding: 12px; text-align: center;">
-          <div class="preview-trait-name" style="font-size: 12px; color: #666; margin-bottom: 8px; font-weight: 600;">${
-            traitNames[trait] || trait
-          }</div>
-          <div class="preview-trait-bar" style="height: 4px; background: #e0e0e0; border-radius: 2px; overflow: hidden; margin-bottom: 6px;">
-            <div class="preview-trait-fill" style="height: 100%; background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); border-radius: 2px; width: ${
-              (score / 4) * 100
-            }%"></div>
-          </div>
-          <div class="preview-trait-score" style="font-size: 11px; font-weight: 700; color: #333;">${score}/4</div>
-        </div>
-      `
-        )
-        .join("");
+          const bar = document.createElement("div");
+          Object.assign(bar.style, {
+            height: "4px",
+            background: "#e0e0e0",
+            borderRadius: "2px",
+            overflow: "hidden",
+            marginBottom: "6px",
+          });
 
+          const fill = document.createElement("div");
+          Object.assign(fill.style, {
+            height: "100%",
+            width: `${(value / 4) * 100}%`,
+            background: "linear-gradient(90deg, #667eea, #764ba2)",
+          });
+
+          bar.appendChild(fill);
+
+          const score = document.createElement("div");
+          score.textContent = `${value}/4`;
+          Object.assign(score.style, {
+            fontSize: "11px",
+            fontWeight: "700",
+            color: "#333",
+          });
+
+          item.append(label, bar, score);
+          traits.appendChild(item);
+        });
+
+      /* ---------- footer ---------- */
       const footer = document.createElement("div");
-      footer.className = "preview-footer";
-      footer.style.cssText = `
-        text-align: center;
-        padding-top: 20px;
-        border-top: 2px solid #f0f0f0;
-        margin-top: 24px;
-      `;
-      footer.innerHTML = `
-        <div class="preview-footer-text" style="font-size: 13px; color: #999; font-weight: 500;">نتیجه تست شخصیت سیاسی</div>
-        <div class="preview-footer-url" style="font-size: 12px; color: #667eea; font-weight: 600; margin-top: 4px;">Politest.ir</div>
-      `;
+      Object.assign(footer.style, {
+        borderTop: "2px solid #f0f0f0",
+        marginTop: "20px",
+        paddingTop: "16px",
+        fontSize: "12px",
+        color: "#999",
+      });
+      footer.textContent = "Politest.ir";
 
-      content.appendChild(header);
-      content.appendChild(matchSection);
-      content.appendChild(description);
-      content.appendChild(traitsGrid);
-      content.appendChild(footer);
+      /* ---------- assemble ---------- */
+      content.append(header, match, desc, traits, footer);
       container.appendChild(content);
       document.body.appendChild(container);
 
+      /* ---------- wait for render ---------- */
+      await document.fonts.ready;
+      await new Promise((r) => requestAnimationFrame(r));
+
+      /* ---------- capture ---------- */
       const canvas = await html2canvas(container, {
         scale: 2,
-        backgroundColor: null,
         useCORS: true,
+        backgroundColor: "#ffffff",
         logging: false,
       });
 
       const link = document.createElement("a");
-      link.download = `personality-test-${result.name}.png`;
+      link.download = `politest-${result.name}.png`;
       link.href = canvas.toDataURL("image/png");
       link.click();
 
       document.body.removeChild(container);
-
-      if (onDownload) {
-        onDownload();
-      }
+      onDownload?.();
     } catch (error) {
-      console.error("Error:", error);
-
-      if (isMiniApp) {
-        handleCopyResult();
-      } else if (window.Telegram?.WebApp?.showPopup) {
-        window.Telegram.WebApp.showPopup({
-          title: "خطا",
-          message: "خطا در دانلود تصویر",
-          buttons: [{ type: "ok" }],
-        });
-      } else {
-        alert("خطا در دانلود تصویر");
-      }
+      console.error(error);
+      alert("خطا در ساخت تصویر");
     } finally {
       setIsDownloading(false);
     }
@@ -428,29 +472,29 @@ Politest.ir
             />
             <div className="result-name">
               <ShinyText
-              text={result.name}
-              speed={2}
-              delay={0}
-              color="var(--shiny-text-color)"
-              shineColor="var(--shiny-shine-color)"
-              spread={120}
-              direction="left"
-              yoyo={false}
-              pauseOnHover={false}
-            />
+                text={result.name}
+                speed={2}
+                delay={0}
+                color="var(--shiny-text-color)"
+                shineColor="var(--shiny-shine-color)"
+                spread={120}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={false}
+              />
             </div>
             <div className="result-title">
               <ShinyText
-              text={result.title}
-              speed={2}
-              delay={0}
-              color="var(--shiny-text-color)"
-              shineColor="var(--shiny-shine-color)"
-              spread={120}
-              direction="left"
-              yoyo={false}
-              pauseOnHover={false}
-            />
+                text={result.title}
+                speed={2}
+                delay={0}
+                color="var(--shiny-text-color)"
+                shineColor="var(--shiny-shine-color)"
+                spread={120}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={false}
+              />
             </div>
           </div>
 
