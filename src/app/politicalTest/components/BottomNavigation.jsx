@@ -4,7 +4,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/App.css'
 import AdlyBanner from '@/components/AdlyBanner';
 
-
 const AdvancedBottomNavigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -41,12 +40,9 @@ const AdvancedBottomNavigation = () => {
     createRipple(x, y, item.id);
     setActiveTab(item.id);
     
-    // تأخیر کوچک برای دیده شدن انیمیشن
-    setTimeout(() => {
-      if (item.path) {
-        navigate(item.path);
-      }
-    }, 200);
+    if (item.path) {
+      navigate(item.path);
+    }
   };
 
   // Update active tab based on current location

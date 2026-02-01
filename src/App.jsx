@@ -15,17 +15,15 @@ import cacheManager from "./utils/cacheManager";
 import Profile from "./pages/Profile.jsx";
 import GetPage from "./pages/Get.jsx";
 import ClickSpark from "@/components/ClickSpark";
-import AdlyBanner from "@/components/AdlyBanner.jsx"
+import AdlyBanner from "@/components/AdlyBanner.jsx";
 
 function App() {
   const [showIntroSlides, setShowIntroSlides] = useState(true);
 
   useEffect(() => {
     FontManager.initialize();
-
     const stats = cacheManager.getStats();
     console.log("Cache stats:", stats);
-
     cacheManager.autoCleanup();
 
     const unsubscribe = appState.subscribe((key, value) => {
@@ -52,14 +50,7 @@ function App() {
             <Route
               path="/"
               element={
-                <>
-                  <PoliticalTestApp onIntroComplete={handleIntroComplete} />
-                  {!showIntroSlides && (
-                    <>
-                      <BottomNavigation />
-                    </>
-                  )}
-                </>
+                <PoliticalTestApp onIntroComplete={handleIntroComplete} />
               }
             />
             <Route path="/about" element={<About />} />
@@ -68,6 +59,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/get" element={<GetPage />} />
           </Routes>
+          {!showIntroSlides && <BottomNavigation />}
         </BrowserRouter>
       </ClickSoundProvider>
     </ThemeProvider>
